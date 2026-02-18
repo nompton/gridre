@@ -35,22 +35,20 @@ export default function FieldLeadForm() {
 
     const payload = Object.fromEntries(form.entries());
 
-    const res = await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+const res = await fetch(endpoint, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload),
+});
 
-    if (!res.ok) {
-      setStatus("error");
-      return;
-    }
+if (!res.ok) {
+  const text = await res.text();
+  console.error("Webhook failed:", text);
+  setStatus("error");
+  return;
+}
 
-    setStatus("saved");
-    formEl.reset();
-    setCoords(null);
-  }
-
+setStatus("saved");
   return (
     <form onSubmit={submit} className="grid gap-3">
       <input name="address" placeholder="Address" required className="border p-3 rounded-xl" />
