@@ -3,141 +3,180 @@ import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
+export const metadata = {
+  title: "Property Management — GRID Real Estate",
+  description: "Professional property management in Norman for investors and rental owners. Matterport tours, professional photography, tenant placement, and clean reporting.",
+};
+
+const services = [
+  { title: "Tenant Screening & Placement", body: "Full credit, background, and income verification. We find tenants who pay on time, treat the property well, and stay." },
+  { title: "Rent Collection & Disbursement", body: "Automated collection with consistent owner disbursements and monthly statements. No chasing, no guessing." },
+  { title: "Maintenance Coordination", body: "Vetted vendor relationships, clear work orders, and transparent pricing. Problems get handled, not ignored." },
+  { title: "Lease Management & Renewals", body: "Oklahoma-compliant leases, timely renewals, and proactive retention strategy to keep good tenants longer." },
+  { title: "Owner Reporting", body: "Monthly statements with clear income, expense, and maintenance records. Always accessible from any device." },
+  { title: "Trust Account Management", body: "Disciplined financial controls and documentation built on real compliance experience. Your funds are handled correctly." },
+  { title: "Eviction & Legal Coordination", body: "When needed, we manage the process with documentation, timelines, and local legal coordination." },
+];
+
 export default function ManagePage() {
   return (
     <div>
-      {/* HERO (matches Buy/Sell/Invest) */}
       <section className="relative border-b border-black/10">
         <div className="relative h-[420px] w-full">
-          <Image
-            src="/images/balcony.jpg"
-            alt="Norman rentals"
-            fill
-            priority
-            className="object-cover"
-          />
-
-          {/* Overlay */}
+          <Image src="/images/balcony.jpg" alt="Norman rental property" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/25 to-transparent" />
         </div>
-
         <div className="absolute inset-0 flex items-center">
           <div className="mx-auto w-full max-w-6xl px-4">
             <div className="max-w-2xl text-white">
-              <div className="text-sm font-medium text-white/80">Manage</div>
-
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-                property management that feels personal and runs professionally
-              </h1>
-
+              <div className="text-sm font-medium text-white/80">Property Management</div>
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">own it. don't manage it.</h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                Property management is not just maintenance and rent collection.
-                It is tenant relationships, protecting the asset, and maximizing
-                long-term return. <GridWord /> is built for owners who want
-                management done right.
+                <GridWord /> handles the day-to-day so you can focus on the next acquisition. Professional management with clean books, reliable tenants, and zero surprises.
               </p>
-
-              {/* Hero CTAs */}
               <div className="mt-8 flex flex-wrap items-center gap-3">
-                <a
-                  href="/contact"
-                  className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90"
-                >
-                  request a consultation
-                </a>
-
-                <a
-                  href="tel:4053101221"
-                  className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20"
-                >
-                  call (405) 310-1221
-                </a>
+                <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
+                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WHY OWNERS CHOOSE GRID */}
-      <Section title="Why owners choose us">
+      <Section title="Why owners choose GRID" kicker="The difference">
         <div className="grid gap-4 md:grid-cols-2">
-          <Card title="1) investor-led management">
-            We manage with an owner&apos;s mindset because we are owners too.
-            Vacancy, turnover, and deferred maintenance all show up in your
-            returns. We stay focused on retention and long-term value.
+          <Card title="owners since 2018">
+            <GridWord /> has been managing its own properties since 2018. That experience is what shapes how we manage for others. We know what deferred maintenance costs, what good tenants look like, and how to keep both sides of the relationship working.
           </Card>
-
-          <Card title="2) relationship-driven service">
-            Better tenant relationships mean less turnover and fewer vacancies.
-            We take communication seriously with both landlords and tenants, and
-            we keep expectations clear from day one.
+          <Card title="tenant-first management">
+            Well-treated tenants stay longer, take better care of the property, and cause fewer problems. We treat residents with respect, communicate clearly, and keep properties maintained. That's good business.
           </Card>
-
-          <Card title="3) digital-first leasing">
-            Professional marketing and modern workflows help fill vacancies
-            faster. Clear updates throughout the leasing process so you are
-            never guessing what&apos;s happening.
+          <Card title="compliance you can trust">
+            <GridWord />'s management practice is built on deep regulatory experience. Trust accounts, documentation, and financial controls are handled to the professional standard most managers never reach.
           </Card>
-
-          <Card title="4) clean reporting and disciplined accounting">
-            GRID is led by a broker with a background in compliance and trust
-            practices. We operate with professional controls, documentation, and
-            transparency.
+          <Card title="professional marketing on every listing">
+            Every vacancy gets professional photography, Matterport 3D tour, drone coverage, and MLS syndication. Vacancies fill faster because we present properties better.
           </Card>
         </div>
       </Section>
 
-      {/* WHAT WE HANDLE */}
-      <Section title="What we handle">
-        <div className="grid gap-8 md:grid-cols-2 md:items-start">
-          <div className="rounded-2xl border border-black/10 p-6">
-            <div className="text-sm font-semibold tracking-tight">Services</div>
-            <ul className="mt-4 list-disc pl-5 text-sm leading-7 text-black/75">
-              <li>Leasing and marketing</li>
-              <li>Tenant screening and placement</li>
-              <li>Rent collection and enforcement</li>
-              <li>Maintenance coordination and vendor management</li>
-              <li>Lease renewals and tenant retention</li>
-              <li>Owner updates and monthly reporting</li>
-              <li>HOA and small community management support</li>
-            </ul>
+      <section className="border-y border-black/10 bg-black/[0.02] py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Included in every listing</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">The full marketing toolkit.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
+              Every property we manage gets professional marketing treatment when it comes time to lease. Matterport tours, professional photography, drone coverage, and full digital syndication are standard, not upgrades.
+            </p>
           </div>
-
-          <div className="rounded-2xl border border-black/10 p-6">
-            <div className="text-sm font-semibold tracking-tight">
-              The GRID standard
+          <div className="mb-8 grid gap-3 md:grid-cols-3">
+            <div className="relative h-[220px] overflow-hidden rounded-2xl border border-black/10 md:col-span-2">
+              <Image src="/images/mosier_exterior.jpg" alt="Professional exterior photography" fill className="object-cover" />
+              <div className="absolute bottom-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">Professional photography</div>
             </div>
-
-            <p className="mt-4 text-sm leading-7 text-black/75">
-              We stay responsive, document what matters, and treat people with
-              respect. This is a relationship business, and we run it like a
-              professional operation.
-            </p>
-
-            <p className="mt-4 text-sm leading-7 text-black/75">
-              If you want management that protects your investment and keeps
-              ownership stress-free, let&apos;s talk.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="/contact"
-                className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90"
-              >
-                talk management
-              </a>
-
-              <a
-                href="tel:4053101221"
-                className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30"
-              >
-                call (405) 310-1221
-              </a>
+            <div className="relative h-[220px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/mosier_aerial.jpg" alt="Drone aerial photography" fill className="object-cover" />
+              <div className="absolute bottom-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">Drone coverage</div>
+            </div>
+          </div>
+          <div className="grid gap-3 md:grid-cols-3">
+            <div className="relative h-[200px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/mosier_kitchen.jpg" alt="Interior photography" fill className="object-cover" />
+            </div>
+            <div className="relative h-[200px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/mosier_living.jpg" alt="Living area photography" fill className="object-cover" />
+            </div>
+            <div className="relative h-[200px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/mosier_bedroom.jpg" alt="Bedroom photography" fill className="object-cover" />
+            </div>
+          </div>
+          <div className="mt-10 rounded-2xl border border-black/10 bg-white p-8">
+            <div className="mb-6">
+              <div className="text-sm font-semibold tracking-tight">Matterport 3D Tour</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">
+                Every listing includes a full Matterport virtual tour. Remote investors can walk the property from anywhere, and in-person showings are limited to serious, pre-qualified tenants.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-black/10">
+              <iframe width="100%" height="480" src="https://my.matterport.com/show/?m=1N1cK9f4b9Y" frameBorder="0" allowFullScreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking" className="w-full" />
             </div>
           </div>
         </div>
+      </section>
+
+      <Section title="Full-service management" kicker="What we handle">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((s) => (
+            <div key={s.title} className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm">
+              <div className="text-sm font-semibold tracking-tight">{s.title}</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">{s.body}</p>
+            </div>
+          ))}
+        </div>
       </Section>
+
+      <section className="border-y border-black/10 bg-black/[0.02] py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Our clients</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Who we manage for</h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 md:items-start">
+            <div className="space-y-4">
+              <div className="rounded-2xl border border-black/10 bg-white p-6">
+                <div className="text-sm font-semibold tracking-tight">Individual investors and landlords</div>
+                <p className="mt-3 text-sm leading-7 text-black/75">
+                  Whether you own one rental or a handful of properties in Norman, we provide the same professional management standard. No portfolio is too small to deserve proper management.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-white p-6">
+                <div className="text-sm font-semibold tracking-tight">Out-of-state investors</div>
+                <p className="mt-3 text-sm leading-7 text-black/75">
+                  Norman is an attractive market for remote investors. Strong rental demand, a university anchor, and long-term growth. <GridWord /> gives you local eyes and hands so you can own here confidently without being here.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-white p-6">
+                <div className="text-sm font-semibold tracking-tight">Growing portfolios</div>
+                <p className="mt-3 text-sm leading-7 text-black/75">
+                  If you're scaling, we grow with you. Centralized reporting, consistent processes, and a management team that understands your goals across multiple properties.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="relative h-[280px] overflow-hidden rounded-2xl border border-black/10">
+                <Image src="/images/unit_loft_interior.jpeg" alt="Rental unit interior" fill className="object-cover" />
+              </div>
+              <div className="rounded-2xl border border-black/10 bg-white p-6">
+                <div className="text-sm font-semibold tracking-tight">The <GridWord /> standard</div>
+                <p className="mt-3 text-sm leading-7 text-black/75">
+                  We stay responsive, document what matters, and treat every property like we own it because we know what it feels like when someone doesn't. Management fees are straightforward. No hidden charges, no surprise markups on maintenance.
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">get a proposal</a>
+                  <a href="/associations" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">association management</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="rounded-3xl border border-black/10 bg-black p-10 text-white md:p-12">
+            <div className="text-sm font-medium text-white/75">Let's talk management</div>
+            <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Ready to hand it off?</div>
+            <div className="mt-3 max-w-xl text-sm leading-7 text-white/80">
+              Tell us about your property or portfolio and we'll put together a straightforward management proposal.
+            </div>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
+              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
