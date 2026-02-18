@@ -4,25 +4,29 @@ import { useState } from "react";
 
 export default function FieldLeadForm() {
   const endpoint =
-    "https://automation.thegridre.com/webhook/rental-lead";
+    process.env.NEXT_PUBLIC_FIELDLOG_ENDPOINT || "";
 
   const [coords, setCoords] = useState<any>(null);
   const [status, setStatus] = useState("idle");
 
   function captureGPS() {
-    navigator.geolocation.getCurrentPosition((pos) => {
-      setCoords({
-        lat: pos.coords.latitude,
-        lng: pos.coords.longitude,
-      });
-    });
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setCoords({
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+        });
+      },
+      () => alert("GPS failed. Check permissions.")
+    );
   }
 
   async function submit(e: any) {
     e.preventDefault();
     setStatus("sending");
 
-    const form = new FormData(e.target);
+    const formEl = e.target;
+    const form = new FormData(formEl);
 
     if (coords) {
       form.append("lat", coords.lat);
@@ -31,20 +35,24 @@ export default function FieldLeadForm() {
 
     const payload = Object.fromEntries(form.entries());
 
-    await fetch(endpoint, {
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
 
+    if (!res.ok) {
+      setStatus("error");
+      return;
+    }
+
     setStatus("saved");
-    e.target.reset();
+    formEl.reset();
     setCoords(null);
   }
 
   return (
     <form onSubmit={submit} className="grid gap-3">
-
       <input name="address" placeholder="Address" required className="border p-3 rounded-xl" />
       <input name="city" placeholder="City" className="border p-3 rounded-xl" />
 
@@ -68,8 +76,11 @@ export default function FieldLeadForm() {
       <textarea name="notes" placeholder="Notes" className="border p-3 rounded-xl" />
 
       {!coords ? (
-        <button type="button" onClick={captureGPS}
-          className="bg-black text-white p-3 rounded-xl">
+        <button
+          type="button"
+          onClick={captureGPS}
+          className="bg-black text-white p-3 rounded-xl"
+        >
           📍 Capture GPS
         </button>
       ) : (
@@ -78,13 +89,22 @@ export default function FieldLeadForm() {
         </div>
       )}
 
-      <button className="bg-black text-white p-3 rounded-xl">
+      <button
+        disabled={status === "sending"}
+        className="bg-black text-white p-3 rounded-xl disabled:opacity-50"
+      >
         {status === "sending" ? "Saving..." : "Save Rental Lead"}
       </button>
 
       {status === "saved" && (
         <p className="text-green-700 text-sm">
           Saved to CRM ✅
+        </p>
+      )}
+
+      {status === "error" && (
+        <p className="text-red-600 text-sm">
+          Failed. Check webhook.
         </p>
       )}
     </form>
