@@ -84,10 +84,11 @@ export default function FieldLeadForm() {
 
       <select name="propertyType" className="border p-3 rounded-xl">
         <option>House</option>
-        <option>Duplex</option>
-        <option>Fourplex</option>
-        <option>Apartment</option>
-        <option>Condo</option>
+          <option>Duplex</option>
+          <option>Triple</option>
+          <option>4+ Units</option>
+          <option>Condo</option>
+          <option>Townhouse</option>
       </select>
 
       <select name="condition" className="border p-3 rounded-xl">
