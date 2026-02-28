@@ -97,6 +97,11 @@ export default function ProformaEngine() {
     const dp = num(downPercent) / 100;
     return pp > 0 ? pp * (1 - dp) : 0;
   }, [purchasePrice, downPercent, isCash]);
+  
+  const downPaymentAmount =
+  isCash
+    ? num(purchasePrice)
+    : num(purchasePrice) * (num(downPercent) / 100);
 
   const monthlyPayment = useMemo(() => {
     if (isCash || loanAmount === 0) return 0;
@@ -210,10 +215,22 @@ export default function ProformaEngine() {
 
     // Title
     pdf.setFont("helvetica", "bold");
-    pdf.setFontSize(16);
-    pdf.text(propertyTitle || "Property Analysis", 15, 35);
+    pdf.setFontSize(18);
+    pdf.text("Investment Proforma", 15, 35);
 
-    let y = 45;
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(10);
+    pdf.text(
+      "Preliminary Estimate – For Underwriting Purposes Only",
+      15,
+      41
+    );
+
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(14);
+    pdf.text(propertyTitle || "Property Analysis", 15, 50);
+
+    let y = 60;
 
     // Income
     y = drawSection(pdf, y, "Income");
@@ -240,11 +257,35 @@ export default function ProformaEngine() {
 
     y += 4;
 
-    // Financing
     y = drawSection(pdf, y, "Financing");
+
+    y = drawRow(pdf, y, "Purchase Price", format(num(purchasePrice)));
+
+    y = drawRow(
+      pdf,
+      y,
+      "Down Payment",
+      `${format(downPaymentAmount)} (${num(downPercent).toFixed(1)}%)`
+    );
+
+    if (!isCash) {
+      y = drawRow(
+        pdf,
+        y,
+        "Interest Rate",
+        `${num(interestRate).toFixed(2)}%`
+      );
+
+      y = drawRow(
+        pdf,
+        y,
+        "Term",
+        `${num(termYears)} Years`
+      );
+    }
+
     y = drawRow(pdf, y, "Loan Amount", format(loanAmount));
     y = drawRow(pdf, y, "Annual Debt Service", format(annualDebtService));
-    y = drawRow(pdf, y, "Cash Purchase", isCash ? "Yes" : "No");
 
     y += 4;
 
@@ -482,12 +523,22 @@ export default function ProformaEngine() {
 
         {/* PRESENTATION / SCREENSHOT CARD */}
         <div className="bg-white rounded-xl border shadow-sm p-5 space-y-4">
-          <div className="flex items-center justify-between">
-            <img src="/brand/grid_logo.png" alt="GRID" className="h-7 w-auto" />
-            <div className="text-xs text-gray-500">Annual Proforma</div>
+        <div className="space-y-2">
+        <div className="flex items-center justify-between">
+          <img src="/brand/grid_logo.png" alt="GRID" className="h-7 w-auto" />
+          <div className="text-xs text-gray-500">
+            Preliminary Estimate – For Underwriting Purposes Only
           </div>
+        </div>
 
-          <div className="text-lg font-semibold">{propertyTitle || "Property Analysis"}</div>
+        <div className="text-xl font-bold tracking-wide">
+          Investment Proforma
+        </div>
+
+        <div className="text-lg font-semibold">
+          {propertyTitle || "Property Analysis"}
+        </div>
+      </div>
 
           <Statement title="Income">
             {units.map((u, i) => (
@@ -519,6 +570,30 @@ export default function ProformaEngine() {
           </Statement>
 
           <Statement title="Financing">
+            <StatementRow
+              label="Purchase Price"
+              value={format(num(purchasePrice))}
+            />
+
+            <StatementRow
+              label="Down Payment"
+              value={`${format(downPaymentAmount)} (${num(downPercent).toFixed(1)}%)`}
+            />
+
+            {!isCash && (
+              <>
+                <StatementRow
+                  label="Interest Rate"
+                  value={`${num(interestRate).toFixed(2)}%`}
+                />
+
+                <StatementRow
+                  label="Term"
+                  value={`${num(termYears)} Years`}
+                />
+              </>
+            )}
+
             <StatementRow label="Loan Amount" value={format(loanAmount)} />
             <StatementRow label="Debt Service" value={format(annualDebtService)} />
           </Statement>
