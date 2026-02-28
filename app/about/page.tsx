@@ -70,12 +70,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-8">
             <div className="text-sm font-medium text-black/60">Leadership</div>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">About Patrick</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">About the Broker</h2>
           </div>
           <div className="grid gap-10 md:grid-cols-2 md:items-start">
             <div className="max-w-prose space-y-5 text-sm leading-7 text-black/75">
               <p>
-                Patrick Schrank is the broker and founder of <GridWord /> Real Estate. He's been licensed in Oklahoma real estate since February 2017 and earned his broker license in January 2021.
+                Patrick Schrank is the Managing Broker and founder of <GridWord /> Real Estate. He's been licensed in Oklahoma real estate since February 2017 and earned his broker license in January 2021.
               </p>
               <p>
                 Patrick has been managing his own rental properties since 2018, which shapes how <GridWord /> operates. He understands what it takes to keep a property rented, maintained, and profitable over time.
@@ -90,12 +90,13 @@ export default function AboutPage() {
                 <ul className="mt-4 space-y-3 text-sm text-black/75">
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Oklahoma Real Estate Broker License (January 2021)
+                    Licensed in Oklahoma since February 2017
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Licensed in Oklahoma since February 2017
+                    Oklahoma Real Estate Broker License (January 2021)
                   </li>
+                
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
                     Active property owner and operator since 2018
@@ -104,12 +105,11 @@ export default function AboutPage() {
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
                     AIM Norman Comprehensive Plan Committee member
                   </li>
+                  <li className="flex gap-3">
+                    <span className="mt-0.5 shrink-0 text-black/30">+</span>
+                    Former Investigator with Oklahoma Real Estate Commission
+                  </li>
                 </ul>
-              </div>
-              <div className="rounded-2xl border border-black/10 bg-white p-6">
-                <p className="text-sm leading-7 text-black/75">
-                  <GridWord /> operates as part of <a href="https://www.nompton.net" target="_blank" rel="noopener noreferrer" className="font-medium underline underline-offset-2 hover:text-black/60">Nompton™</a>, a Norman-based real estate and development collective.
-                </p>
               </div>
             </div>
           </div>

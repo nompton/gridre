@@ -48,7 +48,7 @@ export default function HomePage() {
           </div>
           <div>
             <div className="text-sm font-semibold">owners and operators</div>
-            <div className="mt-1 text-sm text-black/70">We've managed our own properties since 2018. We know what good management actually looks like.</div>
+            <div className="mt-1 text-sm text-black/70">We've seen the good, bad, and ugly in the property management business. We know what good management actually looks like.</div>
           </div>
           <div>
             <div className="text-sm font-semibold">tenant-first approach</div>
@@ -62,7 +62,7 @@ export default function HomePage() {
             Full-service management for single-family rentals, small multifamily, and investment portfolios. Tenant placement, rent collection, maintenance coordination, and clean reporting handled professionally.
           </Card>
           <Card title="investor services" href="/invest">
-            Acquisition support, market analysis, and portfolio strategy for Norman investors. We understand the numbers because we run them on our own properties.
+            Acquisition support, market analysis, and portfolio strategy for  investors looking in Norman and the OKC Metro. We understand the numbers because we are investors.
           </Card>
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2">

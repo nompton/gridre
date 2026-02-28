@@ -56,7 +56,7 @@ export default function ManagePage() {
             <GridWord />'s management practice is built on deep regulatory experience. Trust accounts, documentation, and financial controls are handled to the professional standard most managers never reach.
           </Card>
           <Card title="professional marketing on every listing">
-            Every vacancy gets professional photography, Matterport 3D tour, drone coverage, and MLS syndication. Vacancies fill faster because we present properties better.
+            Every vacancy gets professional marketing services including photography, Matterport 3D tour, drone coverage, and MLS syndication. Vacancies fill faster because we present properties better.
           </Card>
         </div>
       </Section>
@@ -67,7 +67,7 @@ export default function ManagePage() {
             <div className="text-sm font-medium text-black/60">Included in every listing</div>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">The full marketing toolkit.</h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
-              Every property we manage gets professional marketing treatment when it comes time to lease. Matterport tours, professional photography, drone coverage, and full digital syndication are standard, not upgrades.
+              Every property we manage gets professional marketing treatment when it comes time to lease. Our marketing toolkit includes Matterport tours, professional photography, drone coverage, and full digital syndication across hundreds of rental sites.
             </p>
           </div>
           <div className="mb-8 grid gap-3 md:grid-cols-3">
@@ -95,7 +95,7 @@ export default function ManagePage() {
             <div className="mb-6">
               <div className="text-sm font-semibold tracking-tight">Matterport 3D Tour</div>
               <p className="mt-2 text-sm leading-6 text-black/70">
-                Every listing includes a full Matterport virtual tour. Remote investors can walk the property from anywhere, and in-person showings are limited to serious, pre-qualified tenants.
+                Every rental listing includes a full Matterport virtual tour. In-person showings are limited to serious, pre-qualified tenants.
               </p>
             </div>
             <div className="overflow-hidden rounded-xl border border-black/10">
