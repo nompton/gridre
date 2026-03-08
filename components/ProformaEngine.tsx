@@ -143,6 +143,7 @@ export default function ProformaEngine() {
 
   const noi = effectiveGross - operatingExpenses;
   const cashFlow = noi - annualDebtService;
+  const dscr = annualDebtService > 0 ? noi / annualDebtService : 0;
 
   const capRate = num(purchasePrice) > 0 ? (noi / num(purchasePrice)) * 100 : 0;
 
@@ -292,6 +293,7 @@ export default function ProformaEngine() {
     // Returns
     y = drawSection(pdf, y, "Returns");
     y = drawRow(pdf, y, "NOI", format(noi), { bold: true });
+    y = drawRow(pdf, y, "DSCR", annualDebtService ? dscr.toFixed(2) : "-");
     y = drawRow(pdf, y, "Cash Flow", format(cashFlow), { bold: true });
     y = drawRow(pdf, y, "Cap Rate", `${capRate.toFixed(2)}%`);
     y = drawRow(pdf, y, "Cash on Cash", `${cashOnCash.toFixed(2)}%`);
@@ -600,6 +602,7 @@ export default function ProformaEngine() {
 
           <Statement title="Returns">
             <StatementRow label="NOI" value={format(noi)} bold />
+            <StatementRow label="DSCR" value={annualDebtService ? dscr.toFixed(2) : "-"} />
             <StatementRow label="Cash Flow" value={format(cashFlow)} bold />
             <StatementRow label="Cap Rate" value={`${capRate.toFixed(2)}%`} />
             <StatementRow label="Cash on Cash" value={`${cashOnCash.toFixed(2)}%`} />
