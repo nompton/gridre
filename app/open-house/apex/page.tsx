@@ -7,17 +7,14 @@ import Script from "next/script"
 const photos = Array.from({ length: 35 }, (_, i) => `/open-house/apex/${i + 1}.jpg`)
 
 export default function OpenHouseApexPage() {
-  const [contactSubmitted, setContactSubmitted] = useState(false)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null)
 
   useEffect(() => {
     if (selectedImageIndex === null) return
 
     function handleKey(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        setSelectedImageIndex(null)
-      }
+      if (e.key === "Escape") setSelectedImageIndex(null)
       if (e.key === "ArrowRight") {
         setSelectedImageIndex((prev) =>
           prev === null ? 0 : prev === photos.length - 1 ? 0 : prev + 1
@@ -34,10 +31,7 @@ export default function OpenHouseApexPage() {
     return () => window.removeEventListener("keydown", handleKey)
   }, [selectedImageIndex])
 
-  async function handleSubmit(
-    e: React.FormEvent<HTMLFormElement>,
-    type: "contact" | "feedback"
-  ) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
     const form = e.currentTarget
@@ -53,7 +47,7 @@ export default function OpenHouseApexPage() {
         body: JSON.stringify({
           source: "3844 Apex Court Open House",
           page: "/open-house/apex",
-          type,
+          type: "combined",
           timestamp: new Date().toISOString(),
           ...data,
         }),
@@ -64,19 +58,14 @@ export default function OpenHouseApexPage() {
       }
 
       if (typeof window !== "undefined" && (window as any).fbq) {
-        if (type === "contact") {
-          ;(window as any).fbq("track", "Lead")
-        } else {
-          ;(window as any).fbq("track", "SubmitApplication", {
-            content_name: "3844 Apex Court Feedback",
-          })
-        }
+        ;(window as any).fbq("track", "Lead")
+        ;(window as any).fbq("track", "SubmitApplication", {
+          content_name: "3844 Apex Court Open House Form",
+        })
       }
 
       form.reset()
-
-      if (type === "contact") setContactSubmitted(true)
-      if (type === "feedback") setFeedbackSubmitted(true)
+      setFormSubmitted(true)
     } catch (error) {
       console.error("Form submission error:", error)
       alert("There was a problem submitting the form. Please try again.")
@@ -162,23 +151,36 @@ export default function OpenHouseApexPage() {
               </div>
             </div>
 
-            <div className="relative mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white/5 md:hidden">
-              <div className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth">
-                {photos.map((src, index) => (
-                  <button
-                    key={src}
-                    type="button"
-                    onClick={() => setSelectedImageIndex(index)}
-                    className="relative h-64 min-w-full snap-center"
-                  >
-                    <Image
-                      src={src}
-                      alt={`3844 Apex Court mobile photo ${index + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
+            <div className="mt-8 md:hidden">
+              <div className="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.22em] text-white/60">
+                <span>Swipe Through Photos</span>
+                <span>1 of {photos.length}+</span>
+              </div>
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-black/50 to-transparent" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-black/50 to-transparent" />
+                <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-white/15 bg-black/55 px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm">
+                  <span>{"←"}</span>
+                  <span>Swipe Photos</span>
+                  <span>{"→"}</span>
+                </div>
+                <div className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth">
+                  {photos.map((src, index) => (
+                    <button
+                      key={src}
+                      type="button"
+                      onClick={() => setSelectedImageIndex(index)}
+                      className="relative h-64 min-w-[88%] snap-center first:ml-4 last:mr-4"
+                    >
+                      <Image
+                        src={src}
+                        alt={`3844 Apex Court mobile photo ${index + 1}`}
+                        fill
+                        className="rounded-2xl object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -193,6 +195,33 @@ export default function OpenHouseApexPage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-14">
+          <div className="mb-8 flex flex-wrap gap-3">
+            <a
+              href="/open-house/apex/disclosure.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm transition hover:bg-white hover:text-black"
+            >
+              View Seller Disclosure
+            </a>
+            <a
+              href="/open-house/apex/measurement.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm transition hover:bg-white hover:text-black"
+            >
+              View Measurements
+            </a>
+            <a
+              href="/open-house/apex/ong_bills.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm transition hover:bg-white hover:text-black"
+            >
+              View Average ONG Bills
+            </a>
+          </div>
+
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-6">
               <p className="text-xs uppercase tracking-[0.25em] text-white/60">Price</p>
@@ -300,127 +329,93 @@ export default function OpenHouseApexPage() {
                   fill
                   className="object-cover transition duration-300 group-hover:scale-105"
                 />
-                
               </button>
             ))}
           </div>
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-14">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-white/60">Interested?</p>
-              <h2 className="mt-2 text-2xl font-bold uppercase tracking-wide md:text-3xl">
-                Get More info
-              </h2>
+          <div className="rounded-3xl border border-white/15 bg-white/10 p-5 shadow-2xl shadow-black/20 backdrop-blur-sm md:p-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-white/60">Open House Form</p>
+            <h2 className="mt-2 text-2xl font-bold uppercase tracking-wide md:text-3xl">
+              Share Your Thoughts and Request Info
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/80">
+              Leave your contact information if you want a follow-up, ask a question, or tell us what you think of the home.
+            </p>
 
-              {contactSubmitted ? (
-                <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 text-white/80">
-                  Thanks. Your information has been sent.
-                </div>
-              ) : (
-                <form className="mt-6 space-y-4" onSubmit={(e) => handleSubmit(e, "contact")}>
-                  <input
-                    name="name"
-                    autoComplete="name"
-                    required
-                    placeholder="Name"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <input
-                    name="phone"
-                    autoComplete="tel"
-                    required
-                    placeholder="Phone"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <input
-                    name="email"
-                    autoComplete="email"
-                    type="email"
-                    placeholder="Email"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <select
-                    name="workingWithAgent"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                    defaultValue=""
-                  >
-                    <option value="">Are you working with an agent?</option>
-                    <option value="No">No</option>
-                    <option value="Yes">Yes</option>
-                    <option value="Not sure">Not sure</option>
-                  </select>
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows={4}
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="w-full rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-transparent hover:text-white md:w-auto"
-                  >
-                    Submit
-                  </button>
-                </form>
-              )}
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 md:p-8">
-              <p className="text-xs uppercase tracking-[0.25em] text-white/60">Open House Feedback</p>
-              <h2 className="mt-2 text-2xl font-bold uppercase tracking-wide md:text-3xl">
-                Share Your Thoughts
-              </h2>
-
-              {feedbackSubmitted ? (
-                <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 text-white/80">
-                  Thanks for the feedback.
-                </div>
-              ) : (
-                <form className="mt-6 space-y-4" onSubmit={(e) => handleSubmit(e, "feedback")}>
-                  <select
-                    name="priceOpinion"
-                    required
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                    defaultValue=""
-                  >
-                    <option value="">How does the price feel?</option>
-                    <option value="Too high">Too high</option>
-                    <option value="About right">About right</option>
-                    <option value="Good deal">Good deal</option>
-                  </select>
-                  <input
-                    name="favoriteFeature"
-                    placeholder="Favorite feature"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <input
-                    name="leastFavorite"
-                    placeholder="Least favorite feature"
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                  />
-                  <select
-                    name="wouldConsiderBuying"
-                    required
-                    className="w-full rounded-2xl border border-white/10 bg-black px-4 py-3 text-white outline-none"
-                    defaultValue=""
-                  >
-                    <option value="">Would you consider buying this home?</option>
-                    <option value="Yes">Yes</option>
-                    <option value="Maybe">Maybe</option>
-                    <option value="No">No</option>
-                  </select>
-                  
-                  <button
-                    type="submit"
-                    className="w-full rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-transparent hover:text-white md:w-auto"
-                  >
-                    Send Feedback
-                  </button>
-                </form>
-              )}
-            </div>
+            {formSubmitted ? (
+              <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 text-white/80">
+                Thanks. Your information has been sent.
+              </div>
+            ) : (
+              <form className="mt-6 grid gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
+                <input
+                  name="name"
+                  autoComplete="name"
+                  placeholder="Name"
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                />
+                <input
+                  name="phone"
+                  autoComplete="tel"
+                  placeholder="Phone"
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                />
+                <input
+                  name="email"
+                  autoComplete="email"
+                  type="email"
+                  placeholder="Email"
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35 md:col-span-2"
+                />
+                <select
+                  name="workingWithAgent"
+                  className="w-full appearance-none rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                  defaultValue=""
+                >
+                  <option value="">Are you working with an agent?</option>
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                  <option value="Not sure">Not sure</option>
+                </select>
+                
+                <select
+                  name="priceOpinion"
+                  className="w-full appearance-none rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                  defaultValue=""
+                >
+                  <option value="">How does the price feel?</option>
+                  <option value="Too high">Too high</option>
+                  <option value="About right">About right</option>
+                  <option value="Good deal">Good deal</option>
+                </select>
+                <div className="md:col-span-2 grid gap-4 md:grid-cols-2">
+                <input
+                  name="favoriteFeature"
+                  placeholder="Favorite feature"
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                />
+                <input
+                  name="leastFavorite"
+                  placeholder="Least favorite feature"
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
+                />
+              </div>
+                <textarea
+                  name="message"
+                  placeholder="Questions or comments"
+                  rows={5}
+                  className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35 md:col-span-2"
+                />
+                <button
+                  type="submit"
+                  className="w-full rounded-full border border-white bg-white px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-transparent hover:text-white md:col-span-2"
+                >
+                  Submit
+                </button>
+              </form>
+            )}
           </div>
         </section>
 
