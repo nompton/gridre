@@ -4,8 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Property Management — GRID Real Estate",
-  description: "Professional property management in Norman for investors and rental owners. Matterport tours, professional photography, tenant placement, and clean reporting.",
+  title: "Property Management in Norman, OK | GRID Real Estate",
+  description: "Full-service property management in Norman, Oklahoma for landlords and investors. Tenant screening, rent collection, maintenance coordination, and owner reporting. Call (405) 310-1221.",
+  openGraph: {
+    title: "Property Management in Norman, OK | GRID Real Estate",
+    description: "Professional rental property management for Norman, OK investors. Tenant placement, Matterport tours, trust account management, and clean monthly reporting.",
+    url: "https://thegridre.com/manage",
+  },
 };
 
 const services = [
@@ -16,6 +21,76 @@ const services = [
   { title: "Owner Reporting", body: "Monthly statements with clear income, expense, and maintenance records. Always accessible from any device." },
   { title: "Trust Account Management", body: "Disciplined financial controls and documentation built on real compliance experience. Your funds are handled correctly." },
   { title: "Eviction & Legal Coordination", body: "When needed, we manage the process with documentation, timelines, and local legal coordination." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does property management cost in Norman, OK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your property or portfolio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage single-family rentals in Norman?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We manage single-family homes, small multifamily properties, and investment portfolios of all sizes in Norman and the surrounding OKC Metro area.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you screen tenants?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We run full credit checks, background verification, and income confirmation on every applicant. We look for tenants who pay on time, treat the property well, and stay long-term.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage properties for out-of-state owners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We work with many out-of-state investors who own rental properties in Norman. We provide local oversight, clear monthly reporting, and handle everything so you don't have to be on-site.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is included in GRID's property management service?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our full-service management includes tenant screening and placement, rent collection and disbursement, maintenance coordination, lease management and renewals, monthly owner reporting, trust account management, and eviction coordination when needed.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    q: "How much does property management cost in Norman, OK?",
+    a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your property or portfolio.",
+  },
+  {
+    q: "Do you manage single-family rentals in Norman?",
+    a: "Yes. We manage single-family homes, small multifamily properties, and investment portfolios of all sizes in Norman and the surrounding OKC Metro area.",
+  },
+  {
+    q: "How do you screen tenants?",
+    a: "We run full credit checks, background verification, and income confirmation on every applicant. We look for tenants who pay on time, treat the property well, and stay long-term.",
+  },
+  {
+    q: "Do you manage properties for out-of-state owners?",
+    a: "Yes. We work with many out-of-state investors who own rental properties in Norman. We provide local oversight, clear monthly reporting, and handle everything so you don't have to be on-site.",
+  },
+  {
+    q: "What is included in GRID's property management service?",
+    a: "Our full-service management includes tenant screening and placement, rent collection and disbursement, maintenance coordination, lease management and renewals, monthly owner reporting, trust account management, and eviction coordination when needed.",
+  },
 ];
 
 export default function ManagePage() {
@@ -158,6 +233,28 @@ export default function ManagePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {faqs.map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

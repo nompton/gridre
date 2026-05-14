@@ -11,10 +11,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "GRID Real Estate",
+  title: {
+    default: "GRID Real Estate | Norman, OK Property & HOA Management",
+    template: "%s | GRID Real Estate",
+  },
   description:
-    "Find your place on the GRID. Buy, sell, invest, manage in Norman.",
-  metadataBase: new URL("http://localhost:3000"),
+    "Norman's investor-focused real estate brokerage. Full-service property management, HOA and association management, and investor services in Norman, Oklahoma.",
+  metadataBase: new URL("https://thegridre.com"),
+  openGraph: {
+    siteName: "GRID Real Estate",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
