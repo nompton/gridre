@@ -4,8 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Buy & Sell — GRID Real Estate",
-  description: "Buyer representation and listing services in Norman with an investor-first perspective. Local knowledge, clear strategy, and professional marketing.",
+  title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
+  description: "Buyer representation and home listings in Norman, Oklahoma with an investor-first perspective. Local market knowledge, professional photography, Matterport tours, and MLS syndication. Call (405) 310-1221.",
+  openGraph: {
+    title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
+    description: "Norman, OK buyer representation and listing services. Investor-first perspective, professional marketing, and local expertise.",
+    url: "https://thegridre.com/buy-sell",
+  },
 };
 
 export default function BuySellPage() {

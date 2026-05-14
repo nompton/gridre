@@ -4,16 +4,57 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "GRID Real Estate — Norman's Investor-Focused Brokerage",
-  description: "Property management, HOA management, and investor services in Norman, Oklahoma. GRID is built for owners who want professional management and results.",
+  title: "Property Management & HOA Management in Norman, OK | GRID Real Estate",
+  description: "Norman's investor-focused real estate brokerage. Professional property management, HOA and association management, and investor services in Norman, Oklahoma. Call (405) 310-1221.",
+  openGraph: {
+    title: "GRID Real Estate | Property & HOA Management in Norman, OK",
+    description: "Full-service property management and HOA management in Norman, Oklahoma. Tenant placement, rent collection, covenant enforcement, and board support.",
+    url: "https://thegridre.com",
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["RealEstateAgent", "LocalBusiness"],
+  name: "GRID Real Estate",
+  description: "Full-service property management, HOA and association management, and investor real estate services in Norman, Oklahoma.",
+  url: "https://thegridre.com",
+  telephone: "+14053101221",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Norman",
+    addressRegion: "OK",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 35.2226,
+    longitude: -97.4395,
+  },
+  areaServed: [
+    { "@type": "City", name: "Norman", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Oklahoma City", containedIn: "Oklahoma" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Real Estate Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Property Management", url: "https://thegridre.com/manage" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "HOA and Association Management", url: "https://thegridre.com/associations" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Investor Services", url: "https://thegridre.com/invest" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Buy & Sell Real Estate", url: "https://thegridre.com/buy-sell" } },
+    ],
+  },
 };
 
 export default function HomePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <section className="relative">
         <div className="relative h-[560px] w-full">
-          <Image src="/images/east-village.jpg" alt="Norman, Oklahoma" fill priority className="object-cover" />
+          <Image src="/images/east-village.jpg" alt="GRID Real Estate — property and HOA management in Norman, Oklahoma" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
