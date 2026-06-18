@@ -4,9 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Association Management — GRID Real Estate",
-  description:
-    "HOA, condo, and mixed-use association management in Norman. Financial oversight, vendor coordination, covenant enforcement, and board support.",
+  title: "HOA & Association Management in Norman, OK | GRID Real Estate",
+  description: "Professional HOA and condo association management in Norman, Oklahoma. Financial reporting, covenant enforcement, vendor coordination, and board support. Call (405) 310-1221.",
+  openGraph: {
+    title: "HOA & Association Management in Norman, OK | GRID Real Estate",
+    description: "Full-service HOA management for Norman, OK communities. Budget oversight, CC&R enforcement, owner communication, and board support from a local Norman company.",
+    url: "https://thegridre.com/associations",
+  },
 };
 
 const services = [
@@ -22,6 +26,76 @@ const types = [
   { title: "Small HOAs and planned communities", body: "Neighborhood associations with common areas, covenants, and shared infrastructure. We bring professional management to communities that often get overlooked by larger firms." },
   { title: "Condo associations", body: "Multi-unit communities with shared building systems, parking, and amenities. Complex ownership structures managed with clarity and proper documentation." },
   { title: "Mixed-use and commercial associations", body: "Communities with both residential and commercial components. We understand the different stakeholder needs and manage accordingly." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What does an HOA management company do?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An HOA management company handles the day-to-day operations of a homeowners association. This includes collecting dues, managing the budget and reserves, coordinating vendor work, enforcing CC&Rs, supporting board meetings, and communicating with owners and residents.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage small HOAs in Norman, OK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We specifically focus on smaller communities that are often overlooked by large regional firms. Whether you have 10 units or 100, we bring the same professional management standard.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does GRID handle covenant enforcement?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We enforce CC&Rs and community rules consistently, using proper notice procedures, documented processes, and fair communication. Enforcement is handled professionally to protect both the association and individual homeowners.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between self-managed and professionally managed HOAs?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Self-managed HOAs rely on volunteer board members to handle finances, vendor coordination, rule enforcement, and owner communication — often leading to inconsistency and burnout. A professional management company like GRID takes on all operational responsibilities, so board members can focus on governance and community decisions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage condo associations in Norman?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We manage condo associations with shared building systems, parking, and amenities. Complex ownership structures are handled with clear documentation and transparent financial reporting.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    q: "What does an HOA management company do?",
+    a: "An HOA management company handles the day-to-day operations of a homeowners association. This includes collecting dues, managing the budget and reserves, coordinating vendor work, enforcing CC&Rs, supporting board meetings, and communicating with owners and residents.",
+  },
+  {
+    q: "Do you manage small HOAs in Norman, OK?",
+    a: "Yes. We specifically focus on smaller communities that are often overlooked by large regional firms. Whether you have 10 units or 100, we bring the same professional management standard.",
+  },
+  {
+    q: "How does GRID handle covenant enforcement?",
+    a: "We enforce CC&Rs and community rules consistently, using proper notice procedures, documented processes, and fair communication. Enforcement is handled professionally to protect both the association and individual homeowners.",
+  },
+  {
+    q: "What is the difference between self-managed and professionally managed HOAs?",
+    a: "Self-managed HOAs rely on volunteer board members to handle finances, vendor coordination, rule enforcement, and owner communication — often leading to inconsistency and burnout. A professional management company like GRID takes on all operational responsibilities, so board members can focus on governance and community decisions.",
+  },
+  {
+    q: "Do you manage condo associations in Norman?",
+    a: "Yes. We manage condo associations with shared building systems, parking, and amenities. Complex ownership structures are handled with clear documentation and transparent financial reporting.",
+  },
 ];
 
 export default function AssociationsPage() {
@@ -128,6 +202,29 @@ export default function AssociationsPage() {
           </div>
         </div>
       </Section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      {/* FAQ */}
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">HOA management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {faqs.map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16">

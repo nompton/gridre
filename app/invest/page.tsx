@@ -4,9 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Investor Services — GRID Real Estate",
-  description:
-    "Acquisition support, portfolio strategy, and market analysis for Norman real estate investors. GRID is built by owners, for investors.",
+  title: "Real Estate Investment Services in Norman, OK | GRID Real Estate",
+  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Norman, Oklahoma real estate investors. GRID is run by investors, for investors. Call (405) 310-1221.",
+  openGraph: {
+    title: "Real Estate Investment Services in Norman, OK | GRID Real Estate",
+    description: "Norman, OK real estate investment services built by active owners. Acquisition support, market analysis, and seamless handoff into professional property management.",
+    url: "https://thegridre.com/invest",
+  },
 };
 
 const investorServices = [

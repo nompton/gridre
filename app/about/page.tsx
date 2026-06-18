@@ -3,8 +3,13 @@ import Section from "@/components/Section";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "About — GRID Real Estate | OKC Metro",
-  description: "GRID Real Estate is the OKC Metro's premier property management brokerage. Built on compliance experience, active ownership, and a scalable system that serves the entire metro.",
+  title: "About GRID Real Estate | Norman, OK Property Management Brokerage",
+  description: "GRID Real Estate is Norman, Oklahoma's investor-focused brokerage. Led by a licensed Oklahoma broker with deep compliance experience, active property ownership since 2018, and local market expertise.",
+  openGraph: {
+    title: "About GRID Real Estate | Norman, OK",
+    description: "Norman's investor-focused brokerage, built on real compliance experience and active property ownership since 2018.",
+    url: "https://thegridre.com/about",
+  },
 };
 
 export default function AboutPage() {
@@ -20,9 +25,9 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-6xl px-4">
             <div className="max-w-2xl text-white">
               <div className="text-sm font-medium text-white/80">About</div>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">local roots. metro reach.</h1>
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">built in Norman. backed by experience.</h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> is the OKC Metro's premier property management brokerage, built on real ownership experience, regulatory depth, and systems designed to scale across the entire metro.
+                <GridWord /> is Norman's investor-focused brokerage, built on real ownership experience, regulatory depth, and a genuine commitment to this city's future.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get in touch</a>
@@ -37,16 +42,16 @@ export default function AboutPage() {
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           <div className="max-w-prose space-y-5 text-sm leading-7 text-black/75">
             <p>
-              <GridWord /> Real Estate is an Oklahoma City Metro brokerage focused on property management, association management, and investor services. We're built specifically for owners, investors, and communities across the metro who need professional, accountable management.
+              <GridWord /> Real Estate is a Norman-based brokerage focused on property management, association management, and investor services. We're built specifically for owners, investors, and communities who need professional, accountable management.
             </p>
             <p>
-              The company is led by a licensed Oklahoma broker who has been managing their own properties since 2018. That foundation shapes how <GridWord /> operates. We manage for others the way we manage for ourselves — and we've built systems scalable enough to serve the entire OKC Metro.
+              The company is led by a licensed Oklahoma broker who has been managing their own properties since 2018. That foundation shapes how <GridWord /> operates. We manage for others the way we manage for ourselves.
             </p>
             <p>
               Our regulatory background, including work at the Oklahoma Real Estate Commission, means trust accounts, documentation, and financial controls are handled correctly from day one.
             </p>
             <p>
-              <GridWord /> is rooted in Norman and deeply invested in the broader metro's growth — from Edmond to Yukon, Moore to Midwest City, and everywhere in between.
+              <GridWord /> is also deeply involved in Norman's growth and planning. We're not just working in Norman. We're invested in where it's going.
             </p>
           </div>
 

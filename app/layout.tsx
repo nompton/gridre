@@ -11,24 +11,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "GRID Real Estate — OKC Metro Property Management",
+  title: {
+    default: "GRID Real Estate | Norman, OK Property & HOA Management",
+    template: "%s | GRID Real Estate",
+  },
   description:
-    "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
-  metadataBase: new URL("https://www.thegridre.com"),
+    "Norman's investor-focused real estate brokerage. Full-service property management, HOA and association management, and investor services in Norman, Oklahoma.",
+  metadataBase: new URL("https://thegridre.com"),
   openGraph: {
-    type: "website",
     siteName: "GRID Real Estate",
-    title: "GRID Real Estate — OKC Metro Property Management",
-    description:
-      "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
-    url: "https://www.thegridre.com",
-    images: [{ url: "/images/east-village.jpg", width: 1200, height: 630, alt: "GRID Real Estate" }],
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GRID Real Estate — OKC Metro Property Management",
-    description: "Premier property management across the Oklahoma City Metro.",
-    images: ["/images/east-village.jpg"],
   },
 };
 

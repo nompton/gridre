@@ -4,8 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Property Management — GRID Real Estate | OKC Metro",
-  description: "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D tours, drone coverage, social media marketing, tenant placement, and clean reporting.",
+  title: "Property Management in Norman, OK | GRID Real Estate",
+  description: "Full-service property management in Norman, Oklahoma for landlords and investors. Tenant screening, rent collection, maintenance coordination, and owner reporting. Call (405) 310-1221.",
+  openGraph: {
+    title: "Property Management in Norman, OK | GRID Real Estate",
+    description: "Professional rental property management for Norman, OK investors. Tenant placement, Matterport tours, trust account management, and clean monthly reporting.",
+    url: "https://thegridre.com/manage",
+  },
 };
 
 const services = [
@@ -16,6 +21,76 @@ const services = [
   { title: "Owner Reporting", body: "Monthly statements with clear income, expense, and maintenance records. Always accessible from any device." },
   { title: "Trust Account Management", body: "Disciplined financial controls and documentation built on real compliance experience. Your funds are handled correctly." },
   { title: "Eviction & Legal Coordination", body: "When needed, we manage the process with documentation, timelines, and local legal coordination." },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How much does property management cost in Norman, OK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your property or portfolio.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage single-family rentals in Norman?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We manage single-family homes, small multifamily properties, and investment portfolios of all sizes in Norman and the surrounding OKC Metro area.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do you screen tenants?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We run full credit checks, background verification, and income confirmation on every applicant. We look for tenants who pay on time, treat the property well, and stay long-term.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you manage properties for out-of-state owners?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We work with many out-of-state investors who own rental properties in Norman. We provide local oversight, clear monthly reporting, and handle everything so you don't have to be on-site.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is included in GRID's property management service?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our full-service management includes tenant screening and placement, rent collection and disbursement, maintenance coordination, lease management and renewals, monthly owner reporting, trust account management, and eviction coordination when needed.",
+      },
+    },
+  ],
+};
+
+const faqs = [
+  {
+    q: "How much does property management cost in Norman, OK?",
+    a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your property or portfolio.",
+  },
+  {
+    q: "Do you manage single-family rentals in Norman?",
+    a: "Yes. We manage single-family homes, small multifamily properties, and investment portfolios of all sizes in Norman and the surrounding OKC Metro area.",
+  },
+  {
+    q: "How do you screen tenants?",
+    a: "We run full credit checks, background verification, and income confirmation on every applicant. We look for tenants who pay on time, treat the property well, and stay long-term.",
+  },
+  {
+    q: "Do you manage properties for out-of-state owners?",
+    a: "Yes. We work with many out-of-state investors who own rental properties in Norman. We provide local oversight, clear monthly reporting, and handle everything so you don't have to be on-site.",
+  },
+  {
+    q: "What is included in GRID's property management service?",
+    a: "Our full-service management includes tenant screening and placement, rent collection and disbursement, maintenance coordination, lease management and renewals, monthly owner reporting, trust account management, and eviction coordination when needed.",
+  },
 ];
 
 export default function ManagePage() {
@@ -33,7 +108,7 @@ export default function ManagePage() {
               <div className="text-sm font-medium text-white/80">Property Management</div>
               <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">own it. don't manage it.</h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> handles the day-to-day so you can focus on the next acquisition. Premier marketing, professional management, clean books, reliable tenants — across the entire OKC Metro.
+                <GridWord /> handles the day-to-day so you can focus on the next acquisition. Professional management with clean books, reliable tenants, and zero surprises.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
@@ -55,8 +130,8 @@ export default function ManagePage() {
           <Card title="compliance you can trust">
             <GridWord />'s management practice is built on deep regulatory experience. Trust accounts, documentation, and financial controls are handled to the professional standard most managers never reach.
           </Card>
-          <Card title="premier marketing on every listing">
-            Every vacancy gets the full treatment: professional photography, Matterport 3D tour, drone coverage, social media campaigns, and syndication across 100+ rental platforms. Vacancies fill faster because no one markets better.
+          <Card title="professional marketing on every listing">
+            Every vacancy gets professional marketing services including photography, Matterport 3D tour, drone coverage, and MLS syndication. Vacancies fill faster because we present properties better.
           </Card>
         </div>
       </Section>
@@ -65,9 +140,9 @@ export default function ManagePage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-8">
             <div className="text-sm font-medium text-black/60">Included in every listing</div>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">The most comprehensive marketing in OKC.</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">The full marketing toolkit.</h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
-              Every property we manage gets premier marketing when it comes time to lease — no upgrades, no add-on fees. Professional photography, Matterport 3D, drone coverage, targeted social media campaigns, and syndication across Zillow, Apartments.com, Zumper, Facebook Marketplace, and 100+ more platforms.
+              Every property we manage gets professional marketing treatment when it comes time to lease. Our marketing toolkit includes Matterport tours, professional photography, drone coverage, and full digital syndication across hundreds of rental sites.
             </p>
           </div>
           <div className="mb-8 grid gap-3 md:grid-cols-3">
@@ -91,31 +166,7 @@ export default function ManagePage() {
               <Image src="/images/mosier_bedroom.jpg" alt="Bedroom photography" fill className="object-cover" />
             </div>
           </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-black/10 bg-white p-6">
-              <div className="text-sm font-semibold tracking-tight">Social Media Marketing</div>
-              <p className="mt-2 text-sm leading-6 text-black/70">
-                Every listing is promoted through Instagram and Facebook with professionally produced content and targeted ad campaigns — reaching qualified renters where they actually spend time.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Instagram", "Facebook", "Facebook Marketplace", "Targeted Ads"].map((p) => (
-                  <span key={p} className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/60">{p}</span>
-                ))}
-              </div>
-            </div>
-            <div className="rounded-2xl border border-black/10 bg-white p-6">
-              <div className="text-sm font-semibold tracking-tight">Platform Syndication</div>
-              <p className="mt-2 text-sm leading-6 text-black/70">
-                Every listing is pushed to 100+ rental platforms automatically — including the major sites where OKC renters search first.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Zillow", "Apartments.com", "Zumper", "Trulia", "HotPads", "Realtor.com"].map((p) => (
-                  <span key={p} className="rounded-full border border-black/10 bg-black/[0.03] px-3 py-1 text-xs font-medium text-black/60">{p}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="mt-4 rounded-2xl border border-black/10 bg-white p-8">
+          <div className="mt-10 rounded-2xl border border-black/10 bg-white p-8">
             <div className="mb-6">
               <div className="text-sm font-semibold tracking-tight">Matterport 3D Tour</div>
               <p className="mt-2 text-sm leading-6 text-black/70">
@@ -151,13 +202,13 @@ export default function ManagePage() {
               <div className="rounded-2xl border border-black/10 bg-white p-6">
                 <div className="text-sm font-semibold tracking-tight">Individual investors and landlords</div>
                 <p className="mt-3 text-sm leading-7 text-black/75">
-                  Whether you own one rental or a handful of properties anywhere in the OKC Metro, we provide the same professional management standard. No portfolio is too small to deserve proper management.
+                  Whether you own one rental or a handful of properties in Norman, we provide the same professional management standard. No portfolio is too small to deserve proper management.
                 </p>
               </div>
               <div className="rounded-2xl border border-black/10 bg-white p-6">
                 <div className="text-sm font-semibold tracking-tight">Out-of-state investors</div>
                 <p className="mt-3 text-sm leading-7 text-black/75">
-                  The OKC Metro is an attractive market for remote investors — strong rental demand, multiple university anchors, and long-term growth across the region. <GridWord /> gives you local eyes and hands so you can own here confidently without being here.
+                  Norman is an attractive market for remote investors. Strong rental demand, a university anchor, and long-term growth. <GridWord /> gives you local eyes and hands so you can own here confidently without being here.
                 </p>
               </div>
               <div className="rounded-2xl border border-black/10 bg-white p-6">
@@ -182,6 +233,28 @@ export default function ManagePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {faqs.map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

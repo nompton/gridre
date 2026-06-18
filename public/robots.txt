@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /open-house/
 
-Sitemap: https://www.thegridre.com/sitemap.xml
+Sitemap: https://thegridre.com/sitemap.xml
