@@ -101,35 +101,58 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <Section title="What we do" kicker="Core services">
-        <div className="grid gap-4 md:grid-cols-2">
-          <Card title="property management" href="/manage">
-            Full-service management for single-family rentals, small multifamily, and investment portfolios. Tenant placement, rent collection, maintenance coordination, and clean reporting handled professionally.
-          </Card>
-          <Card title="investor services" href="/invest">
-            Acquisition support, market analysis, and portfolio strategy for  investors looking in Norman and the OKC Metro. We understand the numbers because we are investors.
-          </Card>
+      {/* INVESTOR FLOW SECTION */}
+      <section className="py-16">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-10">
+            <div className="text-sm font-medium text-black/50">For investors</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">One company. The full investment cycle.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
+              Most brokerages help you buy or sell. <GridWord /> stays with you through the whole thing — finding the deal, running the numbers, managing the asset, and selling when it's time.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            <a href="/invest" className="group rounded-2xl border border-black/10 bg-white p-6 shadow-sm hover:border-black/25 transition-colors">
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">01 — Find</div>
+              <div className="text-sm font-semibold tracking-tight">Investor Services</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">Acquisition support, cash flow underwriting, market analysis, and portfolio strategy. We run real numbers on every deal.</p>
+              <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">learn more →</div>
+            </a>
+            <a href="/manage" className="group rounded-2xl border border-black/10 bg-white p-6 shadow-sm hover:border-black/25 transition-colors">
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">02 — Manage</div>
+              <div className="text-sm font-semibold tracking-tight">Property Management</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">Premier marketing, tenant placement, rent collection, maintenance, and clean monthly reporting. Acquisitions handed directly into management.</p>
+              <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">learn more →</div>
+            </a>
+            <a href="/buy-sell" className="group rounded-2xl border border-black/10 bg-white p-6 shadow-sm hover:border-black/25 transition-colors">
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">03 — Exit</div>
+              <div className="text-sm font-semibold tracking-tight">Buy &amp; Sell</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">When it's time to sell, we bring professional photography, Matterport 3D, and investor-to-investor positioning to maximize your return.</p>
+              <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">learn more →</div>
+            </a>
+          </div>
+          <div className="mt-4 rounded-2xl border border-black/10 bg-black/[0.02] p-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div className="text-sm font-semibold tracking-tight">Also managing HOAs and associations</div>
+                <p className="mt-1 text-sm text-black/65">Financial oversight, covenant enforcement, vendor coordination, and board support for Norman communities.</p>
+              </div>
+              <a href="/associations" className="shrink-0 rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30 transition-colors">association management →</a>
+            </div>
+          </div>
         </div>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <Card title="association management" href="/associations">
-            HOA, condo, and mixed-use association management for Norman communities. Financial oversight, vendor coordination, covenant enforcement, and board support done right.
-          </Card>
-          <Card title="buy & sell" href="/buy-sell">
-            Buyer representation and listing services with an investor-first perspective on every transaction. Local knowledge, clear strategy, smooth execution.
-          </Card>
-        </div>
-      </Section>
+      </section>
       <section className="border-y border-black/10 bg-black/[0.02] py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <div className="text-sm font-medium text-black/60">About GRID</div>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Built for Norman. Backed by real experience.</h2>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Built for the OKC Metro. Backed by real experience.</h2>
               <p className="mt-5 text-sm leading-7 text-black/75">
-                <GridWord /> is Norman's investor-focused brokerage, built by people who own, manage, and operate real estate in this market. Our background spans brokerage compliance, active investment ownership, and years of hands-on property management.
+                <GridWord /> is the OKC Metro's premier property management brokerage, built by people who own, manage, and operate real estate in this market. Our background spans brokerage compliance, active investment ownership since 2018, and years of hands-on property management.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                We manage properties the way we'd want our own managed. That means taking care of the tenant, staying on top of maintenance, and treating every property like the investment it is. It comes from experience, not a company policy.
+                We manage properties the way we'd want our own managed — and we market them better than anyone in the metro. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every listing.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="/about" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">about GRID</a>
@@ -148,7 +171,7 @@ export default function HomePage() {
             <div className="text-sm font-medium text-white/75">Ready to work together?</div>
             <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Management, investments, or associations. Let's talk.</div>
             <div className="mt-3 max-w-xl text-sm leading-7 text-white/80">
-              Whether you own one rental or a growing portfolio, manage an HOA, or want to invest in Norman, <GridWord /> is built for you.
+              Whether you own one rental or a growing portfolio, manage an HOA, or want to invest anywhere in the OKC Metro, <GridWord /> is built for you.
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">contact <GridWord /></a>

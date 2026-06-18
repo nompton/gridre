@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Real Estate Investment Services in Norman, OK | GRID Real Estate",
-  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Norman, Oklahoma real estate investors. GRID is run by investors, for investors. Call (405) 310-1221.",
+  title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
+  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. GRID is run by active owners, for investors. Call (405) 310-1221.",
   openGraph: {
-    title: "Real Estate Investment Services in Norman, OK | GRID Real Estate",
-    description: "Norman, OK real estate investment services built by active owners. Acquisition support, market analysis, and seamless handoff into professional property management.",
+    title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
+    description: "OKC Metro real estate investment services built by active owners. Acquisition support, market analysis, and seamless handoff into professional property management.",
     url: "https://thegridre.com/invest",
   },
 };
@@ -16,7 +16,7 @@ export const metadata = {
 const investorServices = [
   { title: "Acquisition Support", body: "From identifying opportunities to closing, we walk through every deal with an ownership lens. Neighborhoods, rent potential, condition, and exit strategy all factored in." },
   { title: "Cash Flow & Underwriting", body: "We run real numbers on every deal. Rent comps, expense assumptions, cap rate, and cash-on-cash return. No optimistic projections designed to close a transaction." },
-  { title: "Market Analysis", body: "Norman-specific insight on rental demand, neighborhood trajectory, zoning shifts, and where value is moving. Local knowledge that doesn't come from Zillow." },
+  { title: "Market Analysis", body: "OKC Metro insight on rental demand, neighborhood trajectory, zoning shifts, and where value is moving. Local knowledge that doesn't come from Zillow." },
   { title: "Portfolio Strategy", body: "Whether you're building from scratch or optimizing what you own, we help you think through allocation, leverage, and long-term positioning." },
   { title: "Management Integration", body: "Acquisitions handed directly into professional management. No gap, no transition friction. Buy it and hand it off in one conversation." },
   { title: "Disposition & Selling", body: "When it's time to sell, we bring the full GRID marketing stack. Professional photography, Matterport, and investor-to-investor positioning." },
@@ -40,7 +40,7 @@ export default function InvestPage() {
                 invest with an owner's mindset
               </h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> is built for investors because it is run by owners. We understand returns, tenant demand, long-term value, and the Norman neighborhoods shaping the next decade.
+                <GridWord /> is built for investors because it is run by owners. We understand returns, tenant demand, long-term value, and the OKC Metro neighborhoods shaping the next decade.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">talk investing</a>
@@ -103,28 +103,39 @@ export default function InvestPage() {
         </div>
       </section>
 
-      {/* WHY NORMAN */}
-      <Section title="Why Norman" kicker="The market">
+      {/* WHY OKC METRO */}
+      <Section title="Why the OKC Metro" kicker="The market">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
           <div className="space-y-4">
             <p className="text-sm leading-7 text-black/75">
-              Norman is a university-anchored market with consistent rental demand, active infill development, and a growth trajectory that rewards long-term owners. It's not a speculative market. It's a stable, income-generating one.
+              The Oklahoma City Metro is one of the most stable rental markets in the country — low cost of entry, strong rental demand, and consistent cash flow without the volatility of coastal markets. University anchors, major employers, and steady population growth across the metro make it a long-term owner's market.
             </p>
             <p className="text-sm leading-7 text-black/75">
-              <GridWord /> is deeply embedded in how Norman is growing, through active involvement in the city's planning process, local development projects through <span className="font-semibold">Norman OK Development</span>, and the <span className="font-semibold">Nompton™ Group's</span> network of operators and community stakeholders. We see opportunities before they're widely known.
+              <GridWord /> is deeply embedded in how the OKC Metro is growing — through active involvement in planning, local development projects, and the <span className="font-semibold">Nompton™ Group's</span> network of operators and community stakeholders. We see opportunities before they're widely known.
             </p>
+            <div className="grid gap-3 sm:grid-cols-3 pt-2">
+              {[
+                { stat: "Low entry costs", note: "Strong cash flow relative to purchase price" },
+                { stat: "Stable demand", note: "Consistent rental demand across price points" },
+                { stat: "Metro growth", note: "Population and job growth across all submarkets" },
+              ].map((item) => (
+                <div key={item.stat} className="rounded-2xl border border-black/10 bg-white p-4">
+                  <div className="text-sm font-semibold tracking-tight">{item.stat}</div>
+                  <div className="mt-1 text-xs text-black/60 leading-5">{item.note}</div>
+                </div>
+              ))}
+            </div>
             <div className="flex flex-wrap gap-3 pt-2">
-              <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">talk about investing in Norman</a>
+              <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">talk about investing in OKC</a>
             </div>
           </div>
 
-          {/* Two Norman photos stacked */}
           <div className="grid gap-4">
             <div className="relative h-[200px] overflow-hidden rounded-2xl border border-black/10">
-              <Image src="/images/logan_street_view.jpeg" alt="Norman street view" fill className="object-cover" />
+              <Image src="/images/logan_street_view.jpeg" alt="OKC Metro street view" fill className="object-cover" />
             </div>
             <div className="relative h-[200px] overflow-hidden rounded-2xl border border-black/10">
-              <Image src="/images/logan_building_sky.jpeg" alt="Norman building" fill className="object-cover" />
+              <Image src="/images/logan_building_sky.jpeg" alt="OKC Metro building" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -137,7 +148,7 @@ export default function InvestPage() {
             <div className="text-sm font-medium text-white/75">Ready to invest in Norman?</div>
             <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Let's talk about your goals.</div>
             <div className="mt-3 max-w-xl text-sm leading-7 text-white/80">
-              Whether you're evaluating your first rental or expanding a portfolio, we'll have a real conversation about the numbers, the market, and the right move.
+              Whether you're evaluating your first OKC rental or expanding a portfolio, we'll have a real conversation about the numbers, the market, and the right move.
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">talk investing</a>
