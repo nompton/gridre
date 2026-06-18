@@ -4,8 +4,13 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Buy & Sell — GRID Real Estate | OKC Metro",
-  description: "Buyer representation and listing services across the OKC Metro with an investor-first perspective. Premier marketing, local knowledge, and clear strategy.",
+  title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
+  description: "Buyer representation and home listings in Norman, Oklahoma with an investor-first perspective. Local market knowledge, professional photography, Matterport tours, and MLS syndication. Call (405) 310-1221.",
+  openGraph: {
+    title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
+    description: "Norman, OK buyer representation and listing services. Investor-first perspective, professional marketing, and local expertise.",
+    url: "https://thegridre.com/buy-sell",
+  },
 };
 
 export default function BuySellPage() {
@@ -34,14 +39,14 @@ export default function BuySellPage() {
         </div>
       </section>
 
-      <Section title="Buying in the OKC Metro" kicker="Buyer representation">
+      <Section title="Buying in Norman" kicker="Buyer representation">
         <div className="grid gap-8 md:grid-cols-2 md:items-center">
           <div className="space-y-4">
             <p className="text-sm leading-7 text-black/75">
-              Whether you're buying a primary residence or adding to a rental portfolio anywhere in the OKC Metro, <GridWord /> brings a perspective most agents can't. One that accounts for long-term value, rental potential, and neighborhood trajectory alongside the personal factors.
+              Whether you're buying a primary residence or adding to a rental portfolio, <GridWord /> brings a perspective most agents can't. One that accounts for long-term value, rental potential, and neighborhood trajectory alongside the personal factors.
             </p>
             <p className="text-sm leading-7 text-black/75">
-              The OKC Metro is a nuanced market. Neighborhoods vary significantly in rental demand, appreciation, and long-term positioning. We help you understand what you're actually buying — not just the address.
+              Norman is a nuanced market. Neighborhoods vary significantly in rental demand, appreciation, and long-term positioning. We help you understand what you're actually buying, not just the address.
             </p>
             <div className="grid gap-4">
               <Card title="investor-aware buyer representation">
@@ -67,10 +72,10 @@ export default function BuySellPage() {
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <div className="space-y-4">
               <p className="text-sm leading-7 text-black/75">
-                <GridWord /> listings get premier marketing because how a property is presented directly affects what it sells for and how fast. Professional photography, Matterport 3D, drone coverage, and targeted social media campaigns are standard — not add-ons.
+                <GridWord /> listings get professional marketing because how a property is presented directly affects what it sells for and how fast. We don't cut corners on presentation.
               </p>
               <p className="text-sm leading-7 text-black/75">
-                For investors selling a rental, we understand the specific positioning that attracts the right buyer — one who sees the income potential, not just the property.
+                For investors selling a rental, we understand the specific positioning that attracts the right buyer. One who sees the income potential, not just the property.
               </p>
             </div>
             <div className="grid gap-4">
@@ -81,7 +86,7 @@ export default function BuySellPage() {
                 Wide-angle, professionally edited photography and FAA-compliant aerial coverage that shows the property and its context at its best.
               </Card>
               <Card title="MLS and full digital syndication">
-                Listed on MLSOK and syndicated to Zillow, Realtor.com, Redfin, and 100+ portals, plus Instagram and Facebook targeted ad campaigns that reach serious buyers across OKC.
+                Listed on MLSOK and syndicated to Zillow, Realtor.com, Redfin, and 100+ portals, plus targeted social distribution through the Nompton™ network.
               </Card>
             </div>
           </div>

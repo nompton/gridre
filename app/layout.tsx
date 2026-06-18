@@ -11,10 +11,25 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "GRID Real Estate",
+  title: "GRID Real Estate — OKC Metro Property Management",
   description:
-    "Find your place on the GRID. Buy, sell, invest, manage in Norman.",
-  metadataBase: new URL("http://localhost:3000"),
+    "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
+  metadataBase: new URL("https://www.thegridre.com"),
+  openGraph: {
+    type: "website",
+    siteName: "GRID Real Estate",
+    title: "GRID Real Estate — OKC Metro Property Management",
+    description:
+      "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
+    url: "https://www.thegridre.com",
+    images: [{ url: "/images/east-village.jpg", width: 1200, height: 630, alt: "GRID Real Estate" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GRID Real Estate — OKC Metro Property Management",
+    description: "Premier property management across the Oklahoma City Metro.",
+    images: ["/images/east-village.jpg"],
+  },
 };
 
 export default function RootLayout({
