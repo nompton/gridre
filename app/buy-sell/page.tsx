@@ -68,27 +68,60 @@ export default function BuySellPage() {
           <div className="mb-8">
             <div className="text-sm font-medium text-black/60">Listing and marketing</div>
             <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Selling with <GridWord /></h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
+              How a property is presented directly affects what it sells for and how fast. <GridWord /> listings get the full marketing treatment — professional photography, Matterport 3D, drone coverage, and targeted social media campaigns are standard, not add-ons.
+            </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2 md:items-start">
-            <div className="space-y-4">
-              <p className="text-sm leading-7 text-black/75">
-                <GridWord /> listings get professional marketing because how a property is presented directly affects what it sells for and how fast. We don't cut corners on presentation.
-              </p>
-              <p className="text-sm leading-7 text-black/75">
-                For investors selling a rental, we understand the specific positioning that attracts the right buyer. One who sees the income potential, not just the property.
+
+          <div className="mb-6 grid gap-3 md:grid-cols-3">
+            <div className="relative h-[220px] overflow-hidden rounded-2xl border border-black/10 md:col-span-2">
+              <Image src="/images/listing-exterior.jpg" alt="Professional exterior photography for OKC home listing" fill className="object-cover" />
+              <div className="absolute bottom-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">Professional photography</div>
+            </div>
+            <div className="grid gap-3">
+              <div className="relative h-[104px] overflow-hidden rounded-2xl border border-black/10">
+                <Image src="/images/listing-kitchen.jpg" alt="Professional kitchen photography" fill className="object-cover" />
+              </div>
+              <div className="relative h-[104px] overflow-hidden rounded-2xl border border-black/10">
+                <Image src="/images/listing-living.jpg" alt="Professional living room photography" fill className="object-cover" />
+              </div>
+            </div>
+          </div>
+          <div className="mb-8 grid gap-3 md:grid-cols-4">
+            <div className="relative h-[180px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/listing-bedroom.jpg" alt="Professional bedroom photography" fill className="object-cover" />
+            </div>
+            <div className="relative h-[180px] overflow-hidden rounded-2xl border border-black/10">
+              <Image src="/images/listing-bath.jpg" alt="Professional bathroom photography" fill className="object-cover" />
+            </div>
+            <div className="relative h-[180px] overflow-hidden rounded-2xl border border-black/10 md:col-span-2">
+              <Image src="/images/listing-backpatio.jpg" alt="Professional back patio photography" fill className="object-cover" />
+              <div className="absolute bottom-3 left-3 rounded-lg bg-black/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">Full property coverage</div>
+            </div>
+          </div>
+
+          <div className="mb-8 rounded-2xl border border-black/10 bg-white p-8">
+            <div className="mb-6">
+              <div className="text-sm font-semibold tracking-tight">Matterport 3D Tour</div>
+              <p className="mt-2 text-sm leading-6 text-black/70">
+                Every listing gets a full Matterport virtual tour. Buyers and investors explore the property remotely and arrive at showings already serious.
               </p>
             </div>
-            <div className="grid gap-4">
-              <Card title="Matterport 3D tours">
-                Every listing gets a full Matterport virtual tour, letting buyers and investors explore the property remotely and arrive at showings already qualified.
-              </Card>
-              <Card title="professional photography and drone">
-                Wide-angle, professionally edited photography and FAA-compliant aerial coverage that shows the property and its context at its best.
-              </Card>
-              <Card title="MLS and full digital syndication">
-                Listed on MLSOK and syndicated to Zillow, Realtor.com, Redfin, and 100+ portals, plus targeted social distribution through the Nompton™ network.
-              </Card>
+            <div className="overflow-hidden rounded-xl border border-black/10">
+              <iframe width="100%" height="480" src="https://my.matterport.com/show/?m=1N1cK9f4b9Y" frameBorder="0" allowFullScreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking" className="w-full" />
             </div>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            <Card title="professional photography & drone">
+              Wide-angle, professionally edited photography and FAA-compliant aerial coverage that shows the property and its surroundings at their best.
+            </Card>
+            <Card title="social media campaigns">
+              Targeted Instagram and Facebook ads that put your listing in front of qualified buyers and investors actively looking in OKC.
+            </Card>
+            <Card title="MLS and full syndication">
+              Listed on MLSOK and syndicated to Zillow, Realtor.com, Redfin, and 100+ portals. Maximum exposure, automatically.
+            </Card>
           </div>
         </div>
       </section>
