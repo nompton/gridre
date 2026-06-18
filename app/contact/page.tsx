@@ -30,9 +30,9 @@ export default function ContactPage() {
                 <a className="font-medium underline underline-offset-4 hover:text-black/70 transition" href="mailto:info@thegridre.com">info@thegridre.com</a>
               </div>
               <div className="mt-4 text-sm">
-                <div className="text-black/60">mailing address</div>
-                <div className="mt-1">PO BOX 5063</div>
-                <div>Norman, OK 73070</div>
+                <div className="text-black/60">address</div>
+                <div className="mt-1">117 E Daws St</div>
+                <div>Norman, OK 73069</div>
               </div>
             </div>
             <div className="rounded-2xl border border-black/10 p-6">
