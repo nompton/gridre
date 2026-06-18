@@ -108,7 +108,7 @@ export default function BuySellPage() {
               </p>
             </div>
             <div className="overflow-hidden rounded-xl border border-black/10">
-              <iframe width="100%" height="480" src="https://my.matterport.com/show/?m=1N1cK9f4b9Y" frameBorder="0" allowFullScreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking" className="w-full" />
+              <iframe width="100%" height="480" src="https://my.matterport.com/show/?m=cHWR8EsNBfv" frameBorder="0" allowFullScreen allow="autoplay; fullscreen; web-share; xr-spatial-tracking" className="w-full" />
             </div>
           </div>
 
