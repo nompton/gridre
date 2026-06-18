@@ -187,19 +187,34 @@ export default function AssociationsPage() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-2xl border border-black/10 p-6">
-          <div className="grid gap-6 md:grid-cols-2 md:items-center">
-            <div>
-              <div className="text-sm font-semibold tracking-tight">Currently managing in Norman</div>
-              <p className="mt-3 text-sm leading-7 text-black/75">
-                <GridWord /> is currently active in Norman with association clients. If your community is looking for a management change, or setting up management for the first time, we'd welcome a conversation.
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center gap-3">
-              <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">contact us about your association</a>
-              <a href="/manage" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">property management</a>
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-black/10 p-6">
+            <div className="grid gap-6 md:items-center">
+              <div>
+                <div className="text-sm font-semibold tracking-tight">Currently managing in Norman</div>
+                <p className="mt-3 text-sm leading-7 text-black/75">
+                  <GridWord /> is currently active in Norman with association clients. If your community is looking for a management change, or setting up management for the first time, we'd welcome a conversation.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">contact us</a>
+                <a href="/manage" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">property management</a>
+              </div>
             </div>
           </div>
+          <a
+            href="https://hoaadvisorsok.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group rounded-2xl border border-black/10 bg-black/[0.02] p-6 hover:border-black/25 transition-colors"
+          >
+            <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Dedicated HOA site</div>
+            <div className="text-sm font-semibold tracking-tight">hoaadvisorsok.com</div>
+            <p className="mt-2 text-sm leading-6 text-black/70">
+              Our dedicated HOA management site — deeper detail on services, process, pricing questions, and a direct proposal form for board members.
+            </p>
+            <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">visit hoaadvisorsok.com →</div>
+          </a>
         </div>
       </Section>
 

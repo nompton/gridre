@@ -40,6 +40,10 @@ const localBusinessSchema = {
     { "@type": "City", name: "Mustang", containedIn: "Oklahoma" },
     { "@type": "City", name: "Midwest City", containedIn: "Oklahoma" },
   ],
+  sameAs: [
+    "https://hoaadvisorsok.com",
+    "https://oldsilkstocking.com",
+  ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Real Estate Services",
