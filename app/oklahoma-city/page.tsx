@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
@@ -20,19 +21,24 @@ const features = [
 export default function OklahomaCityPage() {
   return (
     <div>
-      <section className="border-b border-black/10 py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="max-w-3xl">
-            <div className="text-sm font-medium text-black/50">Property Management — Oklahoma City, OK</div>
-            <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Oklahoma City property management done right.
-            </h1>
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-black/70">
-              <GridWord /> manages rental properties across Oklahoma City with a level of marketing and professionalism most local managers can't match. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every vacancy — not an upgrade.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">get a management proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">call (405) 310-1221</a>
+      <section className="relative border-b border-black/10">
+        <div className="relative h-[480px] w-full">
+          <Image src="/images/okc-rental-townhome.jpg" alt="Oklahoma City rental property — GRID Real Estate property management" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        </div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="mx-auto w-full max-w-6xl px-4">
+            <div className="max-w-2xl text-white">
+              <div className="text-sm font-medium text-white/80">Property Management — Oklahoma City, OK</div>
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Oklahoma City property management done right.</h1>
+              <p className="mt-5 text-sm leading-7 text-white/90">
+                <GridWord /> manages rental properties across Oklahoma City with a level of marketing and professionalism most local managers can't match. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every vacancy — not an upgrade.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
+                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+              </div>
             </div>
           </div>
         </div>

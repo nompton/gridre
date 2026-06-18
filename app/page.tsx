@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Property Management & HOA Management in Norman, OK | GRID Real Estate",
-  description: "Norman's investor-focused real estate brokerage. Professional property management, HOA and association management, and investor services in Norman, Oklahoma. Call (405) 310-1221.",
+  title: "OKC Metro Property Management | GRID Real Estate",
+  description: "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-1221.",
   openGraph: {
-    title: "GRID Real Estate | Property & HOA Management in Norman, OK",
-    description: "Full-service property management and HOA management in Norman, Oklahoma. Tenant placement, rent collection, covenant enforcement, and board support.",
+    title: "OKC Metro Property Management | GRID Real Estate",
+    description: "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
     url: "https://thegridre.com",
   },
 };
@@ -17,7 +17,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "LocalBusiness"],
   name: "GRID Real Estate",
-  description: "Full-service property management, HOA and association management, and investor real estate services in Norman, Oklahoma.",
+  description: "Premier property management, HOA and association management, and investor real estate services across the Oklahoma City Metro.",
   url: "https://thegridre.com",
   telephone: "+14053101221",
   address: {
@@ -33,8 +33,12 @@ const localBusinessSchema = {
   },
   areaServed: [
     { "@type": "City", name: "Norman", containedIn: "Oklahoma" },
-    { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
     { "@type": "City", name: "Oklahoma City", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Edmond", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Yukon", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Mustang", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Midwest City", containedIn: "Oklahoma" },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -64,9 +68,9 @@ export default function HomePage() {
               <div className="mb-5">
                 <Image src="/brand/grid_logo_white.png" alt="GRID Real Estate" width={240} height={70} priority className="drop-shadow-lg" />
               </div>
-              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Norman's investor-focused brokerage</h1>
+              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Oklahoma City Metro's premier property management brokerage</h1>
               <p className="mt-5 max-w-xl text-white/90 text-sm leading-7 drop-shadow-sm">
-                <GridWord /> is built for property owners, investors, and associations who want professional management, regulatory fluency, and a brokerage that thinks like an owner.
+                <GridWord /> serves property owners, investors, and associations across the OKC Metro with professional management, premier marketing, and a brokerage that thinks like an owner.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/manage" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">property management</a>

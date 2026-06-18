@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
@@ -11,19 +12,24 @@ export const metadata = {
 export default function MoorePage() {
   return (
     <div>
-      <section className="border-b border-black/10 py-20">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="max-w-3xl">
-            <div className="text-sm font-medium text-black/50">Property Management — Moore, OK</div>
-            <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
-              Moore property management. Professionally done.
-            </h1>
-            <p className="mt-5 max-w-2xl text-sm leading-7 text-black/70">
-              Moore has a deep pool of quality renters — families, professionals, and workers tied to the south OKC corridor. <GridWord /> manages Moore rentals with professional photography, Matterport 3D tours, drone coverage, targeted social media, and syndication across 100+ platforms. Vacancies fill fast when properties are presented well.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">get a management proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">call (405) 310-1221</a>
+      <section className="relative border-b border-black/10">
+        <div className="relative h-[480px] w-full">
+          <Image src="/images/moore-rental-home.jpg" alt="Moore Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        </div>
+        <div className="absolute inset-0 flex items-center">
+          <div className="mx-auto w-full max-w-6xl px-4">
+            <div className="max-w-2xl text-white">
+              <div className="text-sm font-medium text-white/80">Property Management — Moore, OK</div>
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Moore property management. Professionally done.</h1>
+              <p className="mt-5 text-sm leading-7 text-white/90">
+                Moore has a deep pool of quality renters — families, professionals, and workers tied to the south OKC corridor. <GridWord /> manages Moore rentals with professional photography, Matterport 3D tours, drone coverage, targeted social media, and syndication across 100+ platforms.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
+                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+              </div>
             </div>
           </div>
         </div>
