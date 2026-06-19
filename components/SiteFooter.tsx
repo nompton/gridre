@@ -44,15 +44,11 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="border-t border-black/10 pt-6 space-y-1.5">
-          <div>© {new Date().getFullYear()} GRID Real Estate LLC — Norman, Oklahoma</div>
+          <div>© {new Date().getFullYear()} GRID Real Estate LLC — Oklahoma</div>
           <div>
             a member of the{" "}
             <a href="https://www.nompton.net" target="_blank" rel="noopener noreferrer" className="font-medium text-black underline underline-offset-4 hover:text-black/70 transition">
               nompton™ group
-            </a>
-            {" "}—{" "}
-            <a href="https://www.nompton.net/construction.html" target="_blank" rel="noopener noreferrer" className="font-medium text-black underline underline-offset-4 hover:text-black/70 transition">
-              nompton™ construction
             </a>
           </div>
           <div><a href="/privacy" className="hover:text-black transition">privacy policy</a></div>

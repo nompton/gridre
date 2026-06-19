@@ -12,11 +12,11 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: {
-    default: "GRID Real Estate | Norman, OK Property & HOA Management",
+    default: "GRID Real Estate | Oklahoma Property & HOA Management",
     template: "%s | GRID Real Estate",
   },
   description:
-    "Norman's investor-focused real estate brokerage. Full-service property management, HOA and association management, and investor services in Norman, Oklahoma.",
+    "Oklahoma's investor-focused real estate brokerage. Full-service property management, HOA and association management, and investor services across the OKC and Tulsa metros.",
   metadataBase: new URL("https://thegridre.com"),
   openGraph: {
     siteName: "GRID Real Estate",
