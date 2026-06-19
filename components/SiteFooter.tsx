@@ -23,14 +23,23 @@ export default function SiteFooter() {
             </div>
           </div>
           <div>
-            <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Service Area</div>
-            <div className="space-y-1.5">
+            <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">OKC Metro</div>
+            <div className="space-y-1.5 mb-5">
               <div><a href="/oklahoma-city" className="hover:text-black transition">Oklahoma City</a></div>
               <div><a href="/edmond" className="hover:text-black transition">Edmond</a></div>
               <div><a href="/yukon" className="hover:text-black transition">Yukon</a></div>
               <div><a href="/moore" className="hover:text-black transition">Moore</a></div>
               <div><a href="/mustang" className="hover:text-black transition">Mustang</a></div>
               <div><a href="/midwest-city" className="hover:text-black transition">Midwest City</a></div>
+            </div>
+            <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Tulsa Metro</div>
+            <div className="space-y-1.5">
+              <div><a href="/tulsa" className="hover:text-black transition">Tulsa</a></div>
+              <div><a href="/bixby" className="hover:text-black transition">Bixby</a></div>
+              <div><a href="/broken-arrow" className="hover:text-black transition">Broken Arrow</a></div>
+              <div><a href="/jenks" className="hover:text-black transition">Jenks</a></div>
+              <div><a href="/owasso" className="hover:text-black transition">Owasso</a></div>
+              <div><a href="/sand-springs" className="hover:text-black transition">Sand Springs</a></div>
             </div>
           </div>
         </div>
@@ -40,6 +49,10 @@ export default function SiteFooter() {
             a member of the{" "}
             <a href="https://www.nompton.net" target="_blank" rel="noopener noreferrer" className="font-medium text-black underline underline-offset-4 hover:text-black/70 transition">
               nompton™ group
+            </a>
+            {" "}—{" "}
+            <a href="https://www.nompton.net/construction.html" target="_blank" rel="noopener noreferrer" className="font-medium text-black underline underline-offset-4 hover:text-black/70 transition">
+              nompton™ construction
             </a>
           </div>
           <div><a href="/privacy" className="hover:text-black transition">privacy policy</a></div>

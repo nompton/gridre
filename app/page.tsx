@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "OKC Metro Property Management | GRID Real Estate",
-  description: "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-1221.",
+  title: "Oklahoma Property Management — OKC & Tulsa Metro | GRID Real Estate",
+  description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-1221.",
   openGraph: {
-    title: "OKC Metro Property Management | GRID Real Estate",
-    description: "Premier property management across the Oklahoma City Metro. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
+    title: "Oklahoma Property Management — OKC & Tulsa Metro | GRID Real Estate",
+    description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
     url: "https://thegridre.com",
   },
 };
@@ -17,7 +17,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "LocalBusiness"],
   name: "GRID Real Estate",
-  description: "Premier property management, HOA and association management, and investor real estate services across the Oklahoma City Metro.",
+  description: "Premier property management, HOA and association management, and investor real estate services across the Oklahoma City and Tulsa Metro areas.",
   url: "https://thegridre.com",
   telephone: "+14053101221",
   address: {
@@ -39,6 +39,12 @@ const localBusinessSchema = {
     { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
     { "@type": "City", name: "Mustang", containedIn: "Oklahoma" },
     { "@type": "City", name: "Midwest City", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Tulsa", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Bixby", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Broken Arrow", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Jenks", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Owasso", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Sand Springs", containedIn: "Oklahoma" },
   ],
   sameAs: [
     "https://hoaadvisorsok.com",
@@ -72,9 +78,9 @@ export default function HomePage() {
               <div className="mb-5">
                 <Image src="/brand/grid_logo_white.png" alt="GRID Real Estate" width={240} height={70} priority className="drop-shadow-lg" />
               </div>
-              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Oklahoma City Metro's premier property management brokerage</h1>
+              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Oklahoma's premier property management brokerage — OKC and Tulsa Metro</h1>
               <p className="mt-5 max-w-xl text-white/90 text-sm leading-7 drop-shadow-sm">
-                <GridWord /> serves property owners, investors, and associations across the OKC Metro with professional management, premier marketing, and a brokerage that thinks like an owner.
+                <GridWord /> serves property owners, investors, and associations across both the Oklahoma City and Tulsa Metro areas with professional management, premier marketing, and a brokerage that thinks like an owner.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/manage" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">property management</a>
@@ -151,12 +157,12 @@ export default function HomePage() {
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
               <div className="text-sm font-medium text-black/60">About GRID</div>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Built for the OKC Metro. Backed by real experience.</h2>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Built for Oklahoma. OKC and Tulsa Metro.</h2>
               <p className="mt-5 text-sm leading-7 text-black/75">
-                <GridWord /> is the OKC Metro's premier property management brokerage, built by people who own, manage, and operate real estate in this market. Our background spans brokerage compliance, active investment ownership since 2018, and years of hands-on property management.
+                <GridWord /> is Oklahoma's premier property management brokerage, built by people who own, manage, and operate real estate across both metros. Our background spans brokerage compliance, active investment ownership since 2018, and years of hands-on property management in OKC and Tulsa markets.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                We manage properties the way we'd want our own managed — and we market them better than anyone in the metro. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every listing.
+                We manage properties the way we'd want our own managed — and we market them better than anyone in either metro. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every listing.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="/about" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">about GRID</a>
@@ -175,7 +181,7 @@ export default function HomePage() {
             <div className="text-sm font-medium text-white/75">Ready to work together?</div>
             <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Management, investments, or associations. Let's talk.</div>
             <div className="mt-3 max-w-xl text-sm leading-7 text-white/80">
-              Whether you own one rental or a growing portfolio, manage an HOA, or want to invest anywhere in the OKC Metro, <GridWord /> is built for you.
+              Whether you own one rental or a growing portfolio, manage an HOA, or want to invest anywhere in the OKC or Tulsa Metro, <GridWord /> is built for you.
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">contact <GridWord /></a>

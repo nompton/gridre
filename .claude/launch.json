@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nompton",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "/Users/patrickschrank/Documents/GitHub/nompton"],
+      "port": 3456
+    },
+    {
+      "name": "bixby-development",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "3457", "--directory", "/Users/patrickschrank/Documents/GitHub/bixbydevelopment"],
+      "port": 3457
+    }
+  ]
+}
