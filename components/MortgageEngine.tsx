@@ -33,7 +33,7 @@ export default function MortgageEngine() {
   const [termYears, setTermYears] = useState<number | "">("");
   const [amortYears, setAmortYears] = useState<number | "">("");
   const [balloonYears, setBalloonYears] = useState<number | "">("");
-  const [extraPrincipalMonthly, setExtraPrincipalMonthly] = useState<number | ">">("");
+  const [extraPrincipalMonthly, setExtraPrincipalMonthly] = useState<number | "">("");
   const [useExtraPrincipal, setUseExtraPrincipal] = useState(false);
   const [showAmort, setShowAmort] = useState(false);
   const [expandedYears, setExpandedYears] = useState<Record<number, boolean>>({});
