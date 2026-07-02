@@ -103,7 +103,9 @@ export default function CostNetEngine() {
 
   // URL state
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
+    const raw = window.location.hash.slice(1);
+    const colonIdx = raw.indexOf(":");
+    const hash = colonIdx !== -1 ? raw.slice(colonIdx + 1) : raw;
     if (!hash) return;
     try {
       const s = JSON.parse(atob(hash));
@@ -120,7 +122,7 @@ export default function CostNetEngine() {
 
   const shareUrl = () => {
     const s = { side, sp: salesPrice, t: propertyTitle, fin: financing, dp: downPercent, ir: interestRate, ty: termYears, cd: closeDate };
-    const url = window.location.href.split("#")[0] + "#" + btoa(JSON.stringify(s));
+    const url = window.location.href.split("#")[0] + "#costnet:" + btoa(JSON.stringify(s));
     navigator.clipboard.writeText(url);
     setShared(true);
     setTimeout(() => setShared(false), 2000);

@@ -47,7 +47,9 @@ export default function ProformaEngine() {
 
   // URL state decode on mount
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
+    const raw = window.location.hash.slice(1);
+    const colonIdx = raw.indexOf(":");
+    const hash = colonIdx !== -1 ? raw.slice(colonIdx + 1) : raw;
     if (!hash) return;
     try {
       const s = JSON.parse(atob(hash));
@@ -152,7 +154,7 @@ export default function ProformaEngine() {
       mgmt: managementPercent, maint: maintenancePercent,
       ex: extraExpenses.map(e => [e.label, e.amount, e.freq === "monthly" ? "m" : "y"]),
     };
-    const url = window.location.href.split("#")[0] + "#" + btoa(JSON.stringify(s));
+    const url = window.location.href.split("#")[0] + "#proforma:" + btoa(JSON.stringify(s));
     navigator.clipboard.writeText(url);
     setShared(true);
     setTimeout(() => setShared(false), 2000);

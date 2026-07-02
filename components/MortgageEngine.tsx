@@ -55,7 +55,9 @@ export default function MortgageEngine() {
   const [shared, setShared] = useState(false);
 
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
+    const raw = window.location.hash.slice(1);
+    const colonIdx = raw.indexOf(":");
+    const hash = colonIdx !== -1 ? raw.slice(colonIdx + 1) : raw;
     if (!hash) return;
     try {
       const s = JSON.parse(atob(hash));
@@ -265,7 +267,7 @@ export default function MortgageEngine() {
   // Share / Copy
   const shareUrl = () => {
     const s = { t: title, pp: purchasePrice, dp: downPercent, ir: interestRate, ty: termYears, ay: amortYears, by: balloonYears, mode };
-    const url = window.location.href.split("#")[0] + "#" + btoa(JSON.stringify(s));
+    const url = window.location.href.split("#")[0] + "#mortgage:" + btoa(JSON.stringify(s));
     navigator.clipboard.writeText(url);
     setShared(true);
     setTimeout(() => setShared(false), 2000);

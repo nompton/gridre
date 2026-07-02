@@ -118,7 +118,9 @@ export default function RehabEngine() {
 
   // URL state
   useEffect(() => {
-    const hash = window.location.hash.slice(1);
+    const raw = window.location.hash.slice(1);
+    const colonIdx = raw.indexOf(":");
+    const hash = colonIdx !== -1 ? raw.slice(colonIdx + 1) : raw;
     if (!hash) return;
     try {
       const s = JSON.parse(atob(hash));
@@ -132,7 +134,7 @@ export default function RehabEngine() {
 
   const shareUrl = () => {
     const s = { t: propertyTitle, pp: purchasePrice, arv, hm: holdMonths, strat: strategy };
-    const url = window.location.href.split("#")[0] + "#" + btoa(JSON.stringify(s));
+    const url = window.location.href.split("#")[0] + "#rehab:" + btoa(JSON.stringify(s));
     navigator.clipboard.writeText(url);
     setShared(true);
     setTimeout(() => setShared(false), 2000);

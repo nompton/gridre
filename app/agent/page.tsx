@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FieldLeadForm from "@/components/FieldLeadForm";
 import ProformaEngine from "@/components/ProformaEngine";
 import MortgageEngine from "@/components/MortgageEngine";
@@ -52,6 +52,15 @@ const toolTitles: Record<Exclude<View, "menu">, string> = {
 
 export default function AgentToolsPage() {
   const [view, setView] = useState<View>("menu");
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+    const colonIdx = hash.indexOf(":");
+    if (colonIdx === -1) return;
+    const tool = hash.slice(0, colonIdx) as View;
+    if (tools.some((t) => t.id === tool)) setView(tool);
+  }, []);
 
   if (view !== "menu") {
     return (
