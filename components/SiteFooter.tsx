@@ -30,6 +30,7 @@ export default function SiteFooter() {
               <div><a href="/yukon" className="hover:text-black transition">Yukon</a></div>
               <div><a href="/moore" className="hover:text-black transition">Moore</a></div>
               <div><a href="/mustang" className="hover:text-black transition">Mustang</a></div>
+              <div><a href="/noble" className="hover:text-black transition">Noble</a></div>
               <div><a href="/midwest-city" className="hover:text-black transition">Midwest City</a></div>
             </div>
             <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Tulsa Metro</div>
