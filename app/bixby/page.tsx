@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Bixby Property Management — GRID Real Estate",
   description:
-    "Professional property management in Bixby, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Bixby rental properties.",
+    "Property management in Bixby, OK by GRID Real Estate. Bixby's top-rated schools and rapid growth attract quality long-term tenants. We market, screen, and manage Bixby rentals with full-service professional management. Call (405) 310-1221.",
+  openGraph: {
+    title: "Bixby Property Management — GRID Real Estate",
+    description: "Full-service property management in Bixby, Oklahoma. High-demand rental market, professional marketing, and investor-focused management for Bixby landlords.",
+    url: "https://thegridre.com/bixby",
+  },
 };
 
 export default function BixbyPage() {

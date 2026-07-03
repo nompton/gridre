@@ -33,11 +33,13 @@ const localBusinessSchema = {
   },
   areaServed: [
     { "@type": "City", name: "Norman", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Noble", containedIn: "Oklahoma" },
     { "@type": "City", name: "Oklahoma City", containedIn: "Oklahoma" },
     { "@type": "City", name: "Edmond", containedIn: "Oklahoma" },
     { "@type": "City", name: "Yukon", containedIn: "Oklahoma" },
     { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
     { "@type": "City", name: "Mustang", containedIn: "Oklahoma" },
+    { "@type": "City", name: "Noble", containedIn: "Oklahoma" },
     { "@type": "City", name: "Midwest City", containedIn: "Oklahoma" },
     { "@type": "City", name: "Tulsa", containedIn: "Oklahoma" },
     { "@type": "City", name: "Bixby", containedIn: "Oklahoma" },

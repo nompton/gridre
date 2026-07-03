@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Mustang Property Management — GRID Real Estate",
   description:
-    "Professional property management in Mustang, OK. GRID delivers premier marketing, full-service leasing, and owner-focused management for Mustang rental properties.",
+    "Property management in Mustang, OK for growing families and investor landlords. GRID handles leasing, tenant screening, maintenance coordination, and owner reporting — with drone coverage and Matterport 3D on every vacancy. Call (405) 310-1221.",
+  openGraph: {
+    title: "Mustang Property Management — GRID Real Estate",
+    description: "Full-service rental management in Mustang, Oklahoma. Investor-focused management with professional marketing, thorough screening, and clear monthly reporting.",
+    url: "https://thegridre.com/mustang",
+  },
 };
 
 export default function MustangPage() {

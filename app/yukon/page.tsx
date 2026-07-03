@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Yukon Property Management — GRID Real Estate",
   description:
-    "Professional property management in Yukon, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Yukon rental properties.",
+    "Rental property management in Yukon, OK by GRID Real Estate. We handle tenant screening, maintenance, rent collection, and leasing with professional photography and Matterport 3D tours. Yukon owners call (405) 310-1221.",
+  openGraph: {
+    title: "Yukon Property Management — GRID Real Estate",
+    description: "Full-service property management in Yukon, Oklahoma. Strong rental demand, professional marketing, and owner-focused management for Yukon investment properties.",
+    url: "https://thegridre.com/yukon",
+  },
 };
 
 export default function YukonPage() {

@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Midwest City Property Management — GRID Real Estate",
   description:
-    "Professional property management in Midwest City, OK. GRID delivers premier marketing, full-service leasing, and owner-focused management for Midwest City rental properties.",
+    "Rental property management in Midwest City, OK by GRID Real Estate. Affordable housing demand and proximity to Tinker AFB make MWC a strong investor market. We offer tenant screening, professional marketing, and full-service management. Call (405) 310-1221.",
+  openGraph: {
+    title: "Midwest City Property Management — GRID Real Estate",
+    description: "Full-service property management in Midwest City, Oklahoma. Strong rental demand near Tinker AFB, professional marketing, and investor-focused management.",
+    url: "https://thegridre.com/midwest-city",
+  },
 };
 
 export default function MidwestCityPage() {

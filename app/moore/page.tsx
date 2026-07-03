@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Moore Property Management — GRID Real Estate",
   description:
-    "Professional property management in Moore, OK. GRID delivers premier marketing, full-service leasing, and owner-focused management for Moore rental properties.",
+    "Property management in Moore, OK by GRID Real Estate. Moore's strong south OKC renter demand means vacancies fill fast when marketed right. We offer professional photography, Matterport 3D, tenant screening, and full-service management. Call (405) 310-1221.",
+  openGraph: {
+    title: "Moore Property Management — GRID Real Estate",
+    description: "Full-service rental property management in Moore, Oklahoma. Professional marketing, tenant screening, and owner-focused management for the south OKC corridor.",
+    url: "https://thegridre.com/moore",
+  },
 };
 
 export default function MoorePage() {

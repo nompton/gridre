@@ -141,6 +141,34 @@ export default function InvestPage() {
         </div>
       </Section>
 
+      {/* TOOLS + NORMAN CONDOS CALLOUT */}
+      <section className="border-y border-black/10 bg-black/[0.02] py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-6">
+            <div className="text-sm font-medium text-black/60">Investor resources</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Tools built for Oklahoma investors.</h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            <a href="/tools" className="group rounded-2xl border border-black/10 bg-white p-6 hover:border-black/25 transition-colors">
+              <div className="text-2xl mb-3">📊</div>
+              <div className="text-sm font-semibold tracking-tight">Real Estate Calculators</div>
+              <p className="mt-2 text-sm leading-6 text-black/65">
+                Rental proforma, rehab underwriter, mortgage scenarios, and closing cost estimates. Run the numbers on any Oklahoma deal — no sign-up required.
+              </p>
+              <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">open calculators →</div>
+            </a>
+            <a href="https://www.normanokcondos.com" target="_blank" rel="noopener noreferrer" className="group rounded-2xl border border-black/10 bg-white p-6 hover:border-black/25 transition-colors">
+              <div className="text-2xl mb-3">🏙️</div>
+              <div className="text-sm font-semibold tracking-tight">NormanOKCondos.com</div>
+              <p className="mt-2 text-sm leading-6 text-black/65">
+                GRID&apos;s dedicated Norman condo directory — every major complex, with unit layouts, market comps, HOA data, and floorplans. Built for buyers and investors researching the Norman condo market.
+              </p>
+              <div className="mt-4 text-sm font-medium text-black group-hover:underline underline-offset-4">explore the directory →</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4">

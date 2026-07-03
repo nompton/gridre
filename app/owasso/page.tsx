@@ -6,7 +6,12 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Owasso Property Management — GRID Real Estate",
   description:
-    "Professional property management in Owasso, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Owasso rental properties.",
+    "Property management in Owasso, OK by GRID Real Estate. Owasso's consistent growth and strong schools make it one of Tulsa Metro's most reliable rental markets. GRID handles marketing, screening, maintenance, and reporting. Call (405) 310-1221.",
+  openGraph: {
+    title: "Owasso Property Management — GRID Real Estate",
+    description: "Full-service rental property management in Owasso, Oklahoma. Consistent rental demand, professional Matterport marketing, and investor-focused management in the Tulsa Metro.",
+    url: "https://thegridre.com/owasso",
+  },
 };
 
 export default function OwassoPage() {

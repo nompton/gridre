@@ -6,12 +6,29 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Tulsa Property Management — GRID Real Estate",
   description:
-    "Professional property management in Tulsa, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Tulsa rental properties.",
+    "Property management in Tulsa, OK by GRID Real Estate. Tulsa's diverse rental market rewards professional presentation — we offer Matterport 3D tours, drone coverage, tenant screening, and full-service management for Tulsa landlords. Call (405) 310-1221.",
+  openGraph: {
+    title: "Tulsa Property Management — GRID Real Estate",
+    description: "Full-service rental property management in Tulsa, Oklahoma. Professional marketing, thorough tenant screening, and investor-focused management across the Tulsa metro.",
+    url: "https://thegridre.com/tulsa",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Tulsa, OK?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal for your Tulsa property or portfolio." } },
+    { "@type": "Question", name: "Do you manage rental properties in Tulsa?", acceptedAnswer: { "@type": "Answer", text: "Yes. We manage single-family homes, small multifamily properties, and investor portfolios throughout Tulsa and the Tulsa Metro area." } },
+    { "@type": "Question", name: "Why invest in Tulsa rental properties?", acceptedAnswer: { "@type": "Answer", text: "Tulsa offers strong cash flow potential with lower entry costs than many metros, a diverse renter base, and consistent demand. It's an attractive market for both local and out-of-state investors." } },
+    { "@type": "Question", name: "Do you manage Tulsa properties for out-of-state owners?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many remote investors who own Tulsa rentals. We handle everything locally — marketing, tenants, maintenance, and reporting — so you don't need to be here." } },
+  ],
 };
 
 export default function TulsaPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Tulsa Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
@@ -76,6 +93,31 @@ export default function TulsaPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Tulsa property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {[
+              { q: "How much does property management cost in Tulsa, OK?", a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal for your Tulsa property or portfolio." },
+              { q: "Do you manage rental properties in Tulsa?", a: "Yes. We manage single-family homes, small multifamily properties, and investor portfolios throughout Tulsa and the Tulsa Metro area." },
+              { q: "Why invest in Tulsa rental properties?", a: "Tulsa offers strong cash flow potential with lower entry costs than many metros, a diverse renter base, and consistent demand. It's an attractive market for both local and out-of-state investors." },
+              { q: "Do you manage Tulsa properties for out-of-state owners?", a: "Yes. We work with many remote investors who own Tulsa rentals. We handle everything locally — marketing, tenants, maintenance, and reporting — so you don't need to be here." },
+            ].map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

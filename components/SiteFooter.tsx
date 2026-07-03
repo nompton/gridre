@@ -25,6 +25,7 @@ export default function SiteFooter() {
           <div>
             <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">OKC Metro</div>
             <div className="space-y-1.5 mb-5">
+              <div><a href="/norman" className="hover:text-black transition">Norman</a></div>
               <div><a href="/oklahoma-city" className="hover:text-black transition">Oklahoma City</a></div>
               <div><a href="/edmond" className="hover:text-black transition">Edmond</a></div>
               <div><a href="/yukon" className="hover:text-black transition">Yukon</a></div>

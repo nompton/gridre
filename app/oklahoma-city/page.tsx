@@ -6,7 +6,24 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Oklahoma City Property Management — GRID Real Estate",
   description:
-    "Professional property management in Oklahoma City, OK. GRID delivers premier marketing, full-service leasing, and owner-focused management across OKC.",
+    "Property management in Oklahoma City by GRID Real Estate — Oklahoma's investor-focused brokerage. We handle OKC rentals with professional photography, Matterport 3D, tenant screening, maintenance, and clean owner reporting. Call (405) 310-1221.",
+  openGraph: {
+    title: "Oklahoma City Property Management — GRID Real Estate",
+    description: "Investor-focused property management across Oklahoma City. Full-service leasing, professional marketing, and monthly owner statements for OKC landlords and portfolio owners.",
+    url: "https://thegridre.com/oklahoma-city",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Oklahoma City?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your OKC property or portfolio." } },
+    { "@type": "Question", name: "Do you manage single-family homes in OKC?", acceptedAnswer: { "@type": "Answer", text: "Yes. We manage single-family rentals, small multifamily properties, and growing investor portfolios across Oklahoma City and the surrounding metro." } },
+    { "@type": "Question", name: "How do you market vacancies in Oklahoma City?", acceptedAnswer: { "@type": "Answer", text: "Every OKC vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms including Zillow, Apartments.com, and Zumper." } },
+    { "@type": "Question", name: "Do you manage OKC properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many out-of-state owners who invest in the Oklahoma City market. We provide local oversight, monthly reporting, and handle everything on the ground." } },
+    { "@type": "Question", name: "What neighborhoods in Oklahoma City do you manage in?", acceptedAnswer: { "@type": "Answer", text: "We manage rental properties throughout OKC including Midtown, Nichols Hills adjacent areas, the 405 corridor, south OKC, and surrounding suburbs." } },
+  ],
 };
 
 const features = [
@@ -21,6 +38,7 @@ const features = [
 export default function OklahomaCityPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/okc-rental-townhome.jpg" alt="Oklahoma City rental property — GRID Real Estate property management" fill priority className="object-cover" />
@@ -90,6 +108,32 @@ export default function OklahomaCityPage() {
           </div>
         </div>
       </Section>
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Oklahoma City property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {[
+              { q: "How much does property management cost in Oklahoma City?", a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your OKC property or portfolio." },
+              { q: "Do you manage single-family homes in OKC?", a: "Yes. We manage single-family rentals, small multifamily properties, and growing investor portfolios across Oklahoma City and the surrounding metro." },
+              { q: "How do you market vacancies in Oklahoma City?", a: "Every OKC vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms including Zillow, Apartments.com, and Zumper." },
+              { q: "Do you manage OKC properties for out-of-state investors?", a: "Yes. We work with many out-of-state owners who invest in the Oklahoma City market. We provide local oversight, monthly reporting, and handle everything on the ground so you don't need to be here." },
+              { q: "What neighborhoods in Oklahoma City do you manage in?", a: "We manage rental properties throughout OKC including Midtown, Nichols Hills adjacent areas, the 405 corridor, south OKC, and surrounding suburbs. If you own it in the metro, we can manage it." },
+            ].map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4">

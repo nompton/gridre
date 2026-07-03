@@ -6,12 +6,29 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Broken Arrow Property Management — GRID Real Estate",
   description:
-    "Professional property management in Broken Arrow, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Broken Arrow rental properties.",
+    "Property management in Broken Arrow, OK by GRID Real Estate. One of Oklahoma's fastest-growing cities, Broken Arrow's strong renter base and family demand make it a premier investment market. Full-service management with professional marketing. Call (405) 310-1221.",
+  openGraph: {
+    title: "Broken Arrow Property Management — GRID Real Estate",
+    description: "Full-service rental management in Broken Arrow, Oklahoma. Strong family renter demand, professional Matterport marketing, and investor-focused management.",
+    url: "https://thegridre.com/broken-arrow",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Broken Arrow, OK?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal for your Broken Arrow property." } },
+    { "@type": "Question", name: "Do you manage rentals in Broken Arrow?", acceptedAnswer: { "@type": "Answer", text: "Yes. We manage single-family homes, small multifamily properties, and growing investor portfolios across Broken Arrow and the Tulsa Metro." } },
+    { "@type": "Question", name: "Is Broken Arrow a good market for rental property investment?", acceptedAnswer: { "@type": "Answer", text: "Broken Arrow is one of Oklahoma's fastest-growing cities with strong family-driven rental demand, top-rated schools, and consistent appreciation. It's a reliable buy-and-hold market." } },
+    { "@type": "Question", name: "Do you manage Broken Arrow properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many remote investors in Broken Arrow. We handle marketing, tenant placement, maintenance, and monthly reporting so you don't need to be local." } },
+  ],
 };
 
 export default function BrokenArrowPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Broken Arrow Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
@@ -76,6 +93,31 @@ export default function BrokenArrowPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Broken Arrow property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {[
+              { q: "How much does property management cost in Broken Arrow, OK?", a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal for your Broken Arrow property." },
+              { q: "Do you manage rentals in Broken Arrow?", a: "Yes. We manage single-family homes, small multifamily properties, and growing investor portfolios across Broken Arrow and the Tulsa Metro." },
+              { q: "Is Broken Arrow a good market for rental property investment?", a: "Broken Arrow is one of Oklahoma's fastest-growing cities with strong family-driven rental demand, top-rated schools, and consistent appreciation. It's a reliable buy-and-hold market." },
+              { q: "Do you manage Broken Arrow properties for out-of-state investors?", a: "Yes. We work with many remote investors in Broken Arrow. We handle marketing, tenant placement, maintenance, and monthly reporting so you don't need to be local." },
+            ].map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

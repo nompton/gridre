@@ -6,12 +6,29 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Edmond Property Management — GRID Real Estate",
   description:
-    "Professional property management in Edmond, OK. GRID offers premier marketing, full-service leasing, and owner-focused management for Edmond rental properties.",
+    "Property management in Edmond, OK for landlords and investors who want it done right. GRID offers tenant screening, rent collection, professional photography, Matterport 3D tours, and clean owner reporting. Call (405) 310-1221.",
+  openGraph: {
+    title: "Edmond Property Management — GRID Real Estate",
+    description: "Full-service rental property management in Edmond, Oklahoma. Tenant placement, Matterport 3D, drone coverage, and monthly owner statements for Edmond landlords.",
+    url: "https://thegridre.com/edmond",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Edmond, OK?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Edmond property or portfolio." } },
+    { "@type": "Question", name: "Do you manage rental properties in Edmond?", acceptedAnswer: { "@type": "Answer", text: "Yes. We manage single-family homes, small multifamily properties, and investor portfolios in Edmond and across the OKC Metro." } },
+    { "@type": "Question", name: "Why is Edmond a good rental investment market?", acceptedAnswer: { "@type": "Answer", text: "Edmond has consistently strong rental demand driven by top-rated schools, a growing professional population, and proximity to Oklahoma City. Quality tenants actively seek Edmond rentals." } },
+    { "@type": "Question", name: "Do you manage Edmond properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. Many of our Edmond owners are out-of-state investors. We provide local oversight, monthly reporting, and full management so you can own here confidently without being here." } },
+  ],
 };
 
 export default function EdmondPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/edmond-rental-home.jpg" alt="Edmond Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
@@ -76,6 +93,31 @@ export default function EdmondPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Common questions</div>
+            <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">Edmond property management FAQ</h2>
+          </div>
+          <div className="divide-y divide-black/10">
+            {[
+              { q: "How much does property management cost in Edmond, OK?", a: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Edmond property or portfolio." },
+              { q: "Do you manage rental properties in Edmond?", a: "Yes. We manage single-family homes, small multifamily properties, and investor portfolios in Edmond and across the OKC Metro." },
+              { q: "Why is Edmond a good rental investment market?", a: "Edmond has consistently strong rental demand driven by top-rated schools, a growing professional population, and proximity to Oklahoma City. Quality tenants actively seek Edmond rentals." },
+              { q: "Do you manage Edmond properties for out-of-state investors?", a: "Yes. Many of our Edmond owners are out-of-state investors. We provide local oversight, monthly reporting, and full management so you can own here confidently without being here." },
+            ].map((item) => (
+              <details key={item.q} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-sm font-semibold tracking-tight marker:content-none">
+                  {item.q}
+                  <span className="shrink-0 text-black/40 transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-4 text-sm leading-7 text-black/70">{item.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
