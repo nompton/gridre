@@ -7,11 +7,30 @@ export const metadata = {
   title: "Oklahoma City Property Management — GRID Real Estate",
   description:
     "Property management in Oklahoma City by GRID Real Estate — Oklahoma's investor-focused brokerage. We handle OKC rentals with professional photography, Matterport 3D, tenant screening, maintenance, and clean owner reporting. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/oklahoma-city" },
   openGraph: {
     title: "Oklahoma City Property Management — GRID Real Estate",
     description: "Investor-focused property management across Oklahoma City. Full-service leasing, professional marketing, and monthly owner statements for OKC landlords and portfolio owners.",
     url: "https://thegridre.com/oklahoma-city",
   },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Oklahoma City Property Management",
+  "description": "Full-service rental property management in Oklahoma City, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Edmond", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Moore", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Yukon", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Mustang", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Midwest City", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/oklahoma-city",
 };
 
 const faqSchema = {
@@ -38,6 +57,7 @@ const features = [
 export default function OklahomaCityPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">

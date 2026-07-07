@@ -7,6 +7,7 @@ export const metadata = {
   title: "Mustang Property Management — GRID Real Estate",
   description:
     "Property management in Mustang, OK for growing families and investor landlords. GRID handles leasing, tenant screening, maintenance coordination, and owner reporting — with drone coverage and Matterport 3D on every vacancy. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/mustang" },
   openGraph: {
     title: "Mustang Property Management — GRID Real Estate",
     description: "Full-service rental management in Mustang, Oklahoma. Investor-focused management with professional marketing, thorough screening, and clear monthly reporting.",

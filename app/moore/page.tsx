@@ -7,6 +7,7 @@ export const metadata = {
   title: "Moore Property Management — GRID Real Estate",
   description:
     "Property management in Moore, OK by GRID Real Estate. Moore's strong south OKC renter demand means vacancies fill fast when marketed right. We offer professional photography, Matterport 3D, tenant screening, and full-service management. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/moore" },
   openGraph: {
     title: "Moore Property Management — GRID Real Estate",
     description: "Full-service rental property management in Moore, Oklahoma. Professional marketing, tenant screening, and owner-focused management for the south OKC corridor.",

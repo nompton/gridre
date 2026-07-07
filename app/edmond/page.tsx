@@ -7,6 +7,7 @@ export const metadata = {
   title: "Edmond Property Management — GRID Real Estate",
   description:
     "Property management in Edmond, OK for landlords and investors who want it done right. GRID offers tenant screening, rent collection, professional photography, Matterport 3D tours, and clean owner reporting. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/edmond" },
   openGraph: {
     title: "Edmond Property Management — GRID Real Estate",
     description: "Full-service rental property management in Edmond, Oklahoma. Tenant placement, Matterport 3D, drone coverage, and monthly owner statements for Edmond landlords.",

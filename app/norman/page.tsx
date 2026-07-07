@@ -7,11 +7,23 @@ export const metadata = {
   title: "Norman Property Management — GRID Real Estate",
   description:
     "Property management in Norman, OK by GRID Real Estate — Norman is our home market. Tenant screening, rent collection, Matterport 3D, drone coverage, and full-service management for Norman landlords and investors. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/norman" },
   openGraph: {
     title: "Norman Property Management — GRID Real Estate",
     description: "Full-service rental property management in Norman, Oklahoma. GRID is headquartered in Norman — this is our home market. Professional marketing, tenant screening, and investor-focused management.",
     url: "https://thegridre.com/norman",
   },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Norman Property Management",
+  "description": "Full-service rental property management in Norman, Oklahoma — GRID Real Estate's home market. Tenant screening, Matterport 3D marketing, maintenance coordination, and monthly owner reporting.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": { "@type": "City", "name": "Norman", "containedIn": "Oklahoma" },
+  "url": "https://thegridre.com/norman",
 };
 
 const faqSchema = {
@@ -29,6 +41,7 @@ const faqSchema = {
 export default function NormanPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <section className="relative border-b border-black/10">

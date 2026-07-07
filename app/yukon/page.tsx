@@ -7,6 +7,7 @@ export const metadata = {
   title: "Yukon Property Management — GRID Real Estate",
   description:
     "Rental property management in Yukon, OK by GRID Real Estate. We handle tenant screening, maintenance, rent collection, and leasing with professional photography and Matterport 3D tours. Yukon owners call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/yukon" },
   openGraph: {
     title: "Yukon Property Management — GRID Real Estate",
     description: "Full-service property management in Yukon, Oklahoma. Strong rental demand, professional marketing, and owner-focused management for Yukon investment properties.",

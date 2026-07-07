@@ -7,6 +7,7 @@ export const metadata = {
   title: "Jenks Property Management — GRID Real Estate",
   description:
     "Property management in Jenks, OK by GRID Real Estate. Jenks's acclaimed school district draws quality, long-term renters — ideal for investors. GRID manages Jenks rentals with professional photography, Matterport 3D, tenant screening, and full service. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/jenks" },
   openGraph: {
     title: "Jenks Property Management — GRID Real Estate",
     description: "Full-service property management in Jenks, Oklahoma. Top-rated school district, strong renter demand, and professional marketing for Jenks investment properties.",

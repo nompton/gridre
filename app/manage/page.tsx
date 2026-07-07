@@ -21,6 +21,7 @@ const services = [
   { title: "Owner Reporting", body: "Monthly statements with clear income, expense, and maintenance records. Always accessible from any device." },
   { title: "Trust Account Management", body: "Disciplined financial controls and documentation built on real compliance experience. Your funds are handled correctly." },
   { title: "Eviction & Legal Coordination", body: "When needed, we manage the process with documentation, timelines, and local legal coordination." },
+  { title: "Premier Listing Marketing", body: "Professional photography, Matterport 3D tours, drone coverage, social media campaigns, and syndication across 100+ rental platforms. Every listing, every time." },
 ];
 
 const faqSchema = {
@@ -231,6 +232,56 @@ export default function ManagePage() {
                   <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">get a proposal</a>
                   <a href="/associations" className="rounded-full border border-black/15 px-5 py-3 text-sm font-medium hover:border-black/30">association management</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-black/10 bg-black/[0.02] py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Where we manage</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">OKC Metro and Tulsa Metro.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
+              GRID manages rental properties across both major Oklahoma metros. Based in Norman — our home market — with full-service coverage across OKC and Tulsa.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">OKC Metro</div>
+              <div className="grid grid-cols-2 gap-2">
+                {([
+                  ["/norman", "Norman"],
+                  ["/oklahoma-city", "Oklahoma City"],
+                  ["/edmond", "Edmond"],
+                  ["/yukon", "Yukon"],
+                  ["/moore", "Moore"],
+                  ["/mustang", "Mustang"],
+                  ["/noble", "Noble"],
+                  ["/midwest-city", "Midwest City"],
+                ] as [string, string][]).map(([href, label]) => (
+                  <a key={href} href={href} className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm hover:border-black/25 transition-colors">
+                    {label} <span className="text-black/30 text-xs ml-1">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Tulsa Metro</div>
+              <div className="grid grid-cols-2 gap-2">
+                {([
+                  ["/tulsa", "Tulsa"],
+                  ["/bixby", "Bixby"],
+                  ["/broken-arrow", "Broken Arrow"],
+                  ["/jenks", "Jenks"],
+                  ["/owasso", "Owasso"],
+                  ["/sand-springs", "Sand Springs"],
+                ] as [string, string][]).map(([href, label]) => (
+                  <a key={href} href={href} className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm hover:border-black/25 transition-colors">
+                    {label} <span className="text-black/30 text-xs ml-1">→</span>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

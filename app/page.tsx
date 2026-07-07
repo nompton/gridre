@@ -177,6 +177,56 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="border-y border-black/10 py-14">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8">
+            <div className="text-sm font-medium text-black/60">Service area</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Property management across Oklahoma.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-black/70">
+              <GridWord /> manages rental properties across the OKC and Tulsa metros. Headquartered in Norman — our home market — with deep coverage across both major metro areas.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">OKC Metro</div>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { href: "/norman", label: "Norman" },
+                  { href: "/oklahoma-city", label: "Oklahoma City" },
+                  { href: "/edmond", label: "Edmond" },
+                  { href: "/yukon", label: "Yukon" },
+                  { href: "/moore", label: "Moore" },
+                  { href: "/mustang", label: "Mustang" },
+                  { href: "/noble", label: "Noble" },
+                  { href: "/midwest-city", label: "Midwest City" },
+                ].map((city) => (
+                  <a key={city.href} href={city.href} className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm hover:border-black/25 transition-colors">
+                    {city.label} <span className="text-black/30 text-xs ml-1">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="text-xs font-semibold uppercase tracking-widest text-black/40 mb-3">Tulsa Metro</div>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { href: "/tulsa", label: "Tulsa" },
+                  { href: "/bixby", label: "Bixby" },
+                  { href: "/broken-arrow", label: "Broken Arrow" },
+                  { href: "/jenks", label: "Jenks" },
+                  { href: "/owasso", label: "Owasso" },
+                  { href: "/sand-springs", label: "Sand Springs" },
+                ].map((city) => (
+                  <a key={city.href} href={city.href} className="rounded-xl border border-black/10 bg-white px-4 py-3 text-sm hover:border-black/25 transition-colors">
+                    {city.label} <span className="text-black/30 text-xs ml-1">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="rounded-3xl border border-black/10 bg-black p-10 text-white md:p-12">

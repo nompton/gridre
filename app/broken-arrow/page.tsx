@@ -7,6 +7,7 @@ export const metadata = {
   title: "Broken Arrow Property Management — GRID Real Estate",
   description:
     "Property management in Broken Arrow, OK by GRID Real Estate. One of Oklahoma's fastest-growing cities, Broken Arrow's strong renter base and family demand make it a premier investment market. Full-service management with professional marketing. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/broken-arrow" },
   openGraph: {
     title: "Broken Arrow Property Management — GRID Real Estate",
     description: "Full-service rental management in Broken Arrow, Oklahoma. Strong family renter demand, professional Matterport marketing, and investor-focused management.",

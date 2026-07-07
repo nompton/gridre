@@ -7,6 +7,7 @@ export const metadata = {
   title: "Sand Springs Property Management — GRID Real Estate",
   description:
     "Property management in Sand Springs, OK by GRID Real Estate. Affordable entry points and proximity to Tulsa make Sand Springs an attractive market for buy-and-hold investors. Full-service management with professional marketing. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/sand-springs" },
   openGraph: {
     title: "Sand Springs Property Management — GRID Real Estate",
     description: "Full-service property management in Sand Springs, Oklahoma. Affordable investor market with strong rental demand, professional marketing, and owner-focused management.",

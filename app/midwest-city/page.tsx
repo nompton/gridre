@@ -7,6 +7,7 @@ export const metadata = {
   title: "Midwest City Property Management — GRID Real Estate",
   description:
     "Rental property management in Midwest City, OK by GRID Real Estate. Affordable housing demand and proximity to Tinker AFB make MWC a strong investor market. We offer tenant screening, professional marketing, and full-service management. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/midwest-city" },
   openGraph: {
     title: "Midwest City Property Management — GRID Real Estate",
     description: "Full-service property management in Midwest City, Oklahoma. Strong rental demand near Tinker AFB, professional marketing, and investor-focused management.",

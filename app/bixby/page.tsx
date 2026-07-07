@@ -7,6 +7,7 @@ export const metadata = {
   title: "Bixby Property Management — GRID Real Estate",
   description:
     "Property management in Bixby, OK by GRID Real Estate. Bixby's top-rated schools and rapid growth attract quality long-term tenants. We market, screen, and manage Bixby rentals with full-service professional management. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/bixby" },
   openGraph: {
     title: "Bixby Property Management — GRID Real Estate",
     description: "Full-service property management in Bixby, Oklahoma. High-demand rental market, professional marketing, and investor-focused management for Bixby landlords.",

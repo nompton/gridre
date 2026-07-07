@@ -7,6 +7,7 @@ export const metadata = {
   title: "Owasso Property Management — GRID Real Estate",
   description:
     "Property management in Owasso, OK by GRID Real Estate. Owasso's consistent growth and strong schools make it one of Tulsa Metro's most reliable rental markets. GRID handles marketing, screening, maintenance, and reporting. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/owasso" },
   openGraph: {
     title: "Owasso Property Management — GRID Real Estate",
     description: "Full-service rental property management in Owasso, Oklahoma. Consistent rental demand, professional Matterport marketing, and investor-focused management in the Tulsa Metro.",

@@ -7,11 +7,30 @@ export const metadata = {
   title: "Tulsa Property Management — GRID Real Estate",
   description:
     "Property management in Tulsa, OK by GRID Real Estate. Tulsa's diverse rental market rewards professional presentation — we offer Matterport 3D tours, drone coverage, tenant screening, and full-service management for Tulsa landlords. Call (405) 310-1221.",
+  alternates: { canonical: "https://thegridre.com/tulsa" },
   openGraph: {
     title: "Tulsa Property Management — GRID Real Estate",
     description: "Full-service rental property management in Tulsa, Oklahoma. Professional marketing, thorough tenant screening, and investor-focused management across the Tulsa metro.",
     url: "https://thegridre.com/tulsa",
   },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Tulsa Property Management",
+  "description": "Full-service rental property management in Tulsa, Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting across the Tulsa metro.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Broken Arrow", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Owasso", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Sand Springs", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/tulsa",
 };
 
 const faqSchema = {
@@ -28,6 +47,7 @@ const faqSchema = {
 export default function TulsaPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">

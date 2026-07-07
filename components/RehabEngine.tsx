@@ -129,11 +129,59 @@ export default function RehabEngine() {
       if (s.arv !== undefined) setArv(s.arv);
       if (s.hm !== undefined) setHoldMonths(s.hm);
       if (s.strat !== undefined) setStrategy(s.strat);
+      if (s.mh !== undefined) setMonthlyHolding(s.mh);
+      if (s.tp !== undefined) setTargetProfit(s.tp);
+      if (s.scp !== undefined) setSaleCostPct(s.scp);
+      if (s.bcm !== undefined) setBuyerClosingMode(s.bcm);
+      if (s.bcv !== undefined) setBuyerClosingValue(s.bcv);
+      if (s.cm !== undefined) setContingencyMode(s.cm);
+      if (s.ci !== undefined) setContingencyInput(s.ci);
+      if (s.if !== undefined) setInitialFinancing(s.if);
+      if (s.idp !== undefined) setInitialDownPct(s.idp);
+      if (s.dm !== undefined) setDownMode(s.dm);
+      if (s.ir !== undefined) setInitialRate(s.ir);
+      if (s.ity !== undefined) setInitialTermYears(s.ity);
+      if (s.irl !== undefined) setIncludeRehabInLoan(s.irl);
+      if (s.of !== undefined) setOriginationFee(s.of);
+      if (s.sf !== undefined) setServiceFee(s.sf);
+      if (s.af !== undefined) setAppraisalFee(s.af);
+      if (s.tf !== undefined) setTitleFees(s.tf);
+      if (s.tm !== undefined) setTaxMode(s.tm);
+      if (s.ti !== undefined) setTaxInput(s.ti);
+      if (s.im !== undefined) setInsMode(s.im);
+      if (s.ii !== undefined) setInsInput(s.ii);
+      if (s.pl !== undefined) setPermLtv(s.pl);
+      if (s.pr !== undefined) setPermRate(s.pr);
+      if (s.pty !== undefined) setPermTermYears(s.pty);
+      if (s.rm !== undefined) setRentMonthly(s.rm);
+      if (s.op !== undefined) setOperatingPct(s.op);
+      if (s.fbc !== undefined) setFullBathCosts(s.fbc);
+      if (s.hbc !== undefined) setHalfBathCosts(s.hbc);
+      if (s.rl !== undefined) setRehabLines((prev) => prev.map((l) => {
+        const saved = (s.rl as Record<string, number>)[l.id];
+        return saved !== undefined ? { ...l, amount: saved } : l;
+      }));
+      if (s.ex !== undefined) setExtras(s.ex);
     } catch {}
   }, []);
 
   const shareUrl = () => {
-    const s = { t: propertyTitle, pp: purchasePrice, arv, hm: holdMonths, strat: strategy };
+    const rl: Record<string, number> = {};
+    rehabLines.forEach((l) => { rl[l.id] = l.amount; });
+    const s = {
+      t: propertyTitle, pp: purchasePrice, arv, hm: holdMonths, strat: strategy,
+      mh: monthlyHolding, tp: targetProfit, scp: saleCostPct,
+      bcm: buyerClosingMode, bcv: buyerClosingValue,
+      cm: contingencyMode, ci: contingencyInput,
+      if: initialFinancing, idp: initialDownPct, dm: downMode,
+      ir: initialRate, ity: initialTermYears, irl: includeRehabInLoan,
+      of: originationFee, sf: serviceFee, af: appraisalFee, tf: titleFees,
+      tm: taxMode, ti: taxInput, im: insMode, ii: insInput,
+      pl: permLtv, pr: permRate, pty: permTermYears,
+      rm: rentMonthly, op: operatingPct,
+      fbc: fullBathCosts, hbc: halfBathCosts,
+      rl, ex: extras,
+    };
     const url = window.location.href.split("#")[0] + "#rehab:" + btoa(JSON.stringify(s));
     navigator.clipboard.writeText(url);
     setShared(true);
@@ -292,47 +340,133 @@ export default function RehabEngine() {
 
   const downloadPDF = () => {
     const pdf = new jsPDF("p", "mm", "a4");
-    pdf.setFont("helvetica", "bold");
-    pdf.setFontSize(16);
-    pdf.text("GRID – Rehab Underwriting Summary", 14, 15);
-    pdf.setFont("helvetica", "normal");
-    pdf.setFontSize(11);
-    let y = 25;
-    const line = (label: string, value: string) => {
-      pdf.text(label, 14, y);
-      pdf.text(value, 190, y, { align: "right" });
-      y += 6;
+    const PAGE_H = 297;
+    const MARGIN = 14;
+    const RIGHT = 196;
+    let y = 15;
+
+    const checkPage = (needed = 8) => {
+      if (y + needed > PAGE_H - 15) { pdf.addPage(); y = 15; }
     };
-    line("Property", propertyTitle || "-");
-    line("Strategy", strategy === "flip" ? "Flip" : "Keep as Rental");
-    line("Purchase", money0(pp));
-    line("Rehab", money0(rehabTotal));
-    line("Holding", money0(holdingTotal));
-    line("Cash Invested", money0(totalCashInvested));
-    y += 4;
-    if (strategy === "flip") {
-      line("ARV", money0(arvNum));
-      line("Sale Costs", money0(saleCosts));
-      line("Projected Profit", money0(flipProfit));
-      line("ROI", `${flipRoi.toFixed(2)}%`);
-      line("Annualized ROI", `${flipRoiAnnualized.toFixed(2)}%`);
+
+    const row = (label: string, value: string, bold = false) => {
+      checkPage();
+      pdf.setFont("helvetica", bold ? "bold" : "normal");
+      pdf.setFontSize(10);
+      pdf.text(label, MARGIN, y);
+      pdf.text(value, RIGHT, y, { align: "right" });
+      y += 5.5;
+    };
+
+    const sectionHeader = (title: string) => {
+      checkPage(10);
+      y += 3;
+      pdf.setFont("helvetica", "bold");
+      pdf.setFontSize(9);
+      pdf.setTextColor(100, 100, 100);
+      pdf.text(title.toUpperCase(), MARGIN, y);
+      pdf.setTextColor(0, 0, 0);
+      y += 5;
+    };
+
+    const divider = () => {
+      checkPage(4);
+      pdf.setDrawColor(200, 200, 200);
+      pdf.line(MARGIN, y, RIGHT, y);
       y += 4;
-      line("70% Rule MAO", money0(quickMao));
-      line("Target Profit MAO", money0(targetMao));
+    };
+
+    // Header
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(15);
+    pdf.text("GRID – Rehab Underwriting", MARGIN, y);
+    y += 7;
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(10);
+    pdf.setTextColor(100, 100, 100);
+    pdf.text(`${propertyTitle || "Untitled Property"}  ·  Strategy: ${strategy === "flip" ? "Flip" : "Keep as Rental"}  ·  Hold: ${hm} months`, MARGIN, y);
+    pdf.setTextColor(0, 0, 0);
+    y += 7;
+    divider();
+
+    // Acquisition
+    sectionHeader("Acquisition");
+    row("Purchase Price", money0(pp));
+    row("Buyer Closing Costs", money0(buyerClosingCosts));
+    if (loanFeesTotal > 0) row("Loan Fees (origination, title, etc.)", money0(loanFeesTotal));
+    if (initialFinancing !== "cash") {
+      row("Down Payment", money0(initialDownPayment));
+      row("Loan Amount", money0(initialLoanAmount));
+      row("Monthly Payment", money0(initialMonthlyPmt));
+      row("Interest During Hold", money0(interestPaidDuringHold));
     }
+    divider();
+
+    // Rehab budget
+    sectionHeader("Rehab Budget");
+    rehabLines.forEach((l) => {
+      if (l.amount > 0) row(l.label, money0(l.amount));
+    });
+    if (bathroomRehab > 0) {
+      fullBathCosts.forEach((c, i) => { if (c > 0) row(`  Full Bath ${i + 1}`, money0(c)); });
+      halfBathCosts.forEach((c, i) => { if (c > 0) row(`  Half Bath ${i + 1}`, money0(c)); });
+    }
+    extras.forEach((e) => { if (e.amount > 0) row(e.label || "Custom", money0(e.amount)); });
+    if (contingencyAmount > 0) row(`Contingency (${contingencyMode === "percent" ? `${num(contingencyInput)}%` : "$"})`, money0(contingencyAmount));
+    row("Total Rehab Budget", money0(rehabTotal), true);
+    divider();
+
+    // Holding
+    sectionHeader("Holding");
+    row(`Monthly Holding × ${hm} months`, money0(holdingTotal));
+    divider();
+
+    // Project summary
+    sectionHeader("Project Summary");
+    row("Total Project Cost (before interest)", money0(totalProjectCostBeforeInterest));
+    row("Total Cash Invested", money0(totalCashInvested), true);
+    divider();
+
+    // Strategy results
+    if (strategy === "flip") {
+      sectionHeader("Flip Exit");
+      row("After Repair Value (ARV)", money0(arvNum));
+      row(`Sale Costs (${num(saleCostPct)}%)`, money0(saleCosts));
+      if (initialFinancing !== "cash") row("Loan Payoff at Sale", money0(payoffAtSale));
+      row("Projected Profit", money0(flipProfit), true);
+      row("ROI on Cash Invested", `${flipRoi.toFixed(2)}%`);
+      row("Annualized ROI", `${flipRoiAnnualized.toFixed(2)}% / yr`);
+      divider();
+      sectionHeader("Maximum Allowable Offer (MAO)");
+      row("70% Rule MAO  (ARV × 70% − Rehab)", arvNum > 0 ? money0(quickMao) : "—");
+      row(`Target Profit MAO  (target: ${money0(num(targetProfit))})`, arvNum > 0 ? money0(targetMao) : "—");
+    }
+
     if (strategy === "rental") {
-      line("Gross Rent (annual)", money0(grossRentAnnual));
-      line("NOI", money0(noi));
-      line("Cap Rate", `${capRate.toFixed(2)}%`);
-      line("Cash-on-Cash", `${cocReturn.toFixed(2)}%`);
+      sectionHeader("Rental Analysis");
+      row("Monthly Rent", money0(num(rentMonthly)));
+      row("Gross Rent (annual)", money0(grossRentAnnual));
+      row("Operating Expenses (annual)", money0(operatingExpensesAnnual));
+      row("NOI (annual)", money0(noi));
+      row("Debt Service (annual)", money0(debtServiceAnnual));
+      row("Cash Flow (annual)", money0(cashFlowAnnual), true);
+      row("Cap Rate (on total cost)", `${capRate.toFixed(2)}%`);
+      row("Cash-on-Cash (on cash invested)", `${cocReturn.toFixed(2)}%`);
     }
-    y += 12;
-    pdf.line(14, y, 190, y);
+
+    // Signature block
+    checkPage(30);
     y += 10;
-    pdf.text("Investor Signature: _______________________________", 14, y);
-    y += 10;
-    pdf.text("Date: ___________________", 14, y);
-    pdf.save("grid-rehab-underwriting.pdf");
+    pdf.setDrawColor(200, 200, 200);
+    pdf.line(MARGIN, y, RIGHT, y);
+    y += 8;
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(10);
+    pdf.text("Investor Signature: _______________________________", MARGIN, y);
+    y += 8;
+    pdf.text("Date: ___________________", MARGIN, y);
+
+    pdf.save(`grid-rehab-${propertyTitle ? propertyTitle.replace(/\s+/g, "-").toLowerCase() : "underwriting"}.pdf`);
   };
 
   return (
