@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Script from "next/script"
 import { useState } from "react"
+import { sendLeadToBackend } from "@/lib/backendLead"
 
 export default function ZeroDown(){
 
@@ -32,6 +33,16 @@ phone: formData.get("phone"),
 source:"zerodown",
 page:window.location.href
 }
+
+// Funnel the lead into the GRID backend, independent of the marketing
+// webhook below so it lands even if that automation is unavailable.
+sendLeadToBackend({
+site: "ZeroDown",
+name: String(formData.get("name") || ""),
+email: String(formData.get("email") || ""),
+phone: String(formData.get("phone") || ""),
+interest: "ZeroDown program",
+})
 
 await fetch(
 "https://automation.thegridre.com/webhook/48b7cab7-9899-45cc-b5f6-970ebe7dffa7",

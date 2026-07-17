@@ -26,25 +26,40 @@ export default function ContactForm() {
     // Collect form data
     const form = new FormData(formEl);
 
-    // Convert to plain object for JSON webhook
+    // Convert to plain object
     const payload = Object.fromEntries(form.entries());
 
     try {
-      if (!endpoint) {
-        throw new Error("Missing NEXT_PUBLIC_CONTACT_ENDPOINT.");
-      }
-
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      // Primary destination: the GRID backend (Messages inbox + CRM lead).
+      const res = await fetch(
+        "https://portal.thegridre.com/api/public/contact/submit",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            site: "thegridre.com",
+            name: payload.name,
+            email: payload.email,
+            phone: payload.phone,
+            interest: payload.inquiryType,
+            message: payload.message,
+          }),
+        }
+      );
 
       if (!res.ok) {
         const text = await res.text();
         throw new Error(text || "Request failed.");
+      }
+
+      // Also fire the legacy webhook if one is still configured, so anything
+      // that relied on it keeps working. Best-effort — never blocks success.
+      if (endpoint) {
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }).catch(() => {});
       }
 
       // ✅ Success
