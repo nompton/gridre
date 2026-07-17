@@ -3,7 +3,6 @@
 import Image from "next/image"
 import Script from "next/script"
 import { useState } from "react"
-import { sendLeadToBackend } from "@/lib/backendLead"
 
 export default function ZeroDown(){
 
@@ -26,38 +25,34 @@ setSending(true)
 
 const formData = new FormData(e.target)
 
-const payload = {
-name: formData.get("name"),
-email: formData.get("email"),
-phone: formData.get("phone"),
-source:"zerodown",
-page:window.location.href
-}
-
-// Funnel the lead into the GRID backend, independent of the marketing
-// webhook below so it lands even if that automation is unavailable.
-sendLeadToBackend({
-site: "ZeroDown",
-name: String(formData.get("name") || ""),
-email: String(formData.get("email") || ""),
-phone: String(formData.get("phone") || ""),
-interest: "ZeroDown program",
-})
-
-await fetch(
-"https://automation.thegridre.com/webhook/48b7cab7-9899-45cc-b5f6-970ebe7dffa7",
+try {
+// Send the lead straight to the GRID backend (Messages inbox + CRM lead).
+const res = await fetch(
+"https://portal.thegridre.com/api/public/contact/submit",
 {
 method:"POST",
 headers:{ "Content-Type":"application/json"},
-body:JSON.stringify(payload)
+body:JSON.stringify({
+site: "ZeroDown",
+name: formData.get("name"),
+email: formData.get("email"),
+phone: formData.get("phone"),
+interest: "ZeroDown program",
+})
 }
 )
+if(!res.ok) throw new Error(`Submit failed with status ${res.status}`)
 
 if((window as any).fbq){
 (window as any).fbq('track','Lead')
 }
 
 setSubmitted(true)
+} catch(err){
+console.error("ZeroDown submit error:", err)
+setSending(false)
+alert("There was a problem submitting the form. Please try again.")
+}
 }
 
 function next(){

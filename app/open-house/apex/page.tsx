@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Script from "next/script"
-import { sendLeadToBackend } from "@/lib/backendLead"
 
 const photos = Array.from({ length: 35 }, (_, i) => `/open-house/apex/${i + 1}.jpg`)
 
@@ -39,42 +38,35 @@ export default function OpenHouseApexPage() {
     const formData = new FormData(form)
     const data = Object.fromEntries(formData.entries())
 
-    // Funnel the lead into the GRID backend, independent of the marketing
-    // webhook below so it lands even if that automation is unavailable.
-    sendLeadToBackend({
-      site: "3844 Apex Court Open House",
-      name: String(data.name || ""),
-      email: String(data.email || ""),
-      phone: String(data.phone || ""),
-      interest: "Open house — 3844 Apex Court",
-      message: [
-        data.message,
-        data.workingWithAgent && `Working with an agent: ${data.workingWithAgent}`,
-        data.priceOpinion && `Price opinion: ${data.priceOpinion}`,
-        data.favoriteFeature && `Favorite feature: ${data.favoriteFeature}`,
-        data.leastFavorite && `Least favorite: ${data.leastFavorite}`,
-      ]
-        .filter(Boolean)
-        .join("\n"),
-    })
+    const message = [
+      data.message,
+      data.workingWithAgent && `Working with an agent: ${data.workingWithAgent}`,
+      data.priceOpinion && `Price opinion: ${data.priceOpinion}`,
+      data.favoriteFeature && `Favorite feature: ${data.favoriteFeature}`,
+      data.leastFavorite && `Least favorite: ${data.leastFavorite}`,
+    ]
+      .filter(Boolean)
+      .join("\n")
 
     try {
-      const res = await fetch("https://automation.thegridre.com/webhook/open-house-leads", {
+      // Send the lead straight to the GRID backend (Messages inbox + CRM lead).
+      const res = await fetch("https://portal.thegridre.com/api/public/contact/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          source: "3844 Apex Court Open House",
-          page: "/open-house/apex",
-          type: "combined",
-          timestamp: new Date().toISOString(),
-          ...data,
+          site: "3844 Apex Court Open House",
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          interest: "Open house — 3844 Apex Court",
+          message,
         }),
       })
 
       if (!res.ok) {
-        throw new Error(`Webhook failed with status ${res.status}`)
+        throw new Error(`Submit failed with status ${res.status}`)
       }
 
       if (typeof window !== "undefined" && (window as any).fbq) {
