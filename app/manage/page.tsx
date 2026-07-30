@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Property Management in Norman, OK | GRID Real Estate",
@@ -310,17 +311,23 @@ export default function ManagePage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section id="analysis" className="scroll-mt-24 py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="rounded-3xl border border-black/10 bg-black p-10 text-white md:p-12">
-            <div className="text-sm font-medium text-white/75">Let's talk management</div>
-            <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Ready to hand it off?</div>
-            <div className="mt-3 max-w-xl text-sm leading-7 text-white/80">
-              Tell us about your property or portfolio and we'll put together a straightforward management proposal.
-            </div>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+          <div className="rounded-3xl border border-black/10 bg-black p-8 text-white md:p-12">
+            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              <div>
+                <div className="text-sm font-medium text-white/75">Free rental analysis</div>
+                <div className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">What could your rental earn?</div>
+                <div className="mt-3 max-w-md text-sm leading-7 text-white/80">
+                  Tell us about your property or portfolio and we&apos;ll send a straightforward management proposal and a rent estimate — no obligation.
+                </div>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-white p-6 text-black">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>
