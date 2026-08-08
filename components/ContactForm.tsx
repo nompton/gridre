@@ -43,6 +43,9 @@ export default function ContactForm() {
             phone: payload.phone,
             interest: payload.inquiryType,
             message: payload.message,
+            // Submitting the form is the affirmative opt-in — the consent
+            // disclosure sits right above the Send button below.
+            sms_consent: true,
           }),
         }
       );
@@ -138,6 +141,14 @@ export default function ContactForm() {
           className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"
         />
       </div>
+
+      {/* SMS consent disclosure — submitting the form is the opt-in. */}
+      <p className="text-xs text-black/50">
+        By submitting, you agree that GRID Real Estate LLC may contact you by
+        phone, email, and text message about your inquiry. Message &amp; data
+        rates may apply; message frequency varies. Reply STOP to opt out of
+        texts at any time.
+      </p>
 
       {/* Submit Button */}
       <button
