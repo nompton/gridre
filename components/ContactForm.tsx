@@ -38,6 +38,7 @@ export default function ContactForm() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             site: "thegridre.com",
+            site_key: "150d6505d2c0416481881cf6e24f6937",
             name: payload.name,
             email: payload.email,
             phone: payload.phone,

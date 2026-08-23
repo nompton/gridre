@@ -57,6 +57,7 @@ export default function OpenHouseApexPage() {
         },
         body: JSON.stringify({
           site: "3844 Apex Court Open House",
+          site_key: "150d6505d2c0416481881cf6e24f6937",
           name: data.name,
           email: data.email,
           phone: data.phone,
