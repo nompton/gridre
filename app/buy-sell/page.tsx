@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
+  alternates: { canonical: "https://thegridre.com/buy-sell" },
   title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
   description: "Buyer representation and home listings in Norman, Oklahoma with an investor-first perspective. Local market knowledge, professional photography, Matterport tours, and MLS syndication. Call (405) 310-1221.",
   openGraph: {

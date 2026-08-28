@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
+  alternates: { canonical: "https://thegridre.com/contact" },
   title: "Contact — GRID Real Estate",
   description: "Get in touch with GRID Real Estate. Property management, association management, investor services, and listings in Norman, Oklahoma.",
 };
@@ -10,7 +11,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div>
-      <Section kicker="Contact" title="Let's talk">
+      <Section as="h1" kicker="Contact" title="Let's talk">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <p className="text-sm text-black/75 mb-6">

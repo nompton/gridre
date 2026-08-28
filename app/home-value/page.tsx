@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import HomeValueForm from "@/components/HomeValueForm";
 
 export const metadata = {
+  alternates: { canonical: "https://thegridre.com/home-value" },
   title: "What's Your Home Worth? — GRID Real Estate",
   description:
     "Find out what your Norman-area home is worth. Request a free, no-obligation home valuation from GRID Real Estate and we'll follow up with what it's worth in today's market.",
@@ -10,7 +11,7 @@ export const metadata = {
 export default function HomeValuePage() {
   return (
     <div>
-      <Section kicker="Home value" title="What's your home worth?">
+      <Section as="h1" kicker="Home value" title="What's your home worth?">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <p className="text-sm text-black/75 mb-6">

@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
+  alternates: { canonical: "https://thegridre.com/invest" },
   title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
   description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. GRID is run by active owners, for investors. Call (405) 310-1221.",
   openGraph: {
