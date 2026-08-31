@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Mustang Property Management",
+  "description": "Full-service rental property management in Mustang, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for a fast-growing southwest OKC metro market.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Mustang", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Yukon", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Moore", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/mustang",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Mustang?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Mustang property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Mustang?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, new construction homes, small multifamily properties, and growing investor portfolios across Mustang and the southwest OKC metro." } },
+    { "@type": "Question", name: "How do you market vacancies in Mustang?", acceptedAnswer: { "@type": "Answer", text: "Every Mustang vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted Instagram and Facebook campaigns, and syndication across 100+ rental platforms." } },
+    { "@type": "Question", name: "Do you manage Mustang properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with out-of-state owners who invest in the Mustang and OKC metro market. We provide local oversight, monthly reporting, and handle everything on the ground." } },
+    { "@type": "Question", name: "Why is Mustang a good market for rental property owners?", acceptedAnswer: { "@type": "Answer", text: "Mustang is one of the fastest-growing communities in the OKC Metro, with new construction, expanding neighborhoods, and steady rental demand. In a market with new builds competing for tenants, premier marketing helps your property stand out." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Mustang Property Management", item: "https://thegridre.com/mustang" },
+  ],
+};
+
 export default function MustangPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/mustang-rental-home.jpg" alt="Mustang Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

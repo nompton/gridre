@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Bixby Property Management",
+  "description": "Full-service rental property management in Bixby, Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for one of the Tulsa metro's strongest suburban rental markets.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Broken Arrow", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/bixby",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Bixby?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Bixby property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Bixby?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and investor portfolios across Bixby and the surrounding Tulsa metro." } },
+    { "@type": "Question", name: "How do you market vacancies in Bixby?", acceptedAnswer: { "@type": "Answer", text: "Every Bixby vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted Instagram and Facebook campaigns, and syndication across 100+ rental platforms." } },
+    { "@type": "Question", name: "Do you manage Bixby properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with out-of-state owners who invest in the Bixby and Tulsa metro market. We provide local oversight, monthly reporting, and handle everything on the ground." } },
+    { "@type": "Question", name: "What makes the Bixby rental market attractive?", acceptedAnswer: { "@type": "Answer", text: "Bixby is one of Oklahoma's fastest-growing communities, with top-rated schools, a strong family demographic, and proximity to Tulsa's major employers. That demand makes it one of the most in-demand suburban rental submarkets in the metro." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Bixby Property Management", item: "https://thegridre.com/bixby" },
+  ],
+};
+
 export default function BixbyPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Bixby Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

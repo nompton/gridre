@@ -9,6 +9,7 @@ const links = [
   { href: "/invest", label: "Investor Services" },
   { href: "/buy-sell", label: "Buy & Sell" },
   { href: "/associations", label: "Associations" },
+  { href: "/platform", label: "Platform" },
   { href: "/about", label: "About" },
 ];
 

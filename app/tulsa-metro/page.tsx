@@ -10,6 +10,45 @@ export const metadata = {
     "Professional property management across the Tulsa Metro — Tulsa, Bixby, Broken Arrow, Jenks, Owasso, and Sand Springs. GRID delivers premier marketing and full-service management for Tulsa area rental properties.",
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Tulsa Metro Property Management",
+  "description": "Full-service rental property management across the greater Tulsa metropolitan area in Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for Tulsa Metro rental properties.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Broken Arrow", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Owasso", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Sand Springs", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/tulsa-metro",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Tulsa Metro property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and growing investor portfolios across the Tulsa Metro — from urban core properties in Tulsa to homes in the surrounding suburbs. Whether you own one property or a portfolio, we treat it like our own." } },
+    { "@type": "Question", name: "How do you market vacancies in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "Every Tulsa Metro vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms including Zillow, Apartments.com, and Zumper." } },
+    { "@type": "Question", name: "Do you manage Tulsa Metro properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many out-of-state owners who invest in the Tulsa Metro market. We provide local oversight, monthly reporting, and handle everything on the ground so you don't need to be here." } },
+    { "@type": "Question", name: "Which Tulsa Metro communities do you cover?", acceptedAnswer: { "@type": "Answer", text: "We manage rental properties across the greater Tulsa metropolitan area including Tulsa, Bixby, Broken Arrow, Jenks, Owasso, and Sand Springs. Each has its own demand profile, and GRID knows them all." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Tulsa Metro Property Management", item: "https://thegridre.com/tulsa-metro" },
+  ],
+};
+
 const cities = [
   { name: "Tulsa", href: "/tulsa", desc: "Core city rentals, diverse neighborhoods, strong urban demand." },
   { name: "Bixby", href: "/bixby", desc: "One of Oklahoma's fastest-growing suburbs. Top schools, strong family demand." },
@@ -22,6 +61,9 @@ const cities = [
 export default function TulsaMetroPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Tulsa Metro Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

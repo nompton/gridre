@@ -44,11 +44,21 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Tulsa Property Management", item: "https://thegridre.com/tulsa" },
+  ],
+};
+
 export default function TulsaPage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Tulsa Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

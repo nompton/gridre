@@ -219,6 +219,29 @@ export default function AssociationsPage() {
         </div>
       </Section>
 
+      {/* PLATFORM / ATLAS TEASER */}
+      <section className="py-4">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="rounded-3xl border border-black/10 bg-black p-8 text-white md:p-10">
+            <div className="flex flex-wrap items-center justify-between gap-6">
+              <div className="max-w-xl">
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80">
+                  <span className="h-1.5 w-1.5 rounded-full bg-white" /> Proprietary technology
+                </div>
+                <div className="mt-4 text-xl font-semibold tracking-tight md:text-2xl">Financial transparency your board can log into.</div>
+                <p className="mt-3 text-sm leading-7 text-white/80">
+                  <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software. Reconciled association accounting, a clear audit trail, and statements your board and owners can pull up any time.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <a href="/platform" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">explore the platform</a>
+                <a href="/contact" className="rounded-full border border-white/40 bg-white/5 px-5 py-3 text-sm font-medium text-white hover:bg-white/15">talk to us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* FAQ */}

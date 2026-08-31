@@ -88,9 +88,9 @@ export default function PrivacyPage() {
       </Section>
 
       <Section title="10. Contact">
-        <p>GRID</p>
-        <p>117 E Daws Street</p>
-        <p>Norman, OK 73069</p>
+        <p>GRID Real Estate LLC</p>
+        <p>1263 S Eastern Ave Ste B</p>
+        <p>Moore, OK 73160</p>
         <p>info@thegridre.com</p>
       </Section>
 

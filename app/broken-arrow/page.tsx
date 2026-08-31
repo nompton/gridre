@@ -26,10 +26,20 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Broken Arrow Property Management", item: "https://thegridre.com/broken-arrow" },
+  ],
+};
+
 export default function BrokenArrowPage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Broken Arrow Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

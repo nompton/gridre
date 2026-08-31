@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Midwest City Property Management",
+  "description": "Full-service rental property management in Midwest City, Oklahoma. Premier marketing, thorough tenant screening, Oklahoma-compliant leases, maintenance coordination, and clean monthly owner reporting for a rental market anchored by Tinker AFB.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Midwest City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Moore", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Edmond", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/midwest-city",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Midwest City?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise markups. Contact us for a clear, no-obligation proposal based on your Midwest City property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Midwest City?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals and investor portfolios across Midwest City and the surrounding OKC metro, with full-service management on every property." } },
+    { "@type": "Question", name: "How do you market vacancies in Midwest City?", acceptedAnswer: { "@type": "Answer", text: "Every Midwest City listing gets professional photography, a Matterport 3D tour, drone coverage, Instagram and Facebook campaigns, and syndication across 100+ rental platforms so tenants searching online find your property first." } },
+    { "@type": "Question", name: "Do you manage Midwest City properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. If you own a Midwest City property remotely, GRID gives you local management, clear reporting, and a team that handles everything on the ground so you don't have to be here." } },
+    { "@type": "Question", name: "Is Midwest City a good rental market?", acceptedAnswer: { "@type": "Answer", text: "Midwest City has a reliable rental market anchored by Tinker AFB, steady employment, and consistent demand for quality housing, which makes well-managed properties straightforward to own." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Midwest City Property Management", item: "https://thegridre.com/midwest-city" },
+  ],
+};
+
 export default function MidwestCityPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/midwest-city-rental-home.jpg" alt="Midwest City Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

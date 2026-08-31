@@ -38,11 +38,21 @@ const faqSchema = {
   ],
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Norman Property Management", item: "https://thegridre.com/norman" },
+  ],
+};
+
 export default function NormanPage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
@@ -79,7 +89,7 @@ export default function NormanPage() {
             Every Norman vacancy gets professional photography, a Matterport 3D tour, drone coverage, and syndication across 100+ platforms. Vacancies fill faster because we present properties better than anyone in this market.
           </Card>
           <Card title="compliance you can trust">
-            <GridWord />&apos;s management practice is built on deep regulatory experience — including work at the Oklahoma Real Estate Commission. Trust accounts and documentation handled to the professional standard most managers never reach.
+            <GridWord />&apos;s management practice is built on deep regulatory and compliance experience. Trust accounts and documentation handled to the professional standard most managers never reach.
           </Card>
         </div>
       </Section>
