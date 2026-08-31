@@ -10,9 +10,49 @@ export const metadata = {
     "Professional property management in Noble, OK. Noble is one of the fastest-growing communities in the OKC metro. GRID delivers premier marketing, full-service leasing, and owner-focused management.",
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Noble Property Management",
+  "description": "Full-service rental property management in Noble, Oklahoma — a fast-growing community south of Norman. Professional marketing, tenant screening, maintenance coordination, and owner-focused reporting.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Noble", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Norman", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Moore", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/noble",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Noble?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate puts together a clear, straightforward management proposal for your Noble property — whether it's one home or a growing portfolio. Contact us for custom pricing based on your rental." } },
+    { "@type": "Question", name: "What types of properties do you manage in Noble?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals and growing investor portfolios across Noble and the surrounding OKC metro, with full-service leasing, rent collection, maintenance coordination, and monthly reporting." } },
+    { "@type": "Question", name: "How do you market vacancies in Noble?", acceptedAnswer: { "@type": "Answer", text: "Every Noble vacancy gets professional photography, a Matterport 3D tour, drone coverage, targeted social media marketing, and syndication across 100+ rental platforms — standard on every listing, not an upgrade." } },
+    { "@type": "Question", name: "Do you manage Noble properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We provide local oversight, monthly reporting, and on-the-ground management for owners who invest in the Noble market from out of state, so you don't need to be here." } },
+    { "@type": "Question", name: "Why invest in the Noble rental market?", acceptedAnswer: { "@type": "Answer", text: "Noble is one of the fastest-growing communities in the OKC metro. New development, rising demand, and a growing population south of Norman are reshaping the community and creating real opportunity for rental property owners." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Noble Property Management", item: "https://thegridre.com/noble" },
+  ],
+};
+
 export default function NoblePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Noble Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
@@ -48,7 +88,7 @@ export default function NoblePage() {
             We coordinate maintenance with vetted vendors, clear work orders, and transparent pricing. Problems get handled before they become expensive.
           </Card>
           <Card title="compliance you can trust">
-            <GridWord />&apos;s management practice is built on deep regulatory experience — including work at the Oklahoma Real Estate Commission. Trust accounts and documentation handled correctly.
+            <GridWord />&apos;s management practice is built on deep regulatory and compliance experience. Trust accounts and documentation handled correctly.
           </Card>
         </div>
       </Section>

@@ -54,11 +54,21 @@ const features = [
   { title: "Tenant Screening", body: "Full credit, background, and income verification on every applicant. No exceptions." },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Oklahoma City Property Management", item: "https://thegridre.com/oklahoma-city" },
+  ],
+};
+
 export default function OklahomaCityPage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/okc-rental-townhome.jpg" alt="Oklahoma City rental property — GRID Real Estate property management" fill priority className="object-cover" />

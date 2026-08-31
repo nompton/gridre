@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Owasso Property Management",
+  "description": "Full-service rental property management in Owasso, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting across the Tulsa Metro.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Owasso", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Broken Arrow", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Sand Springs", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/owasso",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Owasso?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Owasso property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Owasso?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and growing investor portfolios across Owasso and the surrounding Tulsa Metro." } },
+    { "@type": "Question", name: "How do you market vacancies in Owasso?", acceptedAnswer: { "@type": "Answer", text: "Every Owasso vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted Instagram and Facebook campaigns, and syndication across 100+ rental platforms." } },
+    { "@type": "Question", name: "Do you manage Owasso properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with out-of-state owners who invest in the Owasso and Tulsa Metro market. We provide local oversight, monthly reporting, and handle everything on the ground." } },
+    { "@type": "Question", name: "Why invest in the Owasso rental market?", acceptedAnswer: { "@type": "Answer", text: "Owasso has been one of Oklahoma's fastest-growing cities for over a decade, with new development, strong schools, and consistent demand from families and professionals moving north out of Tulsa — making it one of the Tulsa Metro's most reliable rental markets." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Owasso Property Management", item: "https://thegridre.com/owasso" },
+  ],
+};
+
 export default function OwassoPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Owasso Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

@@ -46,10 +46,10 @@ export default function AboutPage() {
               <GridWord /> Real Estate is a Norman-based brokerage focused on property management, association management, and investor services. We're built specifically for owners, investors, and communities who need professional, accountable management.
             </p>
             <p>
-              The company is led by a licensed Oklahoma broker who has been managing their own properties since 2018. That foundation shapes how <GridWord /> operates. We manage for others the way we manage for ourselves.
+              The company is led by a licensed Oklahoma broker with years of hands-on experience owning, operating, and managing rental property. That foundation shapes how <GridWord /> operates. We manage for others the way we manage for ourselves.
             </p>
             <p>
-              Our regulatory background, including work at the Oklahoma Real Estate Commission, means trust accounts, documentation, and financial controls are handled correctly from day one.
+              Deep regulatory and compliance expertise means trust accounts, documentation, and financial controls are handled correctly from day one.
             </p>
             <p>
               <GridWord /> is also deeply involved in Norman's growth and planning. We're not just working in Norman. We're invested in where it's going.
@@ -75,45 +75,44 @@ export default function AboutPage() {
       <section className="border-y border-black/10 bg-black/[0.02] py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-8">
-            <div className="text-sm font-medium text-black/60">Leadership</div>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">About the Broker</h2>
+            <div className="text-sm font-medium text-black/60">Experience</div>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Our Expertise</h2>
           </div>
           <div className="grid gap-10 md:grid-cols-2 md:items-start">
             <div className="max-w-prose space-y-5 text-sm leading-7 text-black/75">
               <p>
-                Patrick Schrank is the Managing Broker and founder of <GridWord /> Real Estate. He's been licensed in Oklahoma real estate since February 2017 and earned his broker license in January 2021.
+                <GridWord /> is led by a licensed Oklahoma broker with years of experience owning, operating, and managing rental property. That hands-on background shapes how we work: we manage for others the way we manage for ourselves.
               </p>
               <p>
-                Patrick has been managing his own rental properties since 2018, which shapes how <GridWord /> operates. He understands what it takes to keep a property rented, maintained, and profitable over time.
+                We understand what it takes to keep a property rented, maintained, and profitable over time, and we bring that same discipline to every owner and association we serve.
               </p>
               <p>
-                Patrick is also actively involved in Norman's planning and development, including serving on the AIM Norman Comprehensive Plan Committee.
+                We're also deeply invested in Norman's growth and long-term planning, because we're not just working in this market, we're building for its future.
               </p>
             </div>
             <div className="space-y-4">
               <div className="rounded-2xl border border-black/10 p-6">
-                <div className="text-sm font-semibold tracking-tight">Credentials</div>
+                <div className="text-sm font-semibold tracking-tight">What we bring</div>
                 <ul className="mt-4 space-y-3 text-sm text-black/75">
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Licensed in Oklahoma since February 2017
+                    Licensed Oklahoma real estate brokerage
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Oklahoma Real Estate Broker License (January 2021)
-                  </li>
-                
-                  <li className="flex gap-3">
-                    <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Active property owner and operator since 2018
+                    Years of hands-on property ownership and management
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    AIM Norman Comprehensive Plan Committee member
+                    Deep regulatory and compliance expertise
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Former Investigator with Oklahoma Real Estate Commission
+                    Trust accounting and financial controls handled correctly
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-0.5 shrink-0 text-black/30">+</span>
+                    Active in Norman's planning and development
                   </li>
                 </ul>
               </div>

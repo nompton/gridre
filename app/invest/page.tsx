@@ -112,7 +112,7 @@ export default function InvestPage() {
               The Oklahoma City Metro is one of the most stable rental markets in the country — low cost of entry, strong rental demand, and consistent cash flow without the volatility of coastal markets. University anchors, major employers, and steady population growth across the metro make it a long-term owner's market.
             </p>
             <p className="text-sm leading-7 text-black/75">
-              <GridWord /> is deeply embedded in how the OKC Metro is growing — through active involvement in planning, local development projects, and the <span className="font-semibold">Nompton™ Group's</span> network of operators and community stakeholders. We see opportunities before they're widely known.
+              <GridWord /> is deeply embedded in how the OKC Metro is growing — through active involvement in planning, local development projects, and a network of operators and community stakeholders. We see opportunities before they're widely known.
             </p>
             <div className="grid gap-3 sm:grid-cols-3 pt-2">
               {[

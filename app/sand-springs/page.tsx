@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Sand Springs Property Management",
+  "description": "Full-service rental property management in Sand Springs, Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for the west Tulsa metro market.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Sand Springs", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Owasso", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/sand-springs",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Sand Springs?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Sand Springs property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Sand Springs?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and investor portfolios across Sand Springs. The affordable housing stock and established neighborhoods make it a strong buy-and-hold market." } },
+    { "@type": "Question", name: "How do you market vacancies in Sand Springs?", acceptedAnswer: { "@type": "Answer", text: "Every Sand Springs vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms including Zillow, Apartments.com, and Zumper." } },
+    { "@type": "Question", name: "Do you manage Sand Springs properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many out-of-state owners who invest in the Sand Springs and Tulsa metro market. We provide local oversight, monthly reporting, and handle everything on the ground so you don't need to be here." } },
+    { "@type": "Question", name: "Why invest in the Sand Springs rental market?", acceptedAnswer: { "@type": "Answer", text: "Sand Springs is one of west Tulsa's most stable long-term rental markets, with affordable entry points, established neighborhoods, and a community-oriented tenant base that tends to stay put and keep turnover low." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Sand Springs Property Management", item: "https://thegridre.com/sand-springs" },
+  ],
+};
+
 export default function SandSpringsPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Sand Springs Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

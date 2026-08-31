@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Moore Property Management",
+  "description": "Full-service rental property management in Moore, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for the south OKC corridor.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Moore", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Norman", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Midwest City", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/moore",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Moore?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a clear, custom proposal based on your Moore property or growing portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Moore?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals and growing investor portfolios across Moore, handling everything from marketing and tenant placement to rent collection, maintenance coordination, and monthly reporting." } },
+    { "@type": "Question", name: "How do you market vacancies in Moore?", acceptedAnswer: { "@type": "Answer", text: "Every Moore vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms so your property reaches Moore's deep pool of quality renters." } },
+    { "@type": "Question", name: "Do you manage Moore properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with out-of-state owners who invest in the Moore market. We provide local oversight, thorough tenant screening, and clean monthly reporting so you don't need to be here." } },
+    { "@type": "Question", name: "Why is Moore a strong rental market?", acceptedAnswer: { "@type": "Answer", text: "Moore sits in the south OKC corridor with deep, steady renter demand from families, professionals, and workers tied to the metro. Vacancies fill fast when a property is marketed and presented professionally." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Moore Property Management", item: "https://thegridre.com/moore" },
+  ],
+};
+
 export default function MoorePage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/moore-rental-home.jpg" alt="Moore Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
@@ -53,7 +93,7 @@ export default function MoorePage() {
             We coordinate maintenance with vetted vendors, clear work orders, and transparent pricing. Problems get handled before they become expensive.
           </Card>
           <Card title="compliance you can trust">
-            <GridWord />'s management practice is built on deep regulatory experience — including work at the Oklahoma Real Estate Commission. Trust accounts and documentation handled correctly.
+            <GridWord />'s management practice is built on deep regulatory and compliance experience. Trust accounts and documentation handled correctly.
           </Card>
         </div>
       </Section>

@@ -14,6 +14,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/invest", priority: 0.9, changeFrequency: "monthly" },
   { path: "/buy-sell", priority: 0.9, changeFrequency: "monthly" },
   { path: "/associations", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/platform", priority: 0.8, changeFrequency: "monthly" },
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
   { path: "/home-value", priority: 0.8, changeFrequency: "monthly" },

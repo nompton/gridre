@@ -23,14 +23,16 @@ const localBusinessSchema = {
   telephone: "+14053101221",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Norman",
+    streetAddress: "1263 S Eastern Ave Ste B",
+    addressLocality: "Moore",
     addressRegion: "OK",
+    postalCode: "73160",
     addressCountry: "US",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 35.2226,
-    longitude: -97.4395,
+    latitude: 35.3395,
+    longitude: -97.4867,
   },
   areaServed: [
     { "@type": "City", name: "Norman", containedIn: "Oklahoma" },
@@ -40,7 +42,6 @@ const localBusinessSchema = {
     { "@type": "City", name: "Yukon", containedIn: "Oklahoma" },
     { "@type": "City", name: "Moore", containedIn: "Oklahoma" },
     { "@type": "City", name: "Mustang", containedIn: "Oklahoma" },
-    { "@type": "City", name: "Noble", containedIn: "Oklahoma" },
     { "@type": "City", name: "Midwest City", containedIn: "Oklahoma" },
     { "@type": "City", name: "Tulsa", containedIn: "Oklahoma" },
     { "@type": "City", name: "Bixby", containedIn: "Oklahoma" },
@@ -151,6 +152,39 @@ export default function HomePage() {
                 <p className="mt-1 text-sm text-black/65">Financial oversight, covenant enforcement, vendor coordination, and board support for Norman communities.</p>
               </div>
               <a href="/associations" className="shrink-0 rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30 transition-colors">association management →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* PLATFORM / ATLAS TEASER */}
+      <section className="border-y border-black/10 bg-black py-14 text-white">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80">
+                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Proprietary technology
+              </div>
+              <h2 className="mt-5 text-2xl font-semibold tracking-tight md:text-3xl">Management you can see into.</h2>
+              <p className="mt-4 max-w-xl text-sm leading-7 text-white/80">
+                <GridWord /> runs on <span className="font-semibold text-white">Atlas</span> — a proprietary Oklahoma-built brokerage platform. Verified trust accounting, per-tenant ledgers, and owner statements you can open on any device, any time. GRID is the first brokerage operating on it.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href="/platform" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">explore the platform</a>
+                <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/40 bg-white/5 px-5 py-3 text-sm font-medium text-white hover:bg-white/15">owner login</a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                ["Verified", "trust accounting & reconciliation"],
+                ["24/7", "statements on any device"],
+                ["Per-tenant", "ledgers and full rental P&L"],
+                ["Built-in", "OREC compliance on every file"],
+              ].map(([stat, note]) => (
+                <div key={note} className="rounded-2xl border border-white/15 bg-white/[0.03] p-5">
+                  <div className="text-xl font-semibold tracking-tight">{stat}</div>
+                  <div className="mt-1 text-xs leading-5 text-white/60">{note}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

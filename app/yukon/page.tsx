@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Yukon Property Management",
+  "description": "Full-service rental property management in Yukon, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for west OKC metro investment properties.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Yukon", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Mustang", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Edmond", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/yukon",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Yukon?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate keeps management fees straightforward with no hidden charges or surprise maintenance markups. Contact us for a clear proposal based on your Yukon rental." } },
+    { "@type": "Question", name: "What types of properties do you manage in Yukon?", acceptedAnswer: { "@type": "Answer", text: "We manage rental properties across Yukon, including single-family homes and new-construction rentals in the growing west OKC metro. Tell us about your property and we'll put together a proposal." } },
+    { "@type": "Question", name: "How do you market vacancies in Yukon?", acceptedAnswer: { "@type": "Answer", text: "Every Yukon vacancy gets professional photography, a Matterport 3D tour, drone coverage, Instagram and Facebook ad campaigns, and syndication to 100+ rental platforms. It's standard, not an upgrade." } },
+    { "@type": "Question", name: "Do you manage Yukon properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We provide local oversight, proactive maintenance, qualified tenant screening, and monthly owner reporting so out-of-state owners can invest in the Yukon market with confidence." } },
+    { "@type": "Question", name: "Why is professional marketing important in the west OKC metro?", acceptedAnswer: { "@type": "Answer", text: "Yukon is growing fast, and new construction means tenants have options. Professionally presented properties — real photography, 3D tours, and social media exposure — lease faster and attract higher-quality tenants across the west metro." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Yukon Property Management", item: "https://thegridre.com/yukon" },
+  ],
+};
+
 export default function YukonPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/yukon-rental-home.jpg" alt="Yukon Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />

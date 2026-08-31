@@ -214,7 +214,7 @@ boxShadow:"0 6px 20px rgba(0,0,0,0.15)"
 <h2>Request Received</h2>
 
 <p>
-Patrick will reach out shortly with details about this home.
+Our team will reach out shortly with details about this home.
 </p>
 
 </div>

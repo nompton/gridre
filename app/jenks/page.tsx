@@ -15,9 +15,49 @@ export const metadata = {
   },
 };
 
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Property Management",
+  "name": "Jenks Property Management",
+  "description": "Full-service rental property management in Jenks, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for Jenks investment properties.",
+  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "areaServed": [
+    { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
+    { "@type": "City", "name": "Sand Springs", "containedIn": "Oklahoma" },
+  ],
+  "url": "https://thegridre.com/jenks",
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How much does property management cost in Jenks?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Jenks property or portfolio." } },
+    { "@type": "Question", name: "What types of properties do you manage in Jenks?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family homes, small multifamily properties, and growing investor portfolios throughout Jenks and the surrounding Tulsa metro." } },
+    { "@type": "Question", name: "How do you market vacancies in Jenks?", acceptedAnswer: { "@type": "Answer", text: "Every Jenks vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted Instagram and Facebook campaigns, and syndication across 100+ rental platforms." } },
+    { "@type": "Question", name: "Do you manage Jenks properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with out-of-state owners who invest in the Jenks and Tulsa metro market. We provide local oversight, monthly reporting, and handle everything on the ground." } },
+    { "@type": "Question", name: "Why is Jenks a good market for rental investors?", acceptedAnswer: { "@type": "Answer", text: "Jenks is a Tulsa-metro community known for its top-rated school district, walkable main street, and river access. That intentional demand draws quality, long-term renters and creates stable tenancies with lower turnover." } },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://thegridre.com" },
+    { "@type": "ListItem", position: 2, name: "Jenks Property Management", item: "https://thegridre.com/jenks" },
+  ],
+};
+
 export default function JenksPage() {
   return (
     <div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative border-b border-black/10">
         <div className="relative h-[480px] w-full">
           <Image src="/images/listing-exterior.jpg" alt="Jenks Oklahoma rental home — GRID Real Estate property management" fill priority className="object-cover" />
