@@ -204,7 +204,7 @@ export default function ManagePage() {
                 </div>
                 <div className="mt-4 text-xl font-semibold tracking-tight md:text-2xl">Your books, your statements, always in view.</div>
                 <p className="mt-3 text-sm leading-7 text-white/80">
-                  <GridWord /> runs on <span className="font-semibold text-white">Atlas</span>, a proprietary Oklahoma-built platform. Verified trust accounting, per-tenant ledgers, and owner statements on any device, any time.
+                  <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software, built in-house. Verified trust accounting, per-tenant ledgers, and owner statements on any device, any time.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">

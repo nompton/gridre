@@ -166,7 +166,7 @@ export default function HomePage() {
               </div>
               <h2 className="mt-5 text-2xl font-semibold tracking-tight md:text-3xl">Management you can see into.</h2>
               <p className="mt-4 max-w-xl text-sm leading-7 text-white/80">
-                <GridWord /> runs on <span className="font-semibold text-white">Atlas</span> — a proprietary Oklahoma-built brokerage platform. Verified trust accounting, per-tenant ledgers, and owner statements you can open on any device, any time. GRID is the first brokerage operating on it.
+                <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software — the proprietary platform we built in-house. Verified trust accounting, per-tenant ledgers, and owner statements you can open on any device, any time.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href="/platform" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">explore the platform</a>

@@ -230,7 +230,7 @@ export default function AssociationsPage() {
                 </div>
                 <div className="mt-4 text-xl font-semibold tracking-tight md:text-2xl">Financial transparency your board can log into.</div>
                 <p className="mt-3 text-sm leading-7 text-white/80">
-                  <GridWord /> runs on <span className="font-semibold text-white">Atlas</span>, a proprietary Oklahoma-built platform. Reconciled association accounting, a clear audit trail, and statements your board and owners can pull up any time.
+                  <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software. Reconciled association accounting, a clear audit trail, and statements your board and owners can pull up any time.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">

@@ -5,11 +5,11 @@ export const metadata = {
   alternates: { canonical: "https://thegridre.com/platform" },
   title: "The Atlas Platform | GRID Real Estate Owner Portal & Trust Accounting",
   description:
-    "GRID Real Estate runs on Atlas — a proprietary Oklahoma-built brokerage platform. Owners get verified trust accounting, per-tenant ledgers, owner payouts, and statements on any device, anytime. Call (405) 310-1221.",
+    "GRID Real Estate runs on Atlas — its own proprietary brokerage software. Owners get verified trust accounting, per-tenant ledgers, owner payouts, and statements on any device, anytime. Call (405) 310-1221.",
   openGraph: {
     title: "The Atlas Platform | GRID Real Estate",
     description:
-      "Verified trust accounting, live owner statements, and a branded client portal — the proprietary technology GRID runs on.",
+      "Verified trust accounting, live owner statements, and a branded client portal — GRID's own proprietary software.",
     url: "https://thegridre.com/platform",
   },
 };
@@ -20,7 +20,7 @@ const serviceSchema = {
   "serviceType": "Property Management Technology & Owner Reporting",
   "name": "GRID Owner Portal & Trust Accounting on Atlas",
   "description":
-    "GRID Real Estate manages property on Atlas, a proprietary Oklahoma-built brokerage platform. Owners receive verified trust accounting, per-tenant ledgers, tracked owner payouts, and monthly statements accessible on any device.",
+    "GRID Real Estate runs on Atlas, its own proprietary brokerage software built in-house. Owners receive verified trust accounting, per-tenant ledgers, tracked owner payouts, and monthly statements accessible on any device.",
   "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
@@ -34,7 +34,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    { "@type": "Question", name: "What software does GRID Real Estate use to manage property?", acceptedAnswer: { "@type": "Answer", text: "GRID runs on Atlas, a proprietary Oklahoma-built brokerage operating system. It handles trust accounting, per-tenant ledgers, owner payouts, and a branded owner portal, with OREC compliance built into the workflow. GRID is the first brokerage operating on Atlas." } },
+    { "@type": "Question", name: "What software does GRID Real Estate use to manage property?", acceptedAnswer: { "@type": "Answer", text: "GRID runs on Atlas, its own proprietary brokerage software. GRID built it to handle trust accounting, per-tenant ledgers, owner payouts, and a branded owner portal, with OREC compliance built into the workflow." } },
     { "@type": "Question", name: "Can I see my owner statements online?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every owner has a secure portal login and can view statements, income and expenses, and property performance on any device, anytime — not just once a month by email." } },
     { "@type": "Question", name: "How does GRID handle trust funds?", acceptedAnswer: { "@type": "Answer", text: "Owner and tenant funds are held in a dedicated trust account with disciplined reconciliation and a full audit trail. Balances and disbursements are documented and verifiable inside the platform." } },
     { "@type": "Question", name: "Do I get a per-tenant ledger?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every property shows rent in, expenses out, owner payouts, and a per-tenant ledger, so the full rental P&L is transparent and always current." } },
@@ -73,13 +73,13 @@ export default function PlatformPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80">
-                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Proprietary technology · Built in Oklahoma
+                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Our own software · Built in-house
               </div>
               <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">
                 Your management, made transparent.
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-7 text-white/80">
-                <GridWord /> runs on <span className="font-semibold text-white">Atlas</span> — a proprietary brokerage operating system built for Oklahoma real estate. Verified trust accounting, live owner statements, and a branded portal you can open any time. GRID is the first brokerage operating on it.
+                <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software — the proprietary platform we built to run everything we do. Verified trust accounting, live owner statements, and a branded portal you can open any time.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">open your portal</a>
@@ -139,7 +139,7 @@ export default function PlatformPage() {
       <Section kicker="Why it matters" title="The technology behind your property.">
         <div className="max-w-3xl">
           <p className="text-sm leading-7 text-black/75">
-            Most management companies stitch together a spreadsheet for trust accounting, a separate tool for statements, and an inbox for everything else. <GridWord /> runs the whole operation on Atlas — one connected system where your money, your documents, and your property performance all live together, and where the compliance controls are built in rather than bolted on.
+            Most management companies stitch together a spreadsheet for trust accounting, a separate tool for statements, and an inbox for everything else. <GridWord /> built its own software instead — Atlas, one connected system where your money, your documents, and your property performance all live together, and where the compliance controls are built in rather than bolted on.
           </p>
           <p className="mt-4 text-sm leading-7 text-black/75">
             For you, that means fewer surprises and more visibility: verified trust balances, statements you can pull up any time, and a clear line from every dollar of rent collected to every dollar disbursed to you.
@@ -222,13 +222,13 @@ export default function PlatformPage() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
             <div>
-              <div className="text-sm font-medium text-white/60">First on Atlas</div>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">A brokerage running on better infrastructure.</h2>
+              <div className="text-sm font-medium text-white/60">Built in-house</div>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">A brokerage that built its own infrastructure.</h2>
               <p className="mt-5 text-sm leading-7 text-white/80">
-                Atlas is a proprietary brokerage operating system built in Norman by Atlas Labs — OREC compliance, back office, transaction management, and a client portal in one connected system. <GridWord /> is the first brokerage operating on it, which means our owners get technology most Oklahoma management companies simply do not have.
+                Atlas is <GridWord />&apos;s own proprietary brokerage platform — OREC compliance, back office, transaction management, and a client portal in one connected system. We built it to run our own business, which means our owners get technology most Oklahoma management companies simply do not have.
               </p>
               <p className="mt-4 text-xs leading-6 text-white/45">
-                Atlas is a product of Atlas Labs LLC, now opening to select Oklahoma brokerages at{" "}
+                <GridWord /> is now making Atlas available to select Oklahoma brokerages at{" "}
                 <a href="https://goatlasbroker.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-white/80">goatlasbroker.com</a>.
               </p>
             </div>
