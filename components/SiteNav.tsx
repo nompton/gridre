@@ -22,19 +22,19 @@ export default function SiteNav() {
         <Link href="/" className="flex items-center gap-3">
           <Image src="/brand/grid_icon.png" alt="GRID Real Estate" width={34} height={34} className="rounded-sm" />
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="text-sm text-black/70 hover:text-black transition-colors">{l.label}</Link>
+            <Link key={l.href} href={l.href} className="whitespace-nowrap text-sm text-black/70 hover:text-black transition-colors">{l.label}</Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 md:flex">
-          <a href="tel:4053101221" className="text-sm text-black/60 hover:text-black transition-colors">(405) 310-1221</a>
-          <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="rounded-full border border-black/15 px-4 py-2 text-sm font-medium text-black/70 hover:border-black/30 hover:text-black transition-colors">client login</a>
-          <a href="/contact" className="rounded-full bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity">get a proposal</a>
+        <div className="hidden items-center gap-3 lg:flex">
+          <a href="tel:4053101221" className="hidden whitespace-nowrap text-sm text-black/60 hover:text-black transition-colors xl:inline-block">(405) 310-1221</a>
+          <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full border border-black/15 px-4 py-2 text-sm font-medium text-black/70 hover:border-black/30 hover:text-black transition-colors">client login</a>
+          <a href="/contact" className="whitespace-nowrap rounded-full bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity">get a proposal</a>
         </div>
-        <button onClick={() => setOpen(!open)} className="md:hidden rounded-full border border-black/15 px-4 py-2 text-sm font-medium">Menu</button>
+        <button onClick={() => setOpen(!open)} className="lg:hidden rounded-full border border-black/15 px-4 py-2 text-sm font-medium">Menu</button>
         {open && (
-          <div className="absolute left-0 top-full w-full border-t border-black/10 bg-white shadow-lg md:hidden">
+          <div className="absolute left-0 top-full w-full border-t border-black/10 bg-white shadow-lg lg:hidden">
             <nav className="flex flex-col px-4 py-4">
               {links.map((l) => (
                 <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3 text-sm font-medium text-black/80 hover:text-black border-b border-black/5 last:border-0">{l.label}</Link>
