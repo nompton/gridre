@@ -5,9 +5,9 @@ export const dynamic = "force-static";
 
 const BASE = "https://thegridre.com";
 
-// Public, indexable marketing pages only. Internal/utility routes (/agent,
-// /agent/qr, /tools) and time-sensitive campaign pages (/open-house/*) are
-// intentionally excluded here and disallowed in robots.ts.
+// Public, indexable marketing pages only. Internal routes (/agent, /agent/qr)
+// and time-sensitive campaign pages (/open-house/*) are intentionally excluded
+// here and disallowed in robots.ts.
 const routes: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1.0, changeFrequency: "weekly" },
   { path: "/manage", priority: 0.9, changeFrequency: "monthly" },
@@ -18,6 +18,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: "/about", priority: 0.7, changeFrequency: "monthly" },
   { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
   { path: "/home-value", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/tools", priority: 0.6, changeFrequency: "monthly" },
   { path: "/zerodown", priority: 0.6, changeFrequency: "monthly" },
   { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },
   // City / metro landing pages
