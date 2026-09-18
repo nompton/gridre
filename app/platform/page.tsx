@@ -5,11 +5,11 @@ export const metadata = {
   alternates: { canonical: "https://thegridre.com/platform" },
   title: { absolute: "The Atlas Platform — GRID Owner Portal & Trust Accounting" },
   description:
-    "GRID Real Estate runs on Atlas — its own proprietary brokerage software. Owners get verified trust accounting, per-tenant ledgers, owner payouts, and statements on any device, anytime. Call (405) 310-1221.",
+    "GRID Real Estate runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Atlas Verified trust accounting and security deposits, per-tenant ledgers, owner payouts, and live statements on any device. Call (405) 310-1221.",
   openGraph: {
     title: "The Atlas Platform | GRID Real Estate",
     description:
-      "Verified trust accounting, live owner statements, and a branded client portal — GRID's own proprietary software.",
+      "GRID runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Atlas Verified trust accounting and security deposits, live owner statements, and a branded client portal.",
     url: "https://thegridre.com/platform",
   },
 };
@@ -20,7 +20,7 @@ const serviceSchema = {
   "serviceType": "Property Management Technology & Owner Reporting",
   "name": "GRID Owner Portal & Trust Accounting on Atlas",
   "description":
-    "GRID Real Estate runs on Atlas, its own proprietary brokerage software built in-house. Owners receive verified trust accounting, per-tenant ledgers, tracked owner payouts, and monthly statements accessible on any device.",
+    "GRID Real Estate runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Owners receive Atlas Verified trust accounting and security deposits, per-tenant ledgers, tracked owner payouts, and live statements accessible on any device.",
   "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
@@ -37,6 +37,7 @@ const faqSchema = {
     { "@type": "Question", name: "What software does GRID Real Estate use to manage property?", acceptedAnswer: { "@type": "Answer", text: "GRID runs on Atlas, its own proprietary brokerage software. GRID built it to handle trust accounting, per-tenant ledgers, owner payouts, and a branded owner portal, with OREC compliance built into the workflow." } },
     { "@type": "Question", name: "Can I see my owner statements online?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every owner has a secure portal login and can view statements, income and expenses, and property performance on any device, anytime — not just once a month by email." } },
     { "@type": "Question", name: "How does GRID handle trust funds?", acceptedAnswer: { "@type": "Answer", text: "Owner and tenant funds are held in a dedicated trust account with disciplined reconciliation and a full audit trail. Balances and disbursements are documented and verifiable inside the platform." } },
+    { "@type": "Question", name: "How does GRID protect my security deposit?", acceptedAnswer: { "@type": "Answer", text: "Security deposits are held in a dedicated trust account and Atlas Verified — the held balance is documented, reconciled, and visible to both owner and tenant, with a full audit trail, rather than sitting in a black box." } },
     { "@type": "Question", name: "Do I get a per-tenant ledger?", acceptedAnswer: { "@type": "Answer", text: "Yes. Every property shows rent in, expenses out, owner payouts, and a per-tenant ledger, so the full rental P&L is transparent and always current." } },
   ],
 };
@@ -51,12 +52,14 @@ const breadcrumbSchema = {
 };
 
 const benefits = [
-  { title: "Verified trust accounting", body: "Owner and tenant funds sit in a dedicated trust account with disciplined reconciliation and a full audit trail. Balances and disbursements are documented and verifiable — compliant by design, not by binder." },
+  { title: "Atlas Verified trust accounting", body: "Owner and tenant funds sit in a dedicated trust account with disciplined reconciliation and a full audit trail. Balances and disbursements are documented and verifiable — compliant by design, not by binder." },
+  { title: "Atlas Verified security deposits", body: "Every security deposit is held in trust and Atlas Verified — the held balance is documented, reconciled, and visible to you and your tenant, with a full audit trail. No black box, no wondering where it sits." },
   { title: "Statements anytime", body: "Your statements live in a secure portal you can open on any device, any time — not a PDF you wait for once a month. Income, expenses, and net disbursement, always current." },
   { title: "Per-tenant ledger", body: "Rent in, expenses out, and a line-by-line ledger for every tenant. The full rental P&L on each property, transparent down to the transaction." },
   { title: "Owner payouts, tracked", body: "Every disbursement to you is recorded and reconciled against collected rent and paid expenses. No guessing where the money went." },
   { title: "Documents & e-sign", body: "Leases, renewals, and disclosures are stored, sent for signature, and tracked in one place — linked to your property and available in your portal." },
   { title: "OREC-compliant by design", body: "Compliance controls, disbursement authorizations, and file checklists are built into the workflow. The regulatory standard is enforced by the system, not chased after the fact." },
+  { title: "One end-to-end platform", body: "Compliance, accounting, documents, leasing, and your portal all live in one connected system — so nothing is re-typed between tools and nothing falls through the cracks." },
 ];
 
 export default function PlatformPage() {
@@ -73,13 +76,13 @@ export default function PlatformPage() {
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium tracking-wide text-white/80">
-                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Our own software · Built in-house
+                <span className="h-1.5 w-1.5 rounded-full bg-white" /> Runs on Atlas · The end-to-end platform
               </div>
               <h1 className="mt-6 text-4xl font-semibold tracking-tight md:text-5xl">
                 Your management, made transparent.
               </h1>
               <p className="mt-5 max-w-xl text-sm leading-7 text-white/80">
-                <span className="font-semibold text-white">Atlas</span> is <GridWord />&apos;s own brokerage software — the proprietary platform we built to run everything we do. Verified trust accounting, live owner statements, and a branded portal you can open any time.
+                <GridWord /> runs on <span className="font-semibold text-white">Atlas</span> — the first-of-its-kind, end-to-end real estate platform we built in-house. Atlas Verified trust accounting and security deposits, live owner statements, and a branded portal you can open any time.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">open your portal</a>
@@ -103,7 +106,7 @@ export default function PlatformPage() {
                       <div className="text-sm font-semibold tracking-tight">1420 Maple Ridge Dr</div>
                     </div>
                     <div className="inline-flex items-center gap-1.5 rounded-full border border-emerald-600/20 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Trust verified
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Atlas Verified
                     </div>
                   </div>
                   <div className="divide-y divide-black/5 rounded-xl border border-black/10">
@@ -166,14 +169,14 @@ export default function PlatformPage() {
       </section>
 
       {/* A LOOK INSIDE — illustrative UI panels */}
-      <Section kicker="A look inside" title="Verified accounting, in plain view.">
+      <Section kicker="A look inside" title="Atlas Verified accounting, in plain view.">
         <div className="grid gap-4 md:grid-cols-2">
           {/* Trust reconciliation panel */}
           <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
             <div className="flex items-center justify-between">
               <div className="text-sm font-semibold tracking-tight">Trust account</div>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-600/20 bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Reconciled
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Atlas Verified · Reconciled
               </span>
             </div>
             <div className="mt-4 divide-y divide-black/5 rounded-xl border border-black/10">
@@ -225,7 +228,7 @@ export default function PlatformPage() {
               <div className="text-sm font-medium text-white/60">Built in-house</div>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">A brokerage that built its own infrastructure.</h2>
               <p className="mt-5 text-sm leading-7 text-white/80">
-                Atlas is <GridWord />&apos;s own proprietary brokerage platform — OREC compliance, back office, transaction management, and a client portal in one connected system. We built it to run our own business, which means our owners get technology most Oklahoma management companies simply do not have.
+                Atlas is <GridWord />&apos;s own proprietary platform — the first-of-its-kind, end-to-end real estate system: OREC compliance, back office, transaction management, Atlas Verified trust accounting, and a client portal in one connected system. We built it to run our own business, which means our owners get technology and transparency most Oklahoma management companies simply do not have.
               </p>
               <p className="mt-4 text-xs leading-6 text-white/45">
                 <GridWord /> is now making Atlas available to select Oklahoma brokerages at{" "}
