@@ -90,7 +90,7 @@ export default function EdmondPage() {
                 Edmond benefits from top-rated schools, strong employment, and consistent demand from families and professionals who want quality rental housing. Properties managed well — and marketed well — hold their value and attract long-term tenants.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Edmond properties with the same standard we apply to our own. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
+                <GridWord /> manages Edmond properties with the discipline serious investors expect. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

@@ -124,8 +124,8 @@ export default function ManagePage() {
 
       <Section title="Why owners choose GRID" kicker="The difference">
         <div className="grid gap-4 md:grid-cols-2">
-          <Card title="owners since 2018">
-            <GridWord /> has been managing its own properties since 2018. That experience is what shapes how we manage for others. We know what deferred maintenance costs, what good tenants look like, and how to keep both sides of the relationship working.
+          <Card title="operators, not just agents">
+            <GridWord /> brings years of hands-on operating experience to management. We know what deferred maintenance costs, what good tenants look like, and how to keep both sides of the relationship working.
           </Card>
           <Card title="tenant-first management">
             Well-treated tenants stay longer, take better care of the property, and cause fewer problems. We treat residents with respect, communicate clearly, and keep properties maintained. That's good business.
@@ -250,7 +250,7 @@ export default function ManagePage() {
               <div className="rounded-2xl border border-black/10 bg-white p-6">
                 <div className="text-sm font-semibold tracking-tight">The <GridWord /> standard</div>
                 <p className="mt-3 text-sm leading-7 text-black/75">
-                  We stay responsive, document what matters, and treat every property like we own it because we know what it feels like when someone doesn't. Management fees are straightforward. No hidden charges, no surprise markups on maintenance.
+                  We stay responsive, document what matters, and manage every property with real accountability — because we know what it feels like when a manager doesn't. Management fees are straightforward. No hidden charges, no surprise markups on maintenance.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <a href="/contact" className="rounded-full bg-black px-5 py-3 text-sm font-medium text-white hover:opacity-90">get a proposal</a>

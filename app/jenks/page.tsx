@@ -108,7 +108,7 @@ export default function JenksPage() {
                 Jenks draws tenants who specifically want what it offers — a top school district, a real main street, and a neighborhood with character. That kind of intentional demand creates stable, long-term tenancies and lower turnover for property owners.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Jenks properties with the same standards we apply to our own. Proactive maintenance, clear communication, and marketing that finds the right tenant quickly.
+                <GridWord /> manages Jenks properties with the discipline serious investors expect. Proactive maintenance, clear communication, and marketing that finds the right tenant quickly.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

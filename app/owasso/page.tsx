@@ -108,7 +108,7 @@ export default function OwassoPage() {
                 Owasso's growth story is still being written. New subdivisions, retail corridors, and employer investment have made it one of the most active markets in the Tulsa Metro. Properties here attract quality, long-term tenants — especially when they're managed and marketed well.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Owasso properties with the same standards we apply to our own. Proactive maintenance, clear communication, and marketing built to minimize vacancy.
+                <GridWord /> manages Owasso properties with the discipline serious investors expect. Proactive maintenance, clear communication, and marketing built to minimize vacancy.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

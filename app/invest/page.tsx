@@ -41,7 +41,7 @@ export default function InvestPage() {
                 invest with an owner's mindset
               </h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> is built for investors because it is run by owners. We understand returns, tenant demand, long-term value, and the OKC Metro neighborhoods shaping the next decade.
+                <GridWord /> is built for investors. We understand returns, tenant demand, long-term value, and the OKC Metro neighborhoods shaping the next decade.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">talk investing</a>
@@ -73,8 +73,8 @@ export default function InvestPage() {
           </div>
 
           <div className="grid gap-4">
-            <Card title="owners since 2018">
-              <GridWord /> has been managing its own properties since 2018. When we talk about returns, maintenance costs, and tenant behavior, it's from real experience, not theory.
+            <Card title="real operating experience">
+              <GridWord /> brings years of hands-on operating experience. When we talk about returns, maintenance costs, and tenant behavior, it's from real experience, not theory.
             </Card>
             <Card title="acquisition to management in one step">
               Buy with <GridWord /> and your property moves directly into professional management. No transition period, no second onboarding, no gap in oversight.

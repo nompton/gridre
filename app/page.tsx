@@ -84,7 +84,7 @@ export default function HomePage() {
               </div>
               <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Oklahoma's premier property management brokerage — OKC and Tulsa Metro</h1>
               <p className="mt-5 max-w-xl text-white/90 text-sm leading-7 drop-shadow-sm">
-                <GridWord /> serves property owners, investors, and associations across both the Oklahoma City and Tulsa Metro areas with professional management, premier marketing, and a brokerage that thinks like an owner.
+                <GridWord /> serves property owners, investors, and associations across both the Oklahoma City and Tulsa Metro areas with professional management, premier marketing, and clear, accountable reporting.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/manage" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">property management</a>
@@ -196,10 +196,10 @@ export default function HomePage() {
               <div className="text-sm font-medium text-black/60">About GRID</div>
               <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-3xl">Built for Oklahoma. OKC and Tulsa Metro.</h2>
               <p className="mt-5 text-sm leading-7 text-black/75">
-                <GridWord /> is Oklahoma's premier property management brokerage, built by people who own, manage, and operate real estate across both metros. Our background spans brokerage compliance, active investment ownership since 2018, and years of hands-on property management in OKC and Tulsa markets.
+                <GridWord /> is Oklahoma's premier property management brokerage. Our background spans brokerage compliance, disciplined trust accounting, and years of hands-on property management across the OKC and Tulsa markets.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                We manage properties the way we'd want our own managed — and we market them better than anyone in either metro. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every listing.
+                We manage every property with real discipline — and we market them better than anyone in either metro. Professional photography, Matterport 3D, drone, and social media campaigns are standard on every listing.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href="/about" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">about GRID</a>

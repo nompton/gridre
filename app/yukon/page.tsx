@@ -90,7 +90,7 @@ export default function YukonPage() {
             Professional photography, Matterport 3D, drone coverage, Instagram and Facebook ad campaigns, and syndication to 100+ rental platforms. Standard. Not optional.
           </Card>
           <Card title="owner-first management">
-            <GridWord /> has been managing its own properties since 2018. We manage yours the same way — proactive maintenance, qualified tenants, and clean books.
+            <GridWord /> brings hands-on operating experience to every property we manage — proactive maintenance, qualified tenants, and clean books.
           </Card>
           <Card title="metro-wide reach">
             Our marketing reaches renters actively looking across the entire OKC west metro, not just people who happen to drive by.

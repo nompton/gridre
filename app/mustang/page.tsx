@@ -93,7 +93,7 @@ export default function MustangPage() {
             Whether you own one Mustang rental or are building a portfolio in the southwest metro, <GridWord /> has the systems to manage it consistently.
           </Card>
           <Card title="owners managing for owners">
-            <GridWord /> has been operating its own rental properties since 2018. We manage yours the way we'd want ours managed.
+            <GridWord /> brings hands-on operating experience to every property we manage — the same standards a serious investor would demand.
           </Card>
         </div>
       </Section>

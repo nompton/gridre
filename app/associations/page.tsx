@@ -136,7 +136,7 @@ export default function AssociationsPage() {
               Most association management companies are large, impersonal, and slow. Boards can't reach anyone. Owners get form letters. Financial reporting is hard to read and harder to trust.
             </p>
             <p className="text-sm leading-7 text-black/75">
-              <GridWord /> is different. We're a Norman-based company that manages associations the way we'd want our own managed. Responsively, transparently, and with genuine care for the community.
+              <GridWord /> is different. We're a Norman-based company that manages associations with real accountability. Responsively, transparently, and with genuine care for the community.
             </p>
             <p className="text-sm leading-7 text-black/75">
               Our compliance background means financial controls, trust account management, and documentation are handled to a professional standard that protects the association and its board members.

@@ -80,7 +80,7 @@ export default function NormanPage() {
       <Section title="Why Norman owners choose GRID" kicker="The difference">
         <div className="grid gap-4 md:grid-cols-2">
           <Card title="local knowledge, not just a license">
-            We own property in Norman. We know which neighborhoods rent fast, which tenants OU attracts, and what maintenance looks like in older Campus Corner stock versus newer east-side builds. That context changes how we manage.
+            Norman is our home market. We know which neighborhoods rent fast, which tenants OU attracts, and what maintenance looks like in older Campus Corner stock versus newer east-side builds. That local context changes how we manage.
           </Card>
           <Card title="thorough tenant screening">
             Norman's renter mix — students, faculty, university staff, professionals — means applicant quality varies widely. We run full credit, criminal, and income verification on every applicant and match the tenant to the property type.

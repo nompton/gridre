@@ -5,10 +5,10 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/about" },
   title: "About GRID Real Estate | Norman, OK Property Management Brokerage",
-  description: "GRID Real Estate is Norman, Oklahoma's investor-focused brokerage. Led by a licensed Oklahoma broker with deep compliance experience, active property ownership since 2018, and local market expertise.",
+  description: "GRID Real Estate is Norman, Oklahoma's investor-focused brokerage — a licensed Oklahoma real estate company with deep compliance experience, disciplined trust accounting, and hands-on local market expertise.",
   openGraph: {
     title: "About GRID Real Estate | Norman, OK",
-    description: "Norman's investor-focused brokerage, built on real compliance experience and active property ownership since 2018.",
+    description: "Norman's investor-focused brokerage, built on real compliance experience and hands-on property management expertise.",
     url: "https://thegridre.com/about",
   },
 };
@@ -28,7 +28,7 @@ export default function AboutPage() {
               <div className="text-sm font-medium text-white/80">About</div>
               <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">built in Norman. backed by experience.</h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> is Norman's investor-focused brokerage, built on real ownership experience, regulatory depth, and a genuine commitment to this city's future.
+                <GridWord /> is Norman's investor-focused brokerage, built on real operating experience, regulatory depth, and a genuine commitment to this city's future.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get in touch</a>
@@ -46,7 +46,7 @@ export default function AboutPage() {
               <GridWord /> Real Estate is a Norman-based brokerage focused on property management, association management, and investor services. We're built specifically for owners, investors, and communities who need professional, accountable management.
             </p>
             <p>
-              The company is led by a licensed Oklahoma broker with years of hands-on experience owning, operating, and managing rental property. That foundation shapes how <GridWord /> operates. We manage for others the way we manage for ourselves.
+              <GridWord /> is a licensed Oklahoma brokerage with deep, hands-on experience leasing, operating, and managing rental property. That operational foundation shapes how we work — every property gets the same discipline, whether it's a single home or a growing portfolio.
             </p>
             <p>
               Deep regulatory and compliance expertise means trust accounts, documentation, and financial controls are handled correctly from day one.
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="grid gap-10 md:grid-cols-2 md:items-start">
             <div className="max-w-prose space-y-5 text-sm leading-7 text-black/75">
               <p>
-                <GridWord /> is led by a licensed Oklahoma broker with years of experience owning, operating, and managing rental property. That hands-on background shapes how we work: we manage for others the way we manage for ourselves.
+                <GridWord /> is a licensed Oklahoma brokerage built on years of hands-on experience leasing, operating, and managing rental property. That operational depth shapes how we work — disciplined books, proactive maintenance, and clear reporting on every property we manage.
               </p>
               <p>
                 We understand what it takes to keep a property rented, maintained, and profitable over time, and we bring that same discipline to every owner and association we serve.
@@ -100,7 +100,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>
-                    Years of hands-on property ownership and management
+                    Years of hands-on property management experience
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5 shrink-0 text-black/30">+</span>

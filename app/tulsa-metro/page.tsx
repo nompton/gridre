@@ -33,7 +33,7 @@ const faqSchema = {
   "@type": "FAQPage",
   mainEntity: [
     { "@type": "Question", name: "How much does property management cost in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "GRID Real Estate offers straightforward property management pricing with no hidden fees or surprise maintenance markups. Contact us for a custom proposal based on your Tulsa Metro property or portfolio." } },
-    { "@type": "Question", name: "What types of properties do you manage in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and growing investor portfolios across the Tulsa Metro — from urban core properties in Tulsa to homes in the surrounding suburbs. Whether you own one property or a portfolio, we treat it like our own." } },
+    { "@type": "Question", name: "What types of properties do you manage in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "We manage single-family rentals, small multifamily properties, and growing investor portfolios across the Tulsa Metro — from urban core properties in Tulsa to homes in the surrounding suburbs. Whether you own one property or a portfolio, it gets the same disciplined management." } },
     { "@type": "Question", name: "How do you market vacancies in the Tulsa Metro?", acceptedAnswer: { "@type": "Answer", text: "Every Tulsa Metro vacancy gets professional photography, a Matterport 3D virtual tour, drone coverage, targeted social media campaigns, and syndication across 100+ rental platforms including Zillow, Apartments.com, and Zumper." } },
     { "@type": "Question", name: "Do you manage Tulsa Metro properties for out-of-state investors?", acceptedAnswer: { "@type": "Answer", text: "Yes. We work with many out-of-state owners who invest in the Tulsa Metro market. We provide local oversight, monthly reporting, and handle everything on the ground so you don't need to be here." } },
     { "@type": "Question", name: "Which Tulsa Metro communities do you cover?", acceptedAnswer: { "@type": "Answer", text: "We manage rental properties across the greater Tulsa metropolitan area including Tulsa, Bixby, Broken Arrow, Jenks, Owasso, and Sand Springs. Each has its own demand profile, and GRID knows them all." } },
@@ -109,7 +109,7 @@ export default function TulsaMetroPage() {
                 The Tulsa Metro offers a range of rental submarkets — urban core properties in Tulsa, high-growth suburbs like Bixby and Owasso, and established family communities in Broken Arrow and Jenks. Each has its own demand profile, and <GridWord /> knows them all.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                We manage every property the same way — professional marketing, thorough tenant screening, and clear owner reporting. Whether you own one home or a growing portfolio, we treat it like our own.
+                We manage every property the same way — professional marketing, thorough tenant screening, and clear owner reporting. Whether you own one home or a growing portfolio, it gets the same disciplined management.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

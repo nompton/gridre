@@ -108,7 +108,7 @@ export default function BixbyPage() {
                 Bixby's growth isn't slowing down. Continued residential development, a strong school district, and proximity to Tulsa's major employers make it one of the most in-demand rental submarkets in the metro. Properties here hold their value and attract long-term tenants.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Bixby properties with the same standard we apply to our own. Proactive maintenance, clear communication, and marketing that fills vacancies fast.
+                <GridWord /> manages Bixby properties with the discipline serious investors expect. Proactive maintenance, clear communication, and marketing that fills vacancies fast.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

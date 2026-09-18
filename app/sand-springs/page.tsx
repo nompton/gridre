@@ -108,7 +108,7 @@ export default function SandSpringsPage() {
                 Sand Springs has a loyal, community-oriented tenant base and affordable entry points for investors. Properties here don't always make headlines — but they perform quietly and consistently for owners who manage them right.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Sand Springs properties with the same standards we apply to our own. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
+                <GridWord /> manages Sand Springs properties with the discipline serious investors expect. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

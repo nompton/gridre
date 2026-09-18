@@ -90,7 +90,7 @@ export default function BrokenArrowPage() {
                 Broken Arrow's scale is its strength. Major employers, a well-developed retail and restaurant corridor, and strong schools create year-round rental demand across single-family homes, townhomes, and condos. Properties that show well fill quickly.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Broken Arrow properties with the same standards we apply to our own. Proactive maintenance, responsive communication, and marketing built to minimize vacancy.
+                <GridWord /> manages Broken Arrow properties with the discipline serious investors expect. Proactive maintenance, responsive communication, and marketing built to minimize vacancy.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>

@@ -109,7 +109,7 @@ export default function TulsaPage() {
                 Tulsa's neighborhoods each have their own character and tenant demand — midtown, the Pearl District, Brookside, east Tulsa, and beyond. Properties managed well and marketed well hold their value and attract long-term tenants regardless of which part of the city you're in.
               </p>
               <p className="mt-4 text-sm leading-7 text-black/75">
-                <GridWord /> manages Tulsa properties with the same standard we apply to our own. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
+                <GridWord /> manages Tulsa properties with the discipline serious investors expect. Proactive maintenance, clear communication, and professional marketing that fills vacancies fast.
               </p>
               <div className="mt-6">
                 <a href="/manage" className="rounded-full border border-black/15 px-4 py-2 text-sm hover:border-black/30">see full management services</a>
