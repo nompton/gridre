@@ -3,7 +3,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/platform" },
-  title: "The Atlas Platform | GRID Real Estate Owner Portal & Trust Accounting",
+  title: { absolute: "The Atlas Platform — GRID Owner Portal & Trust Accounting" },
   description:
     "GRID Real Estate runs on Atlas — its own proprietary brokerage software. Owners get verified trust accounting, per-tenant ledgers, owner payouts, and statements on any device, anytime. Call (405) 310-1221.",
   openGraph: {

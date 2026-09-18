@@ -5,7 +5,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/associations" },
-  title: "HOA & Association Management in Norman, OK | GRID Real Estate",
+  title: "HOA & Association Management in Norman, OK",
   description: "Professional HOA and condo association management in Norman, Oklahoma. Financial reporting, covenant enforcement, vendor coordination, and board support. Call (405) 310-1221.",
   openGraph: {
     title: "HOA & Association Management in Norman, OK | GRID Real Estate",

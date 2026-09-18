@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Norman Property Management — GRID Real Estate",
+  title: "Norman Property Management",
   description:
     "Property management in Norman, OK by GRID Real Estate — Norman is our home market. Tenant screening, rent collection, Matterport 3D, drone coverage, and full-service management for Norman landlords and investors. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/norman" },
@@ -66,7 +66,7 @@ export default function NormanPage() {
               <div className="text-sm font-medium text-white/80">Property Management — Norman, OK</div>
               <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Norman property management. This is our home market.</h1>
               <p className="mt-5 text-sm leading-7 text-white/90">
-                <GridWord /> is headquartered in Norman. We live here, invest here, and know this market at a level no out-of-town property manager can match. Single-family rentals, condos, small multifamily — we manage them all with professional photography, Matterport 3D, drone coverage, and a management practice built on real ownership experience.
+                <GridWord /> is headquartered in Norman. We know this market at a level no out-of-town property manager can match. Single-family rentals, condos, small multifamily — we manage them all with professional photography, Matterport 3D, drone coverage, and a management practice built on real operating experience.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>

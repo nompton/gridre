@@ -5,7 +5,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com" },
-  title: "Oklahoma Property Management — OKC & Tulsa Metro | GRID Real Estate",
+  title: "Oklahoma Property Management — OKC & Tulsa Metro",
   description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-1221.",
   openGraph: {
     title: "Oklahoma Property Management — OKC & Tulsa Metro | GRID Real Estate",

@@ -4,7 +4,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/about" },
-  title: "About GRID Real Estate | Norman, OK Property Management Brokerage",
+  title: { absolute: "About GRID Real Estate | Norman, OK Property Management Brokerage" },
   description: "GRID Real Estate is Norman, Oklahoma's investor-focused brokerage — a licensed Oklahoma real estate company with deep compliance experience, disciplined trust accounting, and hands-on local market expertise.",
   openGraph: {
     title: "About GRID Real Estate | Norman, OK",

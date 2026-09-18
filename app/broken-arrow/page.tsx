@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Broken Arrow Property Management — GRID Real Estate",
+  title: "Broken Arrow Property Management",
   description:
     "Property management in Broken Arrow, OK by GRID Real Estate. One of Oklahoma's fastest-growing cities, Broken Arrow's strong renter base and family demand make it a premier investment market. Full-service management with professional marketing. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/broken-arrow" },

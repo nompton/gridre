@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Tulsa Property Management — GRID Real Estate",
+  title: "Tulsa Property Management",
   description:
     "Property management in Tulsa, OK by GRID Real Estate. Tulsa's diverse rental market rewards professional presentation — we offer Matterport 3D tours, drone coverage, tenant screening, and full-service management for Tulsa landlords. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/tulsa" },

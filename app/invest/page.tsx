@@ -5,17 +5,17 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/invest" },
-  title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
-  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. GRID is run by active owners, for investors. Call (405) 310-1221.",
+  title: "Real Estate Investor Services — OKC Metro",
+  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. Deal analysis, market insight, and a seamless handoff into professional management. Call (405) 310-1221.",
   openGraph: {
     title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
-    description: "OKC Metro real estate investment services built by active owners. Acquisition support, market analysis, and seamless handoff into professional property management.",
+    description: "OKC Metro real estate investment services built for investors. Acquisition support, market analysis, and seamless handoff into professional property management.",
     url: "https://thegridre.com/invest",
   },
 };
 
 const investorServices = [
-  { title: "Acquisition Support", body: "From identifying opportunities to closing, we walk through every deal with an ownership lens. Neighborhoods, rent potential, condition, and exit strategy all factored in." },
+  { title: "Acquisition Support", body: "From identifying opportunities to closing, we walk through every deal with an investor's lens. Neighborhoods, rent potential, condition, and exit strategy all factored in." },
   { title: "Cash Flow & Underwriting", body: "We run real numbers on every deal. Rent comps, expense assumptions, cap rate, and cash-on-cash return. No optimistic projections designed to close a transaction." },
   { title: "Market Analysis", body: "OKC Metro insight on rental demand, neighborhood trajectory, zoning shifts, and where value is moving. Local knowledge that doesn't come from Zillow." },
   { title: "Portfolio Strategy", body: "Whether you're building from scratch or optimizing what you own, we help you think through allocation, leverage, and long-term positioning." },
@@ -57,7 +57,7 @@ export default function InvestPage() {
         <div className="grid gap-8 md:grid-cols-2 md:items-start">
           <div className="space-y-4">
             <p className="text-sm leading-7 text-black/75">
-              Most real estate agents help investors as a secondary service. For <GridWord />, investors are the primary client. Our entire practice, management, marketing, compliance, and brokerage, is built around ownership.
+              Most real estate agents help investors as a secondary service. For <GridWord />, investors are the primary client. Our entire practice, management, marketing, compliance, and brokerage, is built around investors.
             </p>
             <p className="text-sm leading-7 text-black/75">
               That means when we evaluate a deal with you, we're thinking about what happens after closing. Tenant quality, maintenance demands, rent trajectory, and what the exit looks like in five years. Not just whether the transaction closes.

@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Owasso Property Management — GRID Real Estate",
+  title: "Owasso Property Management",
   description:
     "Property management in Owasso, OK by GRID Real Estate. Owasso's consistent growth and strong schools make it one of Tulsa Metro's most reliable rental markets. GRID handles marketing, screening, maintenance, and reporting. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/owasso" },

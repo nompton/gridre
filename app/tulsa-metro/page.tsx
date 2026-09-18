@@ -5,7 +5,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/tulsa-metro" },
-  title: "Tulsa Metro Property Management — GRID Real Estate",
+  title: "Tulsa Metro Property Management",
   description:
     "Professional property management across the Tulsa Metro — Tulsa, Bixby, Broken Arrow, Jenks, Owasso, and Sand Springs. GRID delivers premier marketing and full-service management for Tulsa area rental properties.",
 };

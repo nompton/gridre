@@ -5,7 +5,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/buy-sell" },
-  title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
+  title: "Buy & Sell Real Estate in Norman, OK",
   description: "Buyer representation and home listings in Norman, Oklahoma with an investor-first perspective. Local market knowledge, professional photography, Matterport tours, and MLS syndication. Call (405) 310-1221.",
   openGraph: {
     title: "Buy & Sell Real Estate in Norman, OK | GRID Real Estate",
@@ -51,7 +51,7 @@ export default function BuySellPage() {
             </p>
             <div className="grid gap-4">
               <Card title="investor-aware buyer representation">
-                Even if you're buying a primary home, we evaluate every property through an ownership lens. What it could rent for, what the exit looks like, and what the neighborhood is doing.
+                Even if you're buying a primary home, we evaluate every property through an investor's lens. What it could rent for, what the exit looks like, and what the neighborhood is doing.
               </Card>
               <Card title="clear process, no surprises">
                 From offer to close, you'll always know what's happening and what comes next. We keep transactions moving and handle problems before they become delays.

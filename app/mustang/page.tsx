@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Mustang Property Management — GRID Real Estate",
+  title: "Mustang Property Management",
   description:
     "Property management in Mustang, OK for growing families and investor landlords. GRID handles leasing, tenant screening, maintenance coordination, and owner reporting — with drone coverage and Matterport 3D on every vacancy. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/mustang" },

@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Edmond Property Management — GRID Real Estate",
+  title: "Edmond Property Management",
   description:
     "Property management in Edmond, OK for landlords and investors who want it done right. GRID offers tenant screening, rent collection, professional photography, Matterport 3D tours, and clean owner reporting. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/edmond" },

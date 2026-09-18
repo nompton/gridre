@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/manage" },
-  title: "Property Management in Norman, OK | GRID Real Estate",
+  title: "Property Management in Norman, OK",
   description: "Full-service property management in Norman, Oklahoma for landlords and investors. Tenant screening, rent collection, maintenance coordination, and owner reporting. Call (405) 310-1221.",
   openGraph: {
     title: "Property Management in Norman, OK | GRID Real Estate",

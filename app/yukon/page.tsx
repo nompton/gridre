@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Yukon Property Management — GRID Real Estate",
+  title: "Yukon Property Management",
   description:
     "Rental property management in Yukon, OK by GRID Real Estate. We handle tenant screening, maintenance, rent collection, and leasing with professional photography and Matterport 3D tours. Yukon owners call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/yukon" },

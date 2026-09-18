@@ -4,7 +4,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/contact" },
-  title: "Contact — GRID Real Estate",
+  title: "Contact",
   description: "Get in touch with GRID Real Estate. Property management, association management, investor services, and listings in Norman, Oklahoma.",
 };
 

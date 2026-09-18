@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Jenks Property Management — GRID Real Estate",
+  title: "Jenks Property Management",
   description:
     "Property management in Jenks, OK by GRID Real Estate. Jenks's acclaimed school district draws quality, long-term renters — ideal for investors. GRID manages Jenks rentals with professional photography, Matterport 3D, tenant screening, and full service. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/jenks" },

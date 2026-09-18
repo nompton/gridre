@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Bixby Property Management — GRID Real Estate",
+  title: "Bixby Property Management",
   description:
     "Property management in Bixby, OK by GRID Real Estate. Bixby's top-rated schools and rapid growth attract quality long-term tenants. We market, screen, and manage Bixby rentals with full-service professional management. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/bixby" },

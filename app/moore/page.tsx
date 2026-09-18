@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Moore Property Management — GRID Real Estate",
+  title: "Moore Property Management",
   description:
     "Property management in Moore, OK by GRID Real Estate. Moore's strong south OKC renter demand means vacancies fill fast when marketed right. We offer professional photography, Matterport 3D, tenant screening, and full-service management. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/moore" },

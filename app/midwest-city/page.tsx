@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
 
 export const metadata = {
-  title: "Midwest City Property Management — GRID Real Estate",
+  title: "Midwest City Property Management",
   description:
     "Rental property management in Midwest City, OK by GRID Real Estate. Affordable housing demand and proximity to Tinker AFB make MWC a strong investor market. We offer tenant screening, professional marketing, and full-service management. Call (405) 310-1221.",
   alternates: { canonical: "https://thegridre.com/midwest-city" },

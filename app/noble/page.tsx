@@ -5,7 +5,7 @@ import GridWord from "@/components/GridWord";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/noble" },
-  title: "Noble Property Management — GRID Real Estate",
+  title: "Noble Property Management",
   description:
     "Professional property management in Noble, OK. Noble is one of the fastest-growing communities in the OKC metro. GRID delivers premier marketing, full-service leasing, and owner-focused management.",
 };
