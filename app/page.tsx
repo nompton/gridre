@@ -70,27 +70,27 @@ export default function HomePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <section className="relative">
-        <div className="relative h-[560px] w-full">
+      {/* Hero grows to fit content on mobile (min-h, not fixed h) so the wordmark
+          never hugs the nav and the buttons never spill past the hero edge. */}
+      <section className="relative flex min-h-[560px] items-center overflow-hidden">
+        <div className="absolute inset-0">
           <Image src="/images/east-village.jpg" alt="GRID Real Estate — property and HOA management in Norman, Oklahoma" fill priority className="object-cover" />
           <div className="absolute inset-0 bg-black/45" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         </div>
-        <div className="absolute inset-0">
-          <div className="mx-auto flex h-full max-w-6xl items-center px-4">
-            <div className="max-w-2xl text-white">
-              <div className="mb-5">
-                <Image src="/brand/grid_logo_white.png" alt="GRID Real Estate" width={240} height={70} priority className="drop-shadow-lg" />
-              </div>
-              <h1 className="text-4xl font-semibold tracking-tight md:text-5xl drop-shadow-md">Oklahoma's premier property management brokerage — OKC and Tulsa Metro</h1>
-              <p className="mt-5 max-w-xl text-white/90 text-sm leading-7 drop-shadow-sm">
-                <GridWord /> serves property owners, investors, and associations across both the Oklahoma City and Tulsa Metro areas with professional management, premier marketing, and clear, accountable reporting.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href="/manage" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">property management</a>
-                <a href="/associations" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">association management</a>
-                <a href="/invest" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">investor services</a>
-              </div>
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-14 md:py-16">
+          <div className="max-w-2xl text-white">
+            <div className="mb-5">
+              <Image src="/brand/grid_logo_white.png" alt="GRID Real Estate" width={240} height={70} priority className="h-auto w-44 drop-shadow-lg sm:w-60" />
+            </div>
+            <h1 className="text-3xl font-semibold tracking-tight drop-shadow-md sm:text-4xl md:text-5xl">Oklahoma's premier property management brokerage — OKC and Tulsa Metro</h1>
+            <p className="mt-5 max-w-xl text-white/90 text-sm leading-7 drop-shadow-sm">
+              <GridWord /> serves property owners, investors, and associations across both the Oklahoma City and Tulsa Metro areas with professional management, premier marketing, and clear, accountable reporting.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="/manage" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">property management</a>
+              <a href="/associations" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">association management</a>
+              <a href="/invest" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">investor services</a>
             </div>
           </div>
         </div>
