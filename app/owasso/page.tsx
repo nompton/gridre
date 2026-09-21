@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Owasso Property Management",
   "description": "Full-service rental property management in Owasso, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting across the Tulsa Metro.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Owasso", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },

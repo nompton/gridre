@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Mustang Property Management",
   "description": "Full-service rental property management in Mustang, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for a fast-growing southwest OKC metro market.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Mustang", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Yukon", "containedIn": "Oklahoma" },

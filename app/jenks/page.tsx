@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Jenks Property Management",
   "description": "Full-service rental property management in Jenks, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting for Jenks investment properties.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Jenks", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },

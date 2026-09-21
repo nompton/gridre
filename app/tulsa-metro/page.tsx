@@ -16,7 +16,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Tulsa Metro Property Management",
   "description": "Full-service rental property management across the greater Tulsa metropolitan area in Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for Tulsa Metro rental properties.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },

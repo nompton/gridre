@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Midwest City Property Management",
   "description": "Full-service rental property management in Midwest City, Oklahoma. Premier marketing, thorough tenant screening, Oklahoma-compliant leases, maintenance coordination, and clean monthly owner reporting for a rental market anchored by Tinker AFB.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Midwest City", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },

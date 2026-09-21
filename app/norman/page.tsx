@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Norman Property Management",
   "description": "Full-service rental property management in Norman, Oklahoma — GRID Real Estate's home market. Tenant screening, Matterport 3D marketing, maintenance coordination, and monthly owner reporting.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": { "@type": "City", "name": "Norman", "containedIn": "Oklahoma" },
   "url": "https://thegridre.com/norman",
 };

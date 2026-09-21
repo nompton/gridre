@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Oklahoma City Property Management",
   "description": "Full-service rental property management in Oklahoma City, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Edmond", "containedIn": "Oklahoma" },

@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Bixby Property Management",
   "description": "Full-service rental property management in Bixby, Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for one of the Tulsa metro's strongest suburban rental markets.",
-  "provider": { "@type": "LocalBusiness", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
   "areaServed": [
     { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
