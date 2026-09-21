@@ -74,6 +74,14 @@ export default function BuySellPage() {
             </p>
           </div>
 
+          <a href="/home-value" className="group mb-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-black/10 bg-black/[0.02] p-6 transition-colors hover:border-black/25">
+            <div>
+              <div className="text-sm font-semibold tracking-tight">Thinking of selling? Start with what it&apos;s worth.</div>
+              <p className="mt-1 max-w-xl text-sm text-black/60">Get a free, no-obligation home valuation from a GRID agent — based on real comparable sales in your neighborhood, not an automated guess.</p>
+            </div>
+            <span className="shrink-0 rounded-full bg-black px-5 py-2.5 text-sm font-medium text-white transition-opacity group-hover:opacity-90">What&apos;s my home worth? →</span>
+          </a>
+
           <div className="mb-6 grid gap-3 md:grid-cols-3">
             <div className="relative h-[220px] overflow-hidden rounded-2xl border border-black/10 md:col-span-2">
               <Image src="/images/listing-exterior.jpg" alt="Professional exterior photography for OKC home listing" fill className="object-cover" />

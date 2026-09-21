@@ -17,9 +17,13 @@ export const metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["RealEstateAgent", "LocalBusiness"],
+  "@id": "https://thegridre.com/#business",
   name: "GRID Real Estate",
   description: "Premier property management, HOA and association management, and investor real estate services across the Oklahoma City and Tulsa Metro areas.",
   url: "https://thegridre.com",
+  logo: "https://thegridre.com/brand/grid_logo.png",
+  image: "https://thegridre.com/brand/grid_logo.png",
+  priceRange: "$$",
   telephone: "+14053101221",
   address: {
     "@type": "PostalAddress",
@@ -272,6 +276,7 @@ export default function HomePage() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">contact <GridWord /></a>
+              <a href="/home-value" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">what&apos;s my home worth?</a>
               <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
             </div>
           </div>

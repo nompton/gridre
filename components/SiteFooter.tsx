@@ -20,6 +20,7 @@ export default function SiteFooter() {
               <div><a href="/associations" className="hover:text-black transition">Association Management</a></div>
               <div><a href="/invest" className="hover:text-black transition">Investor Services</a></div>
               <div><a href="/buy-sell" className="hover:text-black transition">Buy &amp; Sell</a></div>
+              <div><a href="/home-value" className="hover:text-black transition">Home Valuation</a></div>
               <div><a href="/platform" className="hover:text-black transition">Platform</a></div>
               <div><a href="https://normanokcommercial.com" target="_blank" rel="noopener noreferrer" className="hover:text-black transition">Commercial Listings ↗</a></div>
             </div>
