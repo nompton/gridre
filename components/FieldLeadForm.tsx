@@ -150,7 +150,10 @@ export default function FieldLeadForm() {
         </div>
       )}
 
-      <button className="bg-black text-white p-3 rounded-xl">
+      <button
+        disabled={status === "sending"}
+        className="bg-black text-white p-3 rounded-xl disabled:opacity-60"
+      >
         {status === "sending" ? "Saving..." : "Save Rental Lead"}
       </button>
 
