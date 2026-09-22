@@ -69,6 +69,9 @@ export default function FieldLeadForm() {
           interest: "Rental Owner",
           property_address: [address, city].filter(Boolean).join(", "),
           message,
+          // Bulk staff entry — record it in the CRM without buzzing the agent
+          // (email + push) for a sign they just typed.
+          no_staff_alert: true,
         }),
       });
 
