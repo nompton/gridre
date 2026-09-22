@@ -3,7 +3,13 @@
 import { useState } from "react";
 
 export default function FieldLeadForm() {
-  const endpoint = "https://automation.thegridre.com/webhook/field-log";
+  // Route canvassed rental signs into the GRID CRM through the same battle-tested
+  // public lead intake as every other GRID form (contact / home-value / open
+  // house) — attributed by GRID's per-site signing key. Replaces the retired n8n
+  // "field-log" webhook (automation.thegridre.com is dead), which was silently
+  // dropping every logged sign.
+  const LEAD_ENDPOINT = "https://portal.thegridre.com/api/public/contact/submit";
+  const GRID_SITE_KEY = "150d6505d2c0416481881cf6e24f6937";
 
   const [coords, setCoords] = useState<{ lat: number; lng: number } | null>(
     null
@@ -26,24 +32,48 @@ export default function FieldLeadForm() {
     setStatus("sending");
 
     const formEl = e.currentTarget;
-    const form = new FormData(formEl);
+    const p = Object.fromEntries(
+      new FormData(formEl).entries()
+    ) as Record<string, string>;
 
-    if (coords) {
-      form.append("lat", coords.lat.toString());
-      form.append("lng", coords.lng.toString());
-    }
+    const address = (p.address || "").trim();
+    const city = (p.city || "").trim();
 
-    const payload = Object.fromEntries(form.entries());
+    // Fold the canvass details the intake has no dedicated column for into the
+    // lead message so nothing is lost. The sign phone is the landlord/PM contact.
+    const message = [
+      p.propertyType ? `Type: ${p.propertyType}` : "",
+      p.condition ? `Condition: ${p.condition}` : "",
+      p.signPhone2 ? `Second sign phone: ${p.signPhone2}` : "",
+      p.notes ? `Notes: ${p.notes}` : "",
+      coords
+        ? `GPS: ${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)} · https://maps.google.com/?q=${coords.lat},${coords.lng}`
+        : "",
+      "\nLogged from the GRID field-canvass tool.",
+    ]
+      .filter(Boolean)
+      .join("\n");
 
     try {
-      const res = await fetch(endpoint, {
+      const res = await fetch(LEAD_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          site: "GRID field canvass",
+          site_key: GRID_SITE_KEY,
+          // The intake requires a name; a canvassed sign has none, so label it by
+          // its address. `interest` tags it a landlord-lead. No email / no
+          // sms_consent, so the sign's number is never auto-contacted.
+          name: `Rental sign${address ? ` — ${address}` : ""}`,
+          phone: (p.signPhone || "").trim(),
+          interest: "Rental Owner",
+          property_address: [address, city].filter(Boolean).join(", "),
+          message,
+        }),
       });
 
       if (!res.ok) {
-        throw new Error("Webhook failed");
+        throw new Error("Request failed");
       }
 
       setStatus("saved");
@@ -127,7 +157,7 @@ export default function FieldLeadForm() {
 
       {status === "error" && (
         <p className="text-red-600 text-sm">
-          Something went wrong. Check webhook.
+          Couldn&apos;t save — check the address &amp; sign phone and try again.
         </p>
       )}
     </form>
