@@ -81,8 +81,9 @@ export default function ContactForm() {
     <form onSubmit={onSubmit} className="grid gap-4">
       {/* Name */}
       <div className="grid gap-2">
-        <label className="text-sm font-medium">name</label>
+        <label htmlFor="cf-name" className="text-sm font-medium">name</label>
         <input
+          id="cf-name"
           name="name"
           required
           placeholder="Your name"
@@ -92,8 +93,9 @@ export default function ContactForm() {
 
       {/* Email */}
       <div className="grid gap-2">
-        <label className="text-sm font-medium">email</label>
+        <label htmlFor="cf-email" className="text-sm font-medium">email</label>
         <input
+          id="cf-email"
           name="email"
           type="email"
           required
@@ -104,8 +106,9 @@ export default function ContactForm() {
 
       {/* Phone */}
       <div className="grid gap-2">
-        <label className="text-sm font-medium">phone (optional)</label>
+        <label htmlFor="cf-phone" className="text-sm font-medium">phone (optional)</label>
         <input
+          id="cf-phone"
           name="phone"
           placeholder="405-555-1234"
           className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"
@@ -114,8 +117,9 @@ export default function ContactForm() {
 
       {/* Inquiry Type */}
       <div className="grid gap-2">
-        <label className="text-sm font-medium">what can we help with?</label>
+        <label htmlFor="cf-inquiry" className="text-sm font-medium">what can we help with?</label>
         <select
+          id="cf-inquiry"
           name="inquiryType"
           required
           defaultValue="Property Management"
@@ -133,8 +137,9 @@ export default function ContactForm() {
 
       {/* Message */}
       <div className="grid gap-2">
-        <label className="text-sm font-medium">message</label>
+        <label htmlFor="cf-message" className="text-sm font-medium">message</label>
         <textarea
+          id="cf-message"
           name="message"
           rows={5}
           required
