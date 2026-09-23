@@ -366,24 +366,25 @@ export default function OpenHouseApexPage() {
                 <input
                   name="name"
                   autoComplete="name"
-                  placeholder="Name"
+                  aria-label="Name" placeholder="Name"
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                 />
                 <input
                   name="phone"
                   autoComplete="tel"
-                  placeholder="Phone"
+                  aria-label="Phone" placeholder="Phone"
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                 />
                 <input
                   name="email"
                   autoComplete="email"
                   type="email"
-                  placeholder="Email"
+                  aria-label="Email" placeholder="Email"
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35 md:col-span-2"
                 />
                 <select
                   name="workingWithAgent"
+                  aria-label="Are you working with an agent?"
                   className="w-full appearance-none rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                   defaultValue=""
                 >
@@ -395,6 +396,7 @@ export default function OpenHouseApexPage() {
                 
                 <select
                   name="priceOpinion"
+                  aria-label="How does the price feel?"
                   className="w-full appearance-none rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                   defaultValue=""
                 >
@@ -406,18 +408,18 @@ export default function OpenHouseApexPage() {
                 <div className="md:col-span-2 grid gap-4 md:grid-cols-2">
                 <input
                   name="favoriteFeature"
-                  placeholder="Favorite feature"
+                  aria-label="Favorite feature" placeholder="Favorite feature"
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                 />
                 <input
                   name="leastFavorite"
-                  placeholder="Least favorite feature"
+                  aria-label="Least favorite feature" placeholder="Least favorite feature"
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35"
                 />
               </div>
                 <textarea
                   name="message"
-                  placeholder="Questions or comments"
+                  aria-label="Questions or comments" placeholder="Questions or comments"
                   rows={5}
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35 md:col-span-2"
                 />

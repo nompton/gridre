@@ -92,30 +92,30 @@ export default function FieldLeadForm() {
     <form onSubmit={submit} className="grid gap-3">
       <input
         name="address"
-        placeholder="Address"
+        aria-label="Address" placeholder="Address"
         required
         className="border p-3 rounded-xl"
       />
 
       <input
         name="city"
-        placeholder="City"
+        aria-label="City" placeholder="City"
         className="border p-3 rounded-xl"
       />
 
       <input
         name="signPhone"
-        placeholder="Sign Phone"
+        aria-label="Sign Phone" placeholder="Sign Phone"
         className="border p-3 rounded-xl"
       />
 
       <input
         name="signPhone2"
-        placeholder="Sign Phone 2"
+        aria-label="Sign Phone 2" placeholder="Sign Phone 2"
         className="border p-3 rounded-xl"
       />
 
-      <select name="propertyType" className="border p-3 rounded-xl">
+      <select name="propertyType" aria-label="Property type" className="border p-3 rounded-xl">
         <option>House</option>
           <option>Duplex</option>
           <option>Triple</option>
@@ -124,7 +124,7 @@ export default function FieldLeadForm() {
           <option>Townhouse</option>
       </select>
 
-      <select name="condition" className="border p-3 rounded-xl">
+      <select name="condition" aria-label="Condition" className="border p-3 rounded-xl">
         <option>Good</option>
         <option>Average</option>
         <option>Rough</option>
@@ -132,7 +132,7 @@ export default function FieldLeadForm() {
 
       <textarea
         name="notes"
-        placeholder="Notes"
+        aria-label="Notes" placeholder="Notes"
         className="border p-3 rounded-xl"
       />
 

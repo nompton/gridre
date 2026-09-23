@@ -60,9 +60,9 @@ export default function HomeValueForm() {
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
       <div className="grid gap-2">
-        <label className="text-sm font-medium">property address</label>
+        <label htmlFor="hv-address" className="text-sm font-medium">property address</label>
         <input
-          name="property_address"
+          id="hv-address" name="property_address"
           required
           placeholder="123 Main St, Norman, OK"
           className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"
@@ -70,9 +70,9 @@ export default function HomeValueForm() {
       </div>
 
       <div className="grid gap-2">
-        <label className="text-sm font-medium">name</label>
+        <label htmlFor="hv-name" className="text-sm font-medium">name</label>
         <input
-          name="name"
+          id="hv-name" name="name"
           required
           placeholder="Your name"
           className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"
@@ -81,9 +81,9 @@ export default function HomeValueForm() {
 
       <div className="grid gap-2 sm:grid-cols-2">
         <div className="grid gap-2">
-          <label className="text-sm font-medium">email</label>
+          <label htmlFor="hv-email" className="text-sm font-medium">email</label>
           <input
-            name="email"
+            id="hv-email" name="email"
             type="email"
             required
             placeholder="you@example.com"
@@ -91,9 +91,9 @@ export default function HomeValueForm() {
           />
         </div>
         <div className="grid gap-2">
-          <label className="text-sm font-medium">phone</label>
+          <label htmlFor="hv-phone" className="text-sm font-medium">phone</label>
           <input
-            name="phone"
+            id="hv-phone" name="phone"
             required
             placeholder="405-555-1234"
             className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"
@@ -102,11 +102,11 @@ export default function HomeValueForm() {
       </div>
 
       <div className="grid gap-2">
-        <label className="text-sm font-medium">
+        <label htmlFor="hv-message" className="text-sm font-medium">
           anything we should know? (optional)
         </label>
         <textarea
-          name="message"
+          id="hv-message" name="message"
           rows={3}
           placeholder="Timeframe, recent updates, why you're curious…"
           className="rounded-xl border border-black/15 px-4 py-3 text-sm outline-none focus:border-black/30"

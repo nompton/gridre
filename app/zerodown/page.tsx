@@ -225,21 +225,21 @@ Our team will reach out shortly with details about this home.
 
 <input
 name="name"
-placeholder="Name"
+aria-label="Name" placeholder="Name"
 required
 style={{padding:"12px"}}
 />
 
 <input
 name="email"
-placeholder="Email"
+aria-label="Email" placeholder="Email"
 required
 style={{padding:"12px"}}
 />
 
 <input
 name="phone"
-placeholder="Phone"
+aria-label="Phone" placeholder="Phone"
 style={{padding:"12px"}}
 />
 
