@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import MarketSnapshot from "@/components/MarketSnapshot";
 
 export const metadata = {
   title: "Edmond Property Management",
@@ -78,6 +79,14 @@ export default function EdmondPage() {
             Monthly statements with clear income, expense, and maintenance records. No surprises, no confusion.
           </Card>
         </div>
+      </Section>
+
+      <Section title="Edmond market snapshot" kicker="Live market data">
+        <MarketSnapshot
+          city="Edmond"
+          title="Edmond home market — recorded sales"
+          blurb="Real recorded sales across Edmond, straight from the Atlas market-data feed. Useful context whether you're buying a rental or weighing what yours could do."
+        />
       </Section>
 
       <section className="border-y border-black/10 bg-black/[0.02] py-14">

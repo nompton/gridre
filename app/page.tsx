@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import MarketSnapshot from "@/components/MarketSnapshot";
 
 export const metadata = {
   alternates: { canonical: "https://thegridre.com" },
@@ -216,6 +217,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <Section title="OKC metro market snapshot" kicker="Live market data">
+        <MarketSnapshot
+          title="Oklahoma City metro — recorded home sales"
+          blurb="Real recorded sales pooled across the OKC metro (Cleveland, Oklahoma & Canadian counties), straight from the Atlas market-data feed — the same data engine behind our management and investor work."
+        />
+      </Section>
+
       <section className="border-y border-black/10 py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-8">

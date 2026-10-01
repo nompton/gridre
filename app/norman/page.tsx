@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import MarketSnapshot from "@/components/MarketSnapshot";
 
 export const metadata = {
   title: "Norman Property Management",
@@ -95,6 +96,14 @@ export default function NormanPage() {
       </Section>
 
       {/* Norman Condo Callout */}
+      <Section title="Norman market snapshot" kicker="Live market data">
+        <MarketSnapshot
+          city="Norman"
+          title="Norman home market — recorded sales"
+          blurb="Real recorded sales across Norman, straight from the Atlas market-data feed. Useful context whether you're buying a rental or weighing what yours could do."
+        />
+      </Section>
+
       <section className="border-y border-black/10 bg-black/[0.02] py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">

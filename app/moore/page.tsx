@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import MarketSnapshot from "@/components/MarketSnapshot";
 
 export const metadata = {
   title: "Moore Property Management",
@@ -96,6 +97,14 @@ export default function MoorePage() {
             <GridWord />'s management practice is built on deep regulatory and compliance experience. Trust accounts and documentation handled correctly.
           </Card>
         </div>
+      </Section>
+
+      <Section title="Moore market snapshot" kicker="Live market data">
+        <MarketSnapshot
+          city="Moore"
+          title="Moore home market — recorded sales"
+          blurb="Real recorded sales across Moore, straight from the Atlas market-data feed. Useful context whether you're buying a rental or weighing what yours could do."
+        />
       </Section>
 
       <section className="border-y border-black/10 bg-black/[0.02] py-14">

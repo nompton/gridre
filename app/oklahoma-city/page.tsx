@@ -2,6 +2,7 @@ import Image from "next/image";
 import Section from "@/components/Section";
 import Card from "@/components/Card";
 import GridWord from "@/components/GridWord";
+import MarketSnapshot from "@/components/MarketSnapshot";
 
 export const metadata = {
   title: "Oklahoma City Property Management",
@@ -91,6 +92,14 @@ export default function OklahomaCityPage() {
           </div>
         </div>
       </section>
+
+      <Section title="OKC market snapshot" kicker="Live market data">
+        <MarketSnapshot
+          city="Oklahoma City"
+          title="Oklahoma City home market — recorded sales"
+          blurb="Real recorded sales across Oklahoma City, straight from the Atlas market-data feed. Useful context whether you're buying a rental or weighing what yours could do."
+        />
+      </Section>
 
       <section className="border-y border-black/10 bg-black/[0.02] py-14">
         <div className="mx-auto max-w-6xl px-4">
