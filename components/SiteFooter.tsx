@@ -10,6 +10,8 @@ export default function SiteFooter() {
               <div>Moore, OK 73160</div>
               <div className="mt-2">
                 <a href="tel:4053101221" className="hover:text-black transition">(405) 310-1221</a>
+                <span className="mx-2 text-black/30">·</span>
+                <a href="sms:+14053101221" className="hover:text-black transition">Text us</a>
               </div>
             </address>
           </div>
