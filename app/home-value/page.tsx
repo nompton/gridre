@@ -54,9 +54,9 @@ export default function HomeValuePage() {
                 <div className="text-black/60">phone</div>
                 <a
                   className="font-medium underline underline-offset-4 hover:text-black/70 transition"
-                  href="tel:4053101221"
+                  href="tel:4053100570"
                 >
-                  (405) 310-1221
+                  (405) 310-0570
                 </a>
               </div>
             </div>

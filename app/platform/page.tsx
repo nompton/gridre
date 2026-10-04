@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "https://thegridre.com/platform" },
   title: { absolute: "The Atlas Platform — GRID Owner Portal & Trust Accounting" },
   description:
-    "GRID Real Estate runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Atlas Verified trust accounting and security deposits, per-tenant ledgers, owner payouts, and live statements on any device. Call (405) 310-1221.",
+    "GRID Real Estate runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Atlas Verified trust accounting and security deposits, per-tenant ledgers, owner payouts, and live statements on any device. Call (405) 310-0570.",
   openGraph: {
     title: "The Atlas Platform | GRID Real Estate",
     description:
@@ -21,7 +21,7 @@ const serviceSchema = {
   "name": "GRID Owner Portal & Trust Accounting on Atlas",
   "description":
     "GRID Real Estate runs on Atlas — the first-of-its-kind, end-to-end real estate platform. Owners receive Atlas Verified trust accounting and security deposits, per-tenant ledgers, tracked owner payouts, and live statements accessible on any device.",
-  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053100570" },
   "areaServed": [
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Norman", "containedIn": "Oklahoma" },

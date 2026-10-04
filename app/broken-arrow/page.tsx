@@ -6,7 +6,7 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Broken Arrow Property Management",
   description:
-    "Property management in Broken Arrow, OK by GRID Real Estate. One of Oklahoma's fastest-growing cities, Broken Arrow's strong renter base and family demand make it a premier investment market. Full-service management with professional marketing. Call (405) 310-1221.",
+    "Property management in Broken Arrow, OK by GRID Real Estate. One of Oklahoma's fastest-growing cities, Broken Arrow's strong renter base and family demand make it a premier investment market. Full-service management with professional marketing. Call (405) 310-0570.",
   alternates: { canonical: "https://thegridre.com/broken-arrow" },
   openGraph: {
     title: "Broken Arrow Property Management — GRID Real Estate",
@@ -56,7 +56,7 @@ export default function BrokenArrowPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-0570</a>
               </div>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function BrokenArrowPage() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+              <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
             </div>
           </div>
         </div>

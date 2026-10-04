@@ -6,7 +6,7 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   title: "Midwest City Property Management",
   description:
-    "Rental property management in Midwest City, OK by GRID Real Estate. Affordable housing demand and proximity to Tinker AFB make MWC a strong investor market. We offer tenant screening, professional marketing, and full-service management. Call (405) 310-1221.",
+    "Rental property management in Midwest City, OK by GRID Real Estate. Affordable housing demand and proximity to Tinker AFB make MWC a strong investor market. We offer tenant screening, professional marketing, and full-service management. Call (405) 310-0570.",
   alternates: { canonical: "https://thegridre.com/midwest-city" },
   openGraph: {
     title: "Midwest City Property Management — GRID Real Estate",
@@ -21,7 +21,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Midwest City Property Management",
   "description": "Full-service rental property management in Midwest City, Oklahoma. Premier marketing, thorough tenant screening, Oklahoma-compliant leases, maintenance coordination, and clean monthly owner reporting for a rental market anchored by Tinker AFB.",
-  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053100570" },
   "areaServed": [
     { "@type": "City", "name": "Midwest City", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
@@ -74,7 +74,7 @@ export default function MidwestCityPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-0570</a>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function MidwestCityPage() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+              <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
             </div>
           </div>
         </div>

@@ -28,8 +28,8 @@ export default function SiteNav() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <a href="sms:+14053101221" className="hidden whitespace-nowrap text-sm text-black/60 hover:text-black transition-colors xl:inline-block">Text us</a>
-          <a href="tel:4053101221" className="hidden whitespace-nowrap text-sm text-black/60 hover:text-black transition-colors xl:inline-block">(405) 310-1221</a>
+          <a href="sms:+14053100570" className="hidden whitespace-nowrap text-sm text-black/60 hover:text-black transition-colors xl:inline-block">Text us</a>
+          <a href="tel:4053100570" className="hidden whitespace-nowrap text-sm text-black/60 hover:text-black transition-colors xl:inline-block">(405) 310-0570</a>
           <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="whitespace-nowrap rounded-full border border-black/15 px-4 py-2 text-sm font-medium text-black/70 hover:border-black/30 hover:text-black transition-colors">client login</a>
           <a href="/contact" className="whitespace-nowrap rounded-full bg-black px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity">get a proposal</a>
         </div>
@@ -42,8 +42,8 @@ export default function SiteNav() {
               ))}
               <div className="mt-4 flex flex-col gap-3">
                 <a href="/contact" onClick={() => setOpen(false)} className="rounded-full bg-black px-5 py-3 text-center text-sm font-semibold text-white hover:opacity-90">get a proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-black/15 px-5 py-3 text-center text-sm font-medium hover:border-black/30">call (405) 310-1221</a>
-                <a href="sms:+14053101221" onClick={() => setOpen(false)} className="rounded-full border border-black/15 px-5 py-3 text-center text-sm font-medium hover:border-black/30">text (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-black/15 px-5 py-3 text-center text-sm font-medium hover:border-black/30">call (405) 310-0570</a>
+                <a href="sms:+14053100570" onClick={() => setOpen(false)} className="rounded-full border border-black/15 px-5 py-3 text-center text-sm font-medium hover:border-black/30">text (405) 310-0570</a>
                 <a href="https://portal.thegridre.com" target="_blank" rel="noopener noreferrer" className="rounded-full border border-black/15 px-5 py-3 text-center text-sm font-medium hover:border-black/30">client login</a>
               </div>
             </nav>

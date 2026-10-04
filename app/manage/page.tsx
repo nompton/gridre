@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/manage" },
   title: "Property Management in Norman, OK",
-  description: "Full-service property management in Norman, Oklahoma for landlords and investors. Tenant screening, rent collection, maintenance coordination, and owner reporting. Call (405) 310-1221.",
+  description: "Full-service property management in Norman, Oklahoma for landlords and investors. Tenant screening, rent collection, maintenance coordination, and owner reporting. Call (405) 310-0570.",
   openGraph: {
     title: "Property Management in Norman, OK | GRID Real Estate",
     description: "Professional rental property management for Norman, OK investors. Tenant placement, Matterport tours, trust account management, and clean monthly reporting.",
@@ -115,7 +115,7 @@ export default function ManagePage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-0570</a>
               </div>
             </div>
           </div>
@@ -345,7 +345,7 @@ export default function ManagePage() {
                   Tell us about your property or portfolio and we&apos;ll send a straightforward management proposal and a rent estimate — no obligation.
                 </div>
                 <div className="mt-7 flex flex-wrap gap-3">
-                  <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+                  <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
                 </div>
               </div>
               <div className="rounded-2xl bg-white p-6 text-black">

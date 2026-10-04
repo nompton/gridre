@@ -7,7 +7,7 @@ import MarketSnapshot from "@/components/MarketSnapshot";
 export const metadata = {
   title: "Oklahoma City Property Management",
   description:
-    "Property management in Oklahoma City by GRID Real Estate — Oklahoma's investor-focused brokerage. We handle OKC rentals with professional photography, Matterport 3D, tenant screening, maintenance, and clean owner reporting. Call (405) 310-1221.",
+    "Property management in Oklahoma City by GRID Real Estate — Oklahoma's investor-focused brokerage. We handle OKC rentals with professional photography, Matterport 3D, tenant screening, maintenance, and clean owner reporting. Call (405) 310-0570.",
   alternates: { canonical: "https://thegridre.com/oklahoma-city" },
   openGraph: {
     title: "Oklahoma City Property Management — GRID Real Estate",
@@ -22,7 +22,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Oklahoma City Property Management",
   "description": "Full-service rental property management in Oklahoma City, Oklahoma. Tenant screening, professional marketing, maintenance coordination, and monthly owner reporting.",
-  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053100570" },
   "areaServed": [
     { "@type": "City", "name": "Oklahoma City", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Edmond", "containedIn": "Oklahoma" },
@@ -86,7 +86,7 @@ export default function OklahomaCityPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-0570</a>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function OklahomaCityPage() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+              <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const serviceSchema = {
   "serviceType": "Property Management",
   "name": "Tulsa Metro Property Management",
   "description": "Full-service rental property management across the greater Tulsa metropolitan area in Oklahoma. Professional marketing, tenant screening, maintenance coordination, and monthly owner reporting for Tulsa Metro rental properties.",
-  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053101221" },
+  "provider": { "@type": "LocalBusiness", "@id": "https://thegridre.com/#business", "name": "GRID Real Estate", "url": "https://thegridre.com", "telephone": "+14053100570" },
   "areaServed": [
     { "@type": "City", "name": "Tulsa", "containedIn": "Oklahoma" },
     { "@type": "City", "name": "Bixby", "containedIn": "Oklahoma" },
@@ -80,7 +80,7 @@ export default function TulsaMetroPage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">get a management proposal</a>
-                <a href="tel:4053101221" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-1221</a>
+                <a href="tel:4053100570" className="rounded-full border border-white/50 bg-white/10 px-5 py-3 text-sm font-medium text-white hover:bg-white/20">call (405) 310-0570</a>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function TulsaMetroPage() {
             </div>
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">request a proposal</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+              <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
             </div>
           </div>
         </div>

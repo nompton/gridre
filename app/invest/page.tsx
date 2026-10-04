@@ -6,7 +6,7 @@ import GridWord from "@/components/GridWord";
 export const metadata = {
   alternates: { canonical: "https://thegridre.com/invest" },
   title: "Real Estate Investor Services — OKC Metro",
-  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. Deal analysis, market insight, and a seamless handoff into professional management. Call (405) 310-1221.",
+  description: "Acquisition support, cash flow underwriting, and portfolio strategy for Oklahoma City Metro investors. Deal analysis, market insight, and a seamless handoff into professional management. Call (405) 310-0570.",
   openGraph: {
     title: "Real Estate Investor Services — OKC Metro | GRID Real Estate",
     description: "OKC Metro real estate investment services built for investors. Acquisition support, market analysis, and seamless handoff into professional property management.",

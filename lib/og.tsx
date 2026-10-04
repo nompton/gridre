@@ -9,7 +9,7 @@ export function ogImageResponse({
   eyebrow,
   title,
   footerLeft = "OKC & Tulsa Metro",
-  footerRight = "(405) 310-1221",
+  footerRight = "(405) 310-0570",
 }: {
   eyebrow: string;
   title: string;

@@ -7,7 +7,7 @@ import MarketSnapshot from "@/components/MarketSnapshot";
 export const metadata = {
   alternates: { canonical: "https://thegridre.com" },
   title: "Oklahoma Property Management — OKC & Tulsa Metro",
-  description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-1221.",
+  description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing. Call (405) 310-0570.",
   openGraph: {
     title: "Oklahoma Property Management — OKC & Tulsa Metro | GRID Real Estate",
     description: "Premier property management across the Oklahoma City and Tulsa Metro areas. Professional photography, Matterport 3D, social media marketing, and full-service leasing.",
@@ -25,7 +25,7 @@ const localBusinessSchema = {
   logo: "https://thegridre.com/brand/grid_logo.png",
   image: "https://thegridre.com/brand/grid_logo.png",
   priceRange: "$$",
-  telephone: "+14053101221",
+  telephone: "+14053100570",
   address: {
     "@type": "PostalAddress",
     streetAddress: "1263 S Eastern Ave Ste B",
@@ -285,7 +285,7 @@ export default function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <a href="/contact" className="rounded-full bg-white px-5 py-3 text-sm font-medium text-black hover:opacity-90">contact <GridWord /></a>
               <a href="/home-value" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">what&apos;s my home worth?</a>
-              <a href="tel:4053101221" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-1221</a>
+              <a href="tel:4053100570" className="rounded-full border border-white/35 px-5 py-3 text-sm font-medium text-white hover:border-white/60">call (405) 310-0570</a>
             </div>
           </div>
         </div>
