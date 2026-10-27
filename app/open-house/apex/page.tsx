@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Script from "next/script"
+import Turnstile from "@/components/Turnstile"
 
 const photos = Array.from({ length: 35 }, (_, i) => `/open-house/apex/${i + 1}.jpg`)
 
@@ -66,6 +67,7 @@ export default function OpenHouseApexPage() {
           // Anti-bot honeypot + timing trap. [[bot-spam-defense]]
           website: data.website,
           form_rendered_at: data.form_rendered_at,
+          cf_turnstile_response: data["cf-turnstile-response"],
         }),
       })
 
@@ -431,6 +433,10 @@ export default function OpenHouseApexPage() {
                   rows={5}
                   className="w-full rounded-2xl border border-white/30 bg-white/10 px-4 py-3.5 text-white placeholder:text-white/65 outline-none ring-1 ring-inset ring-white/10 backdrop-blur-sm focus:border-white/60 focus:bg-white/15 focus:ring-white/35 md:col-span-2"
                 />
+                {/* Cloudflare Turnstile — bot check. [[bot-spam-defense]] */}
+                <div className="md:col-span-2">
+                  <Turnstile />
+                </div>
                 <button
                   type="submit"
                   className="w-full rounded-full border border-white bg-white px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.2em] text-black transition hover:bg-transparent hover:text-white md:col-span-2"

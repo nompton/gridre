@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Turnstile from "@/components/Turnstile";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -38,6 +39,7 @@ export default function HomeValueForm() {
             // Anti-bot honeypot + timing trap. [[bot-spam-defense]]
             website: form.get("website"),
             form_rendered_at: form.get("form_rendered_at"),
+            cf_turnstile_response: form.get("cf-turnstile-response"),
             sms_consent: true,
           }),
         }
@@ -127,6 +129,9 @@ export default function HomeValueForm() {
         data rates may apply; message frequency varies. Reply STOP to opt out of
         texts at any time.
       </p>
+
+      {/* Cloudflare Turnstile — bot check. [[bot-spam-defense]] */}
+      <Turnstile />
 
       <button
         type="submit"

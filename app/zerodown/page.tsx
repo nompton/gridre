@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Script from "next/script"
 import { useState } from "react"
+import Turnstile from "@/components/Turnstile"
 
 export default function ZeroDown(){
 
@@ -42,6 +43,7 @@ interest: "ZeroDown program",
 // Anti-bot honeypot + timing trap. [[bot-spam-defense]]
 website: formData.get("website"),
 form_rendered_at: formData.get("form_rendered_at"),
+cf_turnstile_response: formData.get("cf-turnstile-response"),
 })
 }
 )
@@ -250,6 +252,9 @@ name="phone"
 aria-label="Phone" placeholder="Phone"
 style={{padding:"12px"}}
 />
+
+{/* Cloudflare Turnstile — bot check. [[bot-spam-defense]] */}
+<Turnstile />
 
 <button
 type="submit"

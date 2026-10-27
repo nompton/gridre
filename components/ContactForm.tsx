@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Turnstile from "@/components/Turnstile";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -49,6 +50,8 @@ export default function ContactForm() {
             // too fast. [[bot-spam-defense]]
             website: payload.website,
             form_rendered_at: payload.form_rendered_at,
+            // Cloudflare Turnstile token (gated + fail-open on the backend).
+            cf_turnstile_response: payload["cf-turnstile-response"],
             // Submitting the form is the affirmative opt-in — the consent
             // disclosure sits right above the Send button below.
             sms_consent: true,
@@ -167,6 +170,9 @@ export default function ContactForm() {
         rates may apply; message frequency varies. Reply STOP to opt out of
         texts at any time.
       </p>
+
+      {/* Cloudflare Turnstile — bot check. [[bot-spam-defense]] */}
+      <Turnstile />
 
       {/* Submit Button */}
       <button
