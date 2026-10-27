@@ -29,7 +29,17 @@ function loadTurnstile(): Promise<void> {
   return loader;
 }
 
-export default function Turnstile({ className }: { className?: string }) {
+// onToken fires with the solved token (and "" on expiry/error) for forms that
+// build their POST body from component state rather than a FormData of the
+// <form>. FormData-based forms can ignore it and read the hidden
+// cf-turnstile-response input Cloudflare injects into the form instead.
+export default function Turnstile({
+  className,
+  onToken,
+}: {
+  className?: string;
+  onToken?: (token: string) => void;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -40,7 +50,12 @@ export default function Turnstile({ className }: { className?: string }) {
       if (cancelled || !ref.current || !ts) return;
       if (ref.current.childElementCount > 0) return; // avoid a double render
       try {
-        widgetId = ts.render(ref.current, { sitekey: SITEKEY });
+        widgetId = ts.render(ref.current, {
+          sitekey: SITEKEY,
+          callback: (t: string) => onToken?.(t),
+          "expired-callback": () => onToken?.(""),
+          "error-callback": () => onToken?.(""),
+        });
       } catch {
         /* non-fatal */
       }
