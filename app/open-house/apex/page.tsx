@@ -63,6 +63,9 @@ export default function OpenHouseApexPage() {
           phone: data.phone,
           interest: "Open house — 3844 Apex Court",
           message,
+          // Anti-bot honeypot + timing trap. [[bot-spam-defense]]
+          website: data.website,
+          form_rendered_at: data.form_rendered_at,
         }),
       })
 
@@ -363,6 +366,11 @@ export default function OpenHouseApexPage() {
               </div>
             ) : (
               <form className="mt-6 grid gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
+                {/* Anti-bot honeypot (off-screen, not tabbable) + timing trap. */}
+                <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
+                  <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
+                </div>
+                <input type="hidden" name="form_rendered_at" defaultValue={Date.now()} />
                 <input
                   name="name"
                   autoComplete="name"

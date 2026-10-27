@@ -39,6 +39,9 @@ name: formData.get("name"),
 email: formData.get("email"),
 phone: formData.get("phone"),
 interest: "ZeroDown program",
+// Anti-bot honeypot + timing trap. [[bot-spam-defense]]
+website: formData.get("website"),
+form_rendered_at: formData.get("form_rendered_at"),
 })
 }
 )
@@ -222,6 +225,11 @@ Our team will reach out shortly with details about this home.
 ) : (
 
 <form onSubmit={submitLead} style={{display:"grid",gap:"10px"}}>
+{/* Anti-bot honeypot (off-screen, not tabbable) + timing trap. */}
+<div style={{position:"absolute",left:"-9999px"}} aria-hidden="true">
+<label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
+</div>
+<input type="hidden" name="form_rendered_at" defaultValue={Date.now()} />
 
 <input
 name="name"

@@ -44,6 +44,11 @@ export default function ContactForm() {
             phone: payload.phone,
             interest: payload.inquiryType,
             message: payload.message,
+            // Anti-bot honeypot + timing trap — the backend silently drops a
+            // submission where the hidden decoy is filled or the form was posted
+            // too fast. [[bot-spam-defense]]
+            website: payload.website,
+            form_rendered_at: payload.form_rendered_at,
             // Submitting the form is the affirmative opt-in — the consent
             // disclosure sits right above the Send button below.
             sms_consent: true,
@@ -79,6 +84,13 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
+      {/* Anti-bot honeypot: off-screen, no label a human sees, not tabbable, no
+          autofill. A real user leaves it blank; a bot that fills every field
+          trips it and the backend silently drops the submission. */}
+      <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
+        <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
+      </div>
+      <input type="hidden" name="form_rendered_at" defaultValue={Date.now()} />
       {/* Name */}
       <div className="grid gap-2">
         <label htmlFor="cf-name" className="text-sm font-medium">name</label>

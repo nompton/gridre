@@ -35,6 +35,9 @@ export default function HomeValueForm() {
             phone: form.get("phone"),
             property_address: form.get("property_address"),
             message: form.get("message"),
+            // Anti-bot honeypot + timing trap. [[bot-spam-defense]]
+            website: form.get("website"),
+            form_rendered_at: form.get("form_rendered_at"),
             sms_consent: true,
           }),
         }
@@ -59,6 +62,11 @@ export default function HomeValueForm() {
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
+      {/* Anti-bot honeypot (off-screen, not tabbable) + timing trap. */}
+      <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
+        <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
+      </div>
+      <input type="hidden" name="form_rendered_at" defaultValue={Date.now()} />
       <div className="grid gap-2">
         <label htmlFor="hv-address" className="text-sm font-medium">property address</label>
         <input
